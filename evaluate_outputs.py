@@ -1,3 +1,5 @@
+# === evaluate_outputs.py ===
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -19,7 +21,7 @@ gold_reference = data.get("gold_answer", "").strip()
 llm = ChatOpenAI(model="gpt-4") # This chain was only tested with GPT-4. Performance may be significantly worse with other models.
 
 # LangChain-Evaluatoren laden
-qa_eval = load_evaluator("qa", llm=llm)
+cot_qa_eval = load_evaluator("cot_qa", llm=llm)
 helpfulness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "helpfulness"})
 correctness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "correctness"})
 conciseness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "conciseness"})
@@ -40,7 +42,7 @@ def compute_bertscore(pred, ref, lang="en"):
 if gold_reference:
     print("\n📊 RESPONDER vs. GOLD")
     print("✅ Exact Match:", exact_match(responder_output, gold_reference))
-    print("🤖 QAEval:", qa_eval.evaluate_strings(
+    print("🤖 CotQaEval:", cot_qa_eval.evaluate_strings(
         input=question,
         prediction=responder_output,
         reference=gold_reference
@@ -74,7 +76,7 @@ if gold_reference:
 
     print("\n📊 REVISOR vs. GOLD")
     print("✅ Exact Match:", exact_match(revisor_output, gold_reference))
-    print("🤖 QAEval:", qa_eval.evaluate_strings(
+    print("🤖 CotQaEval:", cot_qa_eval.evaluate_strings(
         input=question,
         prediction=revisor_output,
         reference=gold_reference
