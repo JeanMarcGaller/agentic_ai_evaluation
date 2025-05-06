@@ -15,12 +15,17 @@ responder_output = data["responder_answer"]
 revisor_output = data["revisor_answer"]
 gold_reference = data.get("gold_answer", "").strip()
 
-# LLM für Evaluatoren (für LLM-basierte Evaluationsmethoden)
+# LLM für Evaluatoren
 llm = ChatOpenAI(model="o4-mini")
 
-# Neue Evaluatoren laden (LangChain Smith Evaluator-System)
+# LangChain-Evaluatoren laden
 qa_eval = load_evaluator("qa", llm=llm)
 helpfulness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "helpfulness"})
+correctness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "correctness"})
+conciseness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "conciseness"})
+coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "coherence"})
+relevance_eval = load_evaluator("criteria", llm=llm, config={"criteria": "relevance"})
+pairwise_eval = load_evaluator("evaluate_string_pairs", llm=llm, config={"criteria": "overall"})
 
 # Exact Match
 def exact_match(pred, ref):
@@ -45,6 +50,26 @@ if gold_reference:
         prediction=responder_output,
         reference=gold_reference
     ))
+    print("🎯 Correctness:", correctness_eval.evaluate_strings(
+        input=question,
+        prediction=responder_output,
+        reference=gold_reference
+    ))
+    print("✂️ Conciseness:", conciseness_eval.evaluate_strings(
+        input=question,
+        prediction=responder_output,
+        reference=gold_reference
+    ))
+    print("🔗 Coherence:", coherence_eval.evaluate_strings(
+        input=question,
+        prediction=responder_output,
+        reference=gold_reference
+    ))
+    print("📌 Relevance:", relevance_eval.evaluate_strings(
+        input=question,
+        prediction=responder_output,
+        reference=gold_reference
+    ))
     print("📐 BERTScore:", compute_bertscore(responder_output, gold_reference))
 
     print("\n📊 REVISOR vs. GOLD")
@@ -59,6 +84,35 @@ if gold_reference:
         prediction=revisor_output,
         reference=gold_reference
     ))
+    print("🎯 Correctness:", correctness_eval.evaluate_strings(
+        input=question,
+        prediction=revisor_output,
+        reference=gold_reference
+    ))
+    print("✂️ Conciseness:", conciseness_eval.evaluate_strings(
+        input=question,
+        prediction=revisor_output,
+        reference=gold_reference
+    ))
+    print("🔗 Coherence:", coherence_eval.evaluate_strings(
+        input=question,
+        prediction=revisor_output,
+        reference=gold_reference
+    ))
+    print("📌 Relevance:", relevance_eval.evaluate_strings(
+        input=question,
+        prediction=revisor_output,
+        reference=gold_reference
+    ))
     print("📐 BERTScore:", compute_bertscore(revisor_output, gold_reference))
+
+    print("\n⚖️ REVISOR vs. RESPONDER (Pairwise)")
+    pairwise_result = pairwise_eval.evaluate_string_pairs(
+        input=question,
+        prediction=responder_output,
+        prediction_b=revisor_output
+    )
+    print("🔍 Overall Comparison:", pairwise_result)
+
 else:
     print("⚠️ Kein Goldstandard vorhanden – bitte `gold_answer` in evaluation_inputs.json eintragen.")
