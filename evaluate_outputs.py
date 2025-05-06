@@ -25,7 +25,7 @@ correctness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "corr
 conciseness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "conciseness"})
 coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "coherence"})
 relevance_eval = load_evaluator("criteria", llm=llm, config={"criteria": "relevance"})
-pairwise_eval = load_evaluator("evaluate_string_pairs", llm=llm, config={"criteria": "overall"})
+pairwise_eval = load_evaluator("pairwise_string", llm=llm, config={"criteria": "overall"})
 
 # Exact Match
 def exact_match(pred, ref):
@@ -113,6 +113,14 @@ if gold_reference:
         prediction_b=revisor_output
     )
     print("🔍 Overall Comparison:", pairwise_result)
+
+    winner = pairwise_result.get("value", "").lower()
+    if winner == "a":
+        print("✅ Gewinner: Responder")
+    elif winner == "b":
+        print("✅ Gewinner: Revisor")
+    else:
+        print("⚖️ Unentschieden oder unklar bewertet")
 
 else:
     print("⚠️ Kein Goldstandard vorhanden – bitte `gold_answer` in evaluation_inputs.json eintragen.")
