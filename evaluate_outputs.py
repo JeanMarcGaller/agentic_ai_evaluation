@@ -16,7 +16,7 @@ revisor_output = data["revisor_answer"]
 gold_reference = data.get("gold_answer", "").strip()
 
 # LLM für Evaluatoren
-llm = ChatOpenAI(model="o4-mini")
+llm = ChatOpenAI(model="gpt-4") # This chain was only tested with GPT-4. Performance may be significantly worse with other models.
 
 # LangChain-Evaluatoren laden
 qa_eval = load_evaluator("qa", llm=llm)
