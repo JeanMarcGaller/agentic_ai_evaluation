@@ -3,8 +3,7 @@ load_dotenv()
 
 import json
 from langchain_openai import ChatOpenAI
-from langchain.evaluation.qa import QAEvalChain
-from langchain.evaluation.criteria import CriteriaEvalChain
+from langchain.evaluation import load_evaluator
 from bert_score import score as bert_score  # Optional
 
 # Eingabedaten laden
@@ -16,7 +15,12 @@ responder_output = data["responder_answer"]
 revisor_output = data["revisor_answer"]
 gold_reference = data.get("gold_answer", "").strip()
 
-llm = ChatOpenAI(model="gpt-4")
+# LLM für Evaluatoren (für LLM-basierte Evaluationsmethoden)
+llm = ChatOpenAI(model="o4-mini")
+
+# Neue Evaluatoren laden (LangChain Smith Evaluator-System)
+qa_eval = load_evaluator("qa", llm=llm)
+helpfulness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "helpfulness"})
 
 # Exact Match
 def exact_match(pred, ref):
@@ -27,11 +31,7 @@ def compute_bertscore(pred, ref, lang="en"):
     P, R, F1 = bert_score([pred], [ref], lang=lang)
     return {"precision": round(P[0].item(), 3), "recall": round(R[0].item(), 3), "f1": round(F1[0].item(), 3)}
 
-# LLM-basierte Evaluatoren
-qa_eval = QAEvalChain.from_llm(llm)
-criteria_eval = CriteriaEvalChain.from_llm(llm, criteria="helpfulness")
-
-# Auswertung (wenn Gold vorhanden)
+# Auswertung
 if gold_reference:
     print("\n📊 RESPONDER vs. GOLD")
     print("✅ Exact Match:", exact_match(responder_output, gold_reference))
@@ -40,7 +40,7 @@ if gold_reference:
         prediction=responder_output,
         reference=gold_reference
     ))
-    print("🧠 Helpfulness:", criteria_eval.evaluate_strings(
+    print("🧠 Helpfulness:", helpfulness_eval.evaluate_strings(
         input=question,
         prediction=responder_output,
         reference=gold_reference
@@ -54,7 +54,7 @@ if gold_reference:
         prediction=revisor_output,
         reference=gold_reference
     ))
-    print("🧠 Helpfulness:", criteria_eval.evaluate_strings(
+    print("🧠 Helpfulness:", helpfulness_eval.evaluate_strings(
         input=question,
         prediction=revisor_output,
         reference=gold_reference
