@@ -38,7 +38,7 @@ for idx, ex in enumerate(examples):
     builder.set_entry_point("draft")
     graph = builder.compile()
 
-    print(f"\n📌 Frage {idx + 1}/{NUM_QUESTIONS}: {question}")
+    print(f"\n QUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
     result = graph.invoke(question)
 
     responder_answer = result[1].tool_calls[0]["args"]["answer"]
@@ -53,10 +53,10 @@ for idx, ex in enumerate(examples):
         "evaluation": evaluation
     })
 
-    print("✅ Evaluierung abgeschlossen")
+    print("EVALUATION COMPLETED")
 
 # Ergebnisse speichern
 with open("results.json", "w") as f:
     json.dump(results, f, indent=2)
 
-print("\n📄 Ergebnisse gespeichert in results.json")
+print("\nRESULTS STORED IN results.json")
