@@ -6,16 +6,23 @@ from chains import first_responder, revisor
 from evaluator import evaluate_pairwise
 from tool_executor import execute_tools
 from langgraph.graph import END, MessageGraph
-from langchain_core.messages import BaseMessage, ToolMessage
+from langchain_core.messages import BaseMessage
 
 
-MAX_ITERATIONS = 2
-NUM_QUESTIONS = 1
+MAX_ROUNDS = 2
+NUM_QUESTIONS = 2
 
-# Subset laden
-examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS, force_reload=True)
-
+# Daten laden
+examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
 results = []
+
+def extract_answer(step):
+    if hasattr(step, "tool_calls") and step.tool_calls:
+        return step.tool_calls[0]["args"]["answer"]
+    elif hasattr(step, "content") and isinstance(step.content, str):
+        return step.content  # Falls LLM einfach direkt geantwortet hat
+    else:
+        return "(No answer found)"
 
 for idx, ex in enumerate(examples):
     question = ex["question"]
@@ -29,8 +36,7 @@ for idx, ex in enumerate(examples):
     builder.add_edge("execute_tools", "revise")
 
     def event_loop(state: list[BaseMessage]) -> str:
-        num_tool_uses = sum(isinstance(msg, ToolMessage) for msg in state)
-        if num_tool_uses >= MAX_ITERATIONS:
+        if len(state) >= MAX_ROUNDS:
             return END
         return "execute_tools"
 
@@ -38,11 +44,15 @@ for idx, ex in enumerate(examples):
     builder.set_entry_point("draft")
     graph = builder.compile()
 
-    print(f"\n QUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
+    print(f"\n❓ QUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
     result = graph.invoke(question)
 
-    responder_answer = result[1].tool_calls[0]["args"]["answer"]
-    revisor_answer = result[-1].tool_calls[0]["args"]["answer"]
+    # Debug-Logs, um Tool-Nutzung zu überprüfen
+    print(f"Responder tool used: {hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)}")
+    print(f"Revisor tool used: {hasattr(result[-1], 'tool_calls') and bool(result[-1].tool_calls)}")
+
+    responder_answer = extract_answer(result[1])
+    revisor_answer = extract_answer(result[-1])
 
     evaluation = evaluate_pairwise(question, responder_answer, revisor_answer)
 
@@ -53,10 +63,10 @@ for idx, ex in enumerate(examples):
         "evaluation": evaluation
     })
 
-    print("EVALUATION COMPLETED")
+    print("✅ Evaluation completed")
 
 # Ergebnisse speichern
 with open("results.json", "w") as f:
     json.dump(results, f, indent=2)
 
-print("\nRESULTS STORED IN results.json")
+print("\n📄 RESULTS STORED IN results.json")

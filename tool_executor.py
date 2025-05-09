@@ -1,7 +1,6 @@
 # === tool_executor.py ===
 
 from dotenv import load_dotenv
-
 load_dotenv()
 
 from langchain_core.tools import StructuredTool
@@ -12,15 +11,14 @@ from schemas import AnswerQuestion, ReviseAnswer
 
 tavily_tool = TavilySearch(max_results=5)
 
-
 def run_queries(search_queries: list[str], **kwargs):
-    """Run the generated queries."""
+    """Nur ausführen, wenn auch Queries vorhanden sind"""
+    if not search_queries:
+        return []
     return tavily_tool.batch([{"query": query} for query in search_queries])
 
+execute_tools = ToolNode([
+    StructuredTool.from_function(run_queries, name=AnswerQuestion.__name__),
+    StructuredTool.from_function(run_queries, name=ReviseAnswer.__name__),
+])
 
-execute_tools = ToolNode(
-    [
-        StructuredTool.from_function(run_queries, name=AnswerQuestion.__name__),
-        StructuredTool.from_function(run_queries, name=ReviseAnswer.__name__),
-    ]
-)
