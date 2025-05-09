@@ -10,10 +10,10 @@ from langchain_core.messages import BaseMessage, ToolMessage
 
 
 MAX_ITERATIONS = 2
-NUM_QUESTIONS = 5
+NUM_QUESTIONS = 1
 
 # Subset laden
-examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
+examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS, force_reload=True)
 
 results = []
 

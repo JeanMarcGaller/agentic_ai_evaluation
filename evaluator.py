@@ -28,7 +28,6 @@ def evaluate_pairwise(question, responder, revisor):
         "coherence_revisor": coherence_eval.evaluate_strings(input=question, prediction=revisor),
     }
 
-    # Direkter Vergleich
     pairwise_result = pairwise_eval.evaluate_string_pairs(
         input=question,
         prediction=responder,
