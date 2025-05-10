@@ -32,7 +32,6 @@ agentic_ai_evaluation/
 └──  results.json # Output file containing evaluation results
 ```
 
-
 ---
 
 ## 🛠️ How It Works
@@ -51,7 +50,7 @@ agentic_ai_evaluation/
 - 🦜🔗 [LangChain](https://python.langchain.com)
 - 🦜🕸️ [LangGraph](https://langgraph.readthedocs.io)
 - 🦜🔨 [LangSmith](https://docs.smith.langchain.com/)
-- 🧠 OpenAI API
+- 🧠  [OpenAI API](https://openai.com/index/openai-api/)
 - 🤗 [Hugging Face Datasets](https://huggingface.co/docs/datasets)
 - 🔍 [Tavily](https://www.tavily.com)
 
@@ -93,7 +92,7 @@ This will:
 
 ## 🧪 Customization Ideas
 - Replace HotpotQA with NaturalQuestions or WebQuestions
-- Add support for more tools (e.g. calculator, Wikipedia search)
+- Add support for more tools (e.g. arXiv API, Wikipedia search)
 - Test different LLMs
 ---
 
@@ -113,7 +112,7 @@ This project includes components adapted from:
 
 
 - [LangGraph Reflexion Tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflexion/reflexion/) by the LangChain team,  
-  also used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+ used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 - [Edan Marco](https://github.com/emarco177), used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
   Original codebase: [LangGraph Reflexion Agent](https://github.com/emarco177/langgraph-course)
@@ -127,7 +126,7 @@ This project is licensed under the [Apache License 2.0](https://www.apache.org/l
 See the [LICENSE](./LICENSE) file for full license text and attribution details for third-party code reused or adapted in this project, including:
 
 - LangGraph Reflexion Tutorial (LangChain Team)
-- LangGraph Agentic Evaluations (Edan Marco)
+- LangGraph Reflexion Agent (Edan Marco)
 
 
 
