@@ -1,0 +1,195 @@
+[
+  {
+    "id": "5ac04a265542997d642959f1",
+    "question": "In which Navy was the single-engine BAE Systems Hawk operated?",
+    "answer": "Royal Navy",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Fleet Requirements and Aircraft Direction Unit",
+        "Fleet Requirements and Aircraft Direction Unit",
+        "BAE Systems Hawk"
+      ],
+      "sent_id": [
+        0,
+        2,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "BAE Systems Maritime \u2013 Maritime Services",
+        "BAE Systems AB",
+        "BAE Systems Land &amp; Armaments",
+        "BAE Systems Maritime \u2013 Naval Ships",
+        "BAE Systems Inc.",
+        "BAE Systems Hawk",
+        "McDonnell Douglas T-45 Goshawk",
+        "Fleet Requirements and Aircraft Direction Unit",
+        "BAE Systems Southeast Shipyards",
+        "Atlantic Marine"
+      ],
+      "sentences": [
+        [
+          "Maritime Services was originally formed as Fleet Support Limted (FSL), a joint venture between Vosper Thornycroft (now VT Group) and GEC-Marconi.",
+          " GEC's 50% share passed to its successor BAE Systems in 1999.",
+          " In July 2008 BAE Systems and VT Group merged their military shipbuilding businesses to form BVT Surface Fleet.",
+          " In 2009 this became BAE Systems Surface Ships, with complete ownership passing to BAE Systems and the company being renamed BAE Systems Surface Ships Support Limited.",
+          " In January 2012, BAE Systems Surface Ships Support was restructured, joining with parts of BAE Systems Insyte to become BAE Systems Maritime \u2013 Maritime Services."
+        ],
+        [
+          "BAE Systems AB is a Swedish defence company and a subsidiary of BAE Systems Land and Armaments, whose ultimate parent is the British defence contractor BAE Systems.",
+          " The company is a holding company for Land Systems H\u00e4gglunds AB and BAE Systems Bofors AB, and has no products of its own."
+        ],
+        [
+          "BAE Systems Land & Armaments is a wholly owned subsidiary of BAE Systems Plc.",
+          " and is responsible for the design, development and production of combat vehicles, ammunition, artillery systems, naval guns and missile launchers.",
+          " It is the largest such company in the world.",
+          " It was created on 24 June 2005, following the completion of BAE Systems' acquisition of United Defense in 2004 and its merger with BAE Systems Land Systems.",
+          " In 2007 BAE Systems acquired Armor Holdings adding to the size of Land & Armaments significantly."
+        ],
+        [
+          "BAE Systems Maritime \u2013 Naval Ships is a wholly owned subsidiary company of BAE Systems plc, specialising in naval surface shipbuilding and combat systems integration.",
+          " One of three divisions of BAE Systems Maritime, along with BAE Systems Maritime \u2013 Submarines and BAE Systems Maritime \u2013 Maritime Services, it is the largest shipbuilding company in the United Kingdom, one of the largest shipbuilders in Europe, and one of the world's largest builders of complex warships."
+        ],
+        [
+          "BAE Systems Inc. (formerly BAE Systems North America) is a wholly owned subsidiary of the British defence and aerospace company BAE Systems plc.",
+          " As per its Special Security Agreement, BAE Systems Inc. operates as a semi-autonomous business unit within BAE Systems controlled at a local level by American management."
+        ],
+        [
+          "The BAE Systems Hawk is a British single-engine, jet-powered advanced trainer aircraft.",
+          " It was first flown at Dunsfold, Surrey, in 1974 as the Hawker Siddeley Hawk, and subsequently produced by its successor companies, British Aerospace and BAE Systems, respectively.",
+          " It has been used in a training capacity and as a low-cost combat aircraft."
+        ],
+        [
+          "The McDonnell Douglas (now Boeing) T-45 Goshawk is a highly modified version of the British BAE Systems Hawk land-based training jet aircraft.",
+          " Manufactured by McDonnell Douglas (now Boeing) and British Aerospace (now BAE Systems), the T-45 is used by the United States Navy as an aircraft carrier-capable trainer."
+        ],
+        [
+          "The Fleet Requirements and Air Direction Unit (FRADU) was a unit of the Royal Navy's Fleet Air Arm operated by the contractor Serco Defence and Aerospace.",
+          " It was established in 1972.",
+          " It was most recently equipped with 13 BAE Systems Hawk T1 advanced jet trainer aircraft on lease to the Royal Navy from the Royal Air Force, based at RNAS Culdrose in Cornwall.",
+          " Two of these aircraft were permanently detached to Naval Flying Standards Flight (fixed wing) at RNAS Yeovilton where they are flown by RN pilots, but maintained by Serco engineers."
+        ],
+        [
+          "BAE Systems Southeast Shipyards is a division of BAE Systems Ship Repair, which itself is a subsidiary of BAE Systems Inc., the North American arm of British defense conglomerate BAE Systems.",
+          " It was formed through the acquisition of Atlantic Marine from the J.F. Lehman and Company private equity firm in May 2010 for $352\u00a0million."
+        ],
+        [
+          "Atlantic Marine was an American shipbuilding and construction company.",
+          " It operated two shipyards, one in Mobile, Alabama and the original corporate location, a smaller one in Jacksonville, Florida where its headquarters was located.",
+          " It was acquired by BAE Systems in May 2010 for $352\u00a0million.",
+          " BAE Systems renamed the former company BAE Systems Southeast Shipyards, a division of BAE Systems Inc."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a7db0a05542991319bc93f5",
+    "question": "What college in the Blue Ridge Assembly Historic District  emphasized the study of art?",
+    "answer": "Black Mountain College",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Blue Ridge Assembly Historic District",
+        "Blue Ridge Assembly Historic District",
+        "Black Mountain College"
+      ],
+      "sent_id": [
+        0,
+        6,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Blue Ridge Assembly Historic District",
+        "Blue Ridge Depot",
+        "Ferrum College",
+        "Glasgow Historic District",
+        "Virginia Central Railroad",
+        "Blue Ridge School (North Carolina)",
+        "Blue Ridge National Heritage Area",
+        "Blue Ridge Tunnel",
+        "Black Mountain College",
+        "River Ridge District"
+      ],
+      "sentences": [
+        [
+          "Blue Ridge Assembly Historic District is a national historic district located near Black Mountain, Buncombe County, North Carolina.",
+          " The district encompasses 29 contributing buildings and 1 contributing object associated with the Blue Ridge Assembly, conference center of the Young Men's Christian Association.",
+          " The main building is Eureka Hall (originally named Robert E. Lee Hall, but renamed in 2015) designed by Louis E. Jallade.",
+          " It was built in 1911-1912, and is a three-story, seven bay, frame building with a full-height octastyle portico.",
+          " Also located on the large central courtyard are the Gymnasium (c. 1915), Asheville Hall (1926), Abbott Hall (1927), and College Hall (c. 1928).",
+          " Other notable buildings include the Martha Washington Residence (c. 1914), Craft and Child Care Center (c. 1925), and 19 frame cottages (1913-1927).",
+          " Black Mountain College was founded here in 1933 and operated on the site until 1941."
+        ],
+        [
+          "Blue Ridge Depot is a historic train depot in Blue Ridge, Georgia.",
+          " It was added to the National Register of Historic Places on July 15, 1982.",
+          " It is located on Depot Street.",
+          " The current building was constructed in 1906.",
+          " The depot is the starting point of the Blue Ridge Scenic Railway."
+        ],
+        [
+          "Ferrum College is a private college in Ferrum, Virginia, USA, in the scenic Blue Ridge Mountains of Southwest Virginia.",
+          " Ferrum College has the second-oldest environmental science program in the nation and was ranked 41st by \"U.S. News & World Report\" in Comprehensive Colleges\u2013Bachelor's (South) for 2006.",
+          " The college itself is on the Virginia Historic Register.",
+          " Roberts Hall and Beckham Hall are part of the Ferrum College Historic District and listed in the Virginia Landmarks Register and the National Register of Historic Places."
+        ],
+        [
+          "Glasgow Historic District is a national historic district located at Glasgow, Rockbridge County, Virginia.",
+          " The district encompasses 43 contributing buildings, 3 contributing sites, and 1 contributing structure in the central business district of the town of Glasgow.",
+          " It includes a variety of residential, commercial, and institutional buildings dating from the 1820s to 1920s, with most structures from the 1890s.",
+          " Notable buildings include the Rebecca Salling House (c. 1920), First Baptist Church, the former Glasgow Baptist Church, St. John's Episcopal Church, Blue Ridge Building (c. 1890), and Glasgow Masonic Temple (1891-1892)."
+        ],
+        [
+          "The Virginia Central Railroad was an early railroad in the U.S. state of Virginia that operated between 1850 and 1868 from Richmond westward for 206 mi to Covington.",
+          " Chartered in 1836 as the Louisa Railroad by the Virginia General Assembly, the railroad began near the Richmond, Fredericksburg and Potomac Railroad's line and expanded westward to Orange County, reaching Gordonsville by 1840.",
+          " In 1849, the Blue Ridge Railroad was chartered to construct a line over the Blue Ridge Mountains for the Louisa Railroad which reached the base of the Blue Ridge in 1852.",
+          " After a decision from the U.S. Supreme Court, the Louisa Railroad was allowed to expand eastward from a point near Doswell to Richmond."
+        ],
+        [
+          "Blue Ridge School is a public combined Elementary, Middle, and High School located in Cashiers, North Carolina and is part of the Jackson County Public Schools System.",
+          " It is the smallest school in the district and resulted from the consolidation of the larger Glenville Elementary and High School and the smaller Cashiers Elementary School in 1975.",
+          " The building consists of three 100' diameter round \"pods,\" which have no permanent partitions, with one hallway for each radiating into a central pod that houses a lobby and the school's front offices.",
+          " The school is very similar to Fairview Elementary School in Sylva, but Blue Ridge is smaller than Fairview, no stage and the library isn't in a pod, as well as having grades 7-12 in two detached classroom buildings, making up the \"Virtual Early College\" component of the school.",
+          " The other schools with a high school program in the county are Smoky Mountain High School and Jackson County Early College.",
+          " Blue Ridge serves the towns of Cashiers and Glenville as well as the communities of Sapphire, Fairfield, and Whiteside Cove with public education."
+        ],
+        [
+          "The Blue Ridge National Heritage Area is a federally designated National Heritage Area encompassing the twenty-five westernmost counties of North Carolina, which are associated with the Blue Ridge Mountains.",
+          " The designation provides a framework for the promotion and interpretation of the area's cultural and historic character, and the preservation of the natural and built environment.",
+          " The National Heritage Area includes the North Carolina portions of Great Smoky Mountains National Park and the Blue Ridge Parkway.",
+          " Other attractions include Mount Mitchell in Pisgah National Forest, Nantahala National Forest and the North Carolina portion of the Appalachian Trail.",
+          " The Qualla Boundary of the Eastern Band of Cherokee Indians is also within the National Heritage Area.",
+          " The area's musical heritage and folk craftsmanship are also recognized by the National Heritage Area."
+        ],
+        [
+          "The Blue Ridge Tunnel (also known as the Crozet Tunnel) is a historic railroad tunnel built during the construction of the Blue Ridge Railroad in the 1850s.",
+          " The tunnel was the westernmost and longest of four tunnels engineered by Claudius Crozet to cross the Blue Ridge Mountains at Rockfish Gap in central Virginia.",
+          " At 4237 ft in length, the tunnel was the longest tunnel in the United States at the time of its completion in 1858.",
+          " The tunnel was used by the Virginia Central Railroad from its opening to 1868, when the line was reorganized as the Chesapeake and Ohio Railroad (renamed Chesapeake and Ohio Railway in 1878).",
+          " The Chesapeake and Ohio routed trains through the tunnel until it was abandoned and replaced by a new tunnel in 1944.",
+          " The new tunnel was named the \"Blue Ridge Tunnel\" as well, although the original tunnel still remains abandoned nearby.",
+          " The old Blue Ridge Tunnel has since been named a Historic Civil Engineering Landmark."
+        ],
+        [
+          "Black Mountain College, a school founded in 1933 in Black Mountain, North Carolina (near Asheville, North Carolina), emphasized the study of art as central to a liberal arts education.",
+          " It was organized around John Dewey's principles of education.",
+          " Many of the school's faculty were influential in the arts or other fields, or went on to become influential, as did their students.",
+          " Although notable during its short life, the school closed in 1957 after 24 years.",
+          " The history and legacy of Black Mountain College are preserved and extended through Black Mountain College Museum + Arts Center, in downtown Asheville, NC."
+        ],
+        [
+          "The AA River Ridge District is a district in Region IV of the Virginia High School League which was formed for the 2003-2004 school year out of the AA Blue Ridge District in Region III.",
+          " In the 2002-2003 school year, the student body of Group AAA Cave Spring High School in Roanoke County was split into two Group AA sized schools with the opening of Hidden Valley High School.",
+          " These two new schools gave the Blue Ridge District eleven members that year except in football, where Cave Spring remained in AAA and Hidden Valley played a limited, solely non-district schedule.",
+          " The district was separated for the 2003-2004 school year when both schools played a full schedule as AA members."
+        ]
+      ]
+    }
+  }
+]
