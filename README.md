@@ -37,12 +37,11 @@ agentic_ai_evaluation/
 
 ## 🛠️ How It Works
 
-1. **Load Questions**: A small sample from the HotpotQA dataset is loaded.
-2. **Responder Agent**: Attempts to answer each question, using internal knowledge or calling the search tool.
-3. **Revisor Agent**: Improves the initial answer based on the search results.
-4. **Evaluation**: Both answers are evaluated along several dimensions, and a pairwise judgment is made.
-5. **Save Results**: Everything is saved to `results.json`.
-
+1. 📥 **Load questions** from a small sample of the HotpotQA dataset
+2. 🧞‍♂️ **Responder agent** generates an initial answer using internal knowledge or Tavily web search
+3. 🧞 **Revisor agent** critiques and improves the initial response using new context or tool results
+4. ⚖️ **LLM evaluator** scores both answers on multiple criteria and performs a pairwise comparison
+5. 💾 **Save results** to `results.json` for analysis or reporting
 ---
 
 ## 🧰 Technologies Used
