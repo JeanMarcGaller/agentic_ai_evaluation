@@ -88,6 +88,19 @@ This will:
 - Run them through the agentic QA system 
 - Save evaluations to results.json file
 
+## 📊 Example Results
+
+| # | Question                                      | Responder Answer                 | Revisor Answer                    | Winner | Helpfulness (R/V) | Relevance (R/V) | Conciseness (R/V) | Coherence (R/V) |
+|---|------------------------------------------------------------|----------------------------------|-----------------------------------|--------|-------------------|------------------|--------------------|------------------|
+| 0 | The Polar Bears featuring the voice of Armie H...         | He voices the character Jackson Storm in... | In Cars 3, Armie Hammer provides the voice... | None   | Y / Y             | Y / Y            | Y / Y              | Y / Y            |
+| 1 | What date was the movie originally supposed to...          | The film originally slated for release on... | The film was originally scheduled to be re... | A      | Y / Y             | Y / Y            | Y / Y              | Y / Y            |
+
+Column Key:
+
+- R/V: Responder / Revisor 
+- Y: Satisfies the evaluation criterion (as judged by the LLM evaluator)
+- Winner: Either A, B, or None for tie
+
 ---
 
 ## 🧪 Customization Ideas
@@ -128,7 +141,7 @@ See the [LICENSE](./LICENSE) file for full license text and attribution details 
 ---
 
 ## 📬 Contact
-
+This repository is part of an academic project and is provided for demonstration and review purposes only.  
 If you are interested in this work, have questions or recommendations, feel free to contact me via GitHub or email: 
 
 Jean-Marc Galler
