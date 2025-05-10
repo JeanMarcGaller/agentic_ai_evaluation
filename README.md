@@ -10,11 +10,12 @@ LLM-powered evaluators.
 
 ## 🔧 Features
 
-- **Multi-agent LLM pipeline**: Responder and Revisor roles
-- **Tool-augmented reasoning**: Uses Tavily web search when needed
-- **Self-reflective answer generation**: Critiques and iterates on answers
-- **LLM-based evaluation**: Evaluates helpfulness, relevance, coherence, and conciseness
-- **Pairwise comparison**: Automatically chooses the better answer
+- 🧞‍♂️ **Responder** and 🧞 **Revisor** agents in a multi-agent LLM pipeline
+- 🔍 **Tool-augmented reasoning** using Tavily Web Search when internal knowledge is insufficient
+- 🪞 **Self-reflective answering**, where agents critique and iteratively refine their responses
+- ⚖️ **LLM-as-a-judge** evaluating answers based on helpfulness, relevance, coherence, and conciseness
+- 🤝 **Pairwise comparison** to determine which answer is better overall
+
 
 ---
 
@@ -29,7 +30,7 @@ agentic_ai_evaluation/
 ├── evaluator.py # Uses GPT-4 to evaluate answer quality
 ├── schemas.py # Defines structured outputs and tool schemas
 ├── load_data.py # Loads and samples HotpotQA questions
-└──  results.json # Output file containing evaluation results
+└── results.json # Output file containing evaluation results
 ```
 
 ---
