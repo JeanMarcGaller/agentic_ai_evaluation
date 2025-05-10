@@ -1,0 +1,181 @@
+[
+  {
+    "id": "5add3acb5542990dbb2f7ddc",
+    "question": "Whose real-life story was the inspiration of the film which included the song \"We All Die Young\"?",
+    "answer": "Tim \"Ripper\" Owens",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "We All Die Young",
+        "We All Die Young",
+        "Rock Star (2001 film)",
+        "Rock Star (2001 film)"
+      ],
+      "sent_id": [
+        0,
+        2,
+        0,
+        1
+      ]
+    },
+    "context": {
+      "title": [
+        "We All Die Young",
+        "The Band Perry (album)",
+        "Rock Star (2001 film)",
+        "Do and Die",
+        "Francis L. Sampson",
+        "Rather Die Young",
+        "The French Connection (film)",
+        "The Mommies (comedy duo)",
+        "Maria Anne Hirschmann",
+        "I Can Make You Love Me"
+      ],
+      "sentences": [
+        [
+          "\"We All Die Young\" is a song by Michael Matijevic of Steelheart, and Kenny Kanowski formerly of Steelheart.",
+          " It is the first song from the 1996 album \"Wait\".",
+          " The song was covered by the fictional band Steel Dragon in the 2001 film \"Rock Star\", with Miljenko Matijevic on vocals, Zakk Wylde on guitar, Jeff Pilson on bass and Jason Bonham on drums.",
+          " For the movie, Matijevic performed the vocals for Mark Wahlberg's character, Chris \"Izzy\" Cole."
+        ],
+        [
+          "The Band Perry is the self-titled debut album of the American country music group The Band Perry.",
+          "The album includes five songs from the band's digital EP \"The Band Perry EP\", which was released in April 2010.",
+          " The album has produced five singles: \"Hip to My Heart\", \"If I Die Young\", \"You Lie\", \"All Your Life\", and \"Postcard from Paris\".",
+          " Of these, \"If I Die Young\" and \"All Your Life\" were number one hits on the \"Billboard\" Hot Country Songs chart."
+        ],
+        [
+          "Rock Star is a 2001 American musical comedy-drama film directed by Stephen Herek and starring Mark Wahlberg and Jennifer Aniston.",
+          " It tells the story of Chris \"Izzy\" Cole, a tribute band singer whose ascendance to the position of lead vocalist of his favorite band was inspired by the real-life story of Tim \"Ripper\" Owens, singer in a Judas Priest tribute band who was chosen to replace singer Rob Halford when he left the band."
+        ],
+        [
+          "Do and Die : The Chittagong Uprising 1930\u201334 is a 1999 historical non-fiction book written by the Indian author Manini Chatterjee.",
+          " The book tells the real-life story of revolutionary leader Surya Sen and his role in the Chittagong armoury raid."
+        ],
+        [
+          "Father (Major General) Francis L. Sampson, USA (February 29, 1912 \u2013 January 28, 1996) was a Catholic priest from Archdiocese for the Military Services and an American Army officer who served as the 12th Chief of Chaplains of the United States Army from 1967 to 1971.",
+          " Notably, his real-life story of rescuing a young soldier became the inspiration for the film \"Saving Private Ryan\"."
+        ],
+        [
+          "\"Rather Die Young\" is a song recorded by American singer Beyonc\u00e9 for her fourth studio album, \"4\" (2011).",
+          " Composed by Beyonc\u00e9, Jeff Bhasker, Luke Steele, the song's development was motivated by the fact that Beyonc\u00e9 wanted a song that would help people through both their painful and happy moments.",
+          " \"Rather Die Young\" is an R&B-soul power ballad that is instrumentally complete with synthesizers, a piano, a strummy guitar, and heavy drums, which were inspired by the work of the American band Earth, Wind & Fire.",
+          " Lyrically, the song talks about the inability to fight what the heart wants.",
+          " The female protagonist sings to an indifferent love interest, whom she likens to American actor James Dean and tells him that she prefers to die rather than live without him."
+        ],
+        [
+          "The French Connection is a 1971 American crime thriller film directed by William Friedkin and produced by Philip D'Antoni.",
+          " It stars Gene Hackman, Fernando Rey, and Roy Scheider.",
+          " The film was adapted and fictionalized by Ernest Tidyman from the 1969 non-fiction book by Robin Moore.",
+          " It tells the story of New York Police Department detectives Jimmy \"Popeye\" Doyle and Buddy \"Cloudy\" Russo, whose real-life counterparts were Narcotics Detectives Eddie Egan and Sonny Grosso.",
+          " Don Ellis scored the film."
+        ],
+        [
+          "The Mommies is the name of an American female comedy duo whose real-life tales of suburban life, domestication, family, marriage and other odds and ends, would serve as their comedic trademark."
+        ],
+        [
+          "Maria Anne Hirschmann is a teacher in America whose real-life story was adapted in the Hansi, the Girl who Loved the Swastika, a comic published by Spire Christian Comics."
+        ],
+        [
+          "I Can Make You Love Me, also known as Stalking Laura, is an American made-for-television film starring Richard Thomas and Brooke Shields.",
+          " The film is based on the real-life story of American mass murderer Richard Farley, a former employee of ESL Incorporated whose romantic obsession and subsequent stalking of co-worker Laura Black culminated in the mass murder of several co-workers at ESL's headquarters in California, resulting in the first anti-stalking laws to be enacted in the United States.",
+          " The first half of the film covers the events of the stalking and Black's unrequited love that led to the shootings, while the second half deals with Farley's rampage on the ESL offices."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a81c90a5542990a1d231eb4",
+    "question": "Are the bands Tiger Please and Black Rebel Motorcycle Club from the same country? ",
+    "answer": "no",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Tiger Please",
+        "Black Rebel Motorcycle Club"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Tiger Please",
+        "Taxi Violence",
+        "Black Rebel Motorcycle Club discography",
+        "Black Rebel Motorcycle Club",
+        "Skybombers",
+        "Masaki Liu",
+        "Dan Russell (artist manager)",
+        "Black Rebel Motorcycle Club: Live",
+        "Kav Sandhu",
+        "Vagrant Records"
+      ],
+      "sentences": [
+        [
+          "Tiger Please is an Indie / Alternative five-piece band from Cardiff, Wales.",
+          " The band formed in August 2008.",
+          " The band's influences are U2, Sigur R\u00f3s, Kings of Leon, John Mayer and Counting Crows.",
+          " They signed with Walnut Tree Records in 2009 and released their debut EP \"They Don't Change Under Moonlight\". \"",
+          "Kerrang!",
+          "\" magazine, \"Rock Sound\" magazine, and \"Classic Rock\" magazine praised the EP and featured the band on the \"Rock Sound\" and \"Classic Rock\" cover-mount albums.",
+          " The band toured with Kids In Glass Houses, InMe, Twin Atlantic and Funeral For A Friend."
+        ],
+        [
+          "Taxi Violence is a South African rock band from Cape Town.",
+          " The group consists of George van der Spy (vocals), Jason Ling (bass), Louis Nel (drums), Rian Zietsman (guitar) and Loedi van Renen (guitar/bass).",
+          " They have released five studio albums: \"Untie Yourself\" (2006), \"The Turn\" (2009), \"\" (2011), \"Soul Shake\" (2013), and \"Tenfold\" (2014).",
+          " They are influenced by bands such as: Black Rebel Motorcycle Club, Queens of the Stone Age, Led Zeppelin, Jimi Hendrix, Nirvana, and Pearl Jam."
+        ],
+        [
+          "This is discography of the American rock band Black Rebel Motorcycle Club"
+        ],
+        [
+          "Black Rebel Motorcycle Club (often abbreviated as BRMC) is an American rock band from San Francisco, California.",
+          " The group consists of Peter Hayes (vocal, guitar, harmonica), Robert Levon Been (vocal, bass, guitar), and Leah Shapiro (drums).",
+          " Former drummer Nick Jago left the band in 2008 to focus on his solo project."
+        ],
+        [
+          "Skybombers is a rock band from Melbourne.",
+          " They were formed as Collusion by Scotch College students Hugh Gurney, Ravi Sharma, Scott McMurtrie and Sam Bethune.",
+          " They later changed to Skybombers, a name inspired by an icy-pole.",
+          " Their placing a demo song \"It Goes Off\" on MySpace brought them their first TV appearances.",
+          " They had early international attention when \"It Goes Off\" of their EP \"Sirens\" made the most-played list on L.A.'s Indie 103.1 and played a showcase gig at The Viper Room.",
+          " They have toured Australia, Japan and USA.",
+          " and their debut album \"Take Me To Town\" was recorded in L.A. with Rick Parker (Black Rebel Motorcycle Club).",
+          " The band made their way on video game media in 2007 when \"It Goes Off\" appeared on the soundtrack for \"Burnout Dominator\", the song later reappeared on \"Burnout Paradise\" in early 2008.",
+          " Black Carousel was recorded in LA, again with Rick Parker at the helm."
+        ],
+        [
+          "Masaki Liu, sometimes referred to as \"Saki\", is the engineer and producer operating One Way Studio, a digital recording studio in Benicia, California.",
+          " Masaki has recorded and produced music for many bands, including Five Iron Frenzy, Black Rebel Motorcycle Club, The Echoing Green, The W's and Yellow Second."
+        ],
+        [
+          "Dan Russell is a musician and songwriter in addition to an artist manager and advocate, musician, songwriter, concert promoter, record producer and music supervisor for television and film.",
+          " A graduate of Walpole High School in Massachusetts and later Barrington College, Russell is known for managing both the American rock band The Call and songwriter Michael Been and has worked in various capacities with such artists as Black Rebel Motorcycle Club, Sam Philips, Mark Heard, U2 and Robin Lane, Ramona Silver, Vigilantes of Love, among others."
+        ],
+        [
+          "Black Rebel Motorcycle Club: Live is a DVDs of Black Rebel Motorcycle Club concert footage captured from three sold out shows in Berlin, Dublin and Glasgow, and chronicles the end of the band's 2007 tour in support of \"Baby 81\".",
+          " Additionally, it includes intimate, behind-the-scenes footage, glimpses into the making of 2005's Howl and is rounded out with a bonus live album featuring 14 songs."
+        ],
+        [
+          "KAV (Kav Sandhu) is a British musician from Leicester UK, based in Los Angeles.",
+          " KAV played guitar with British band Happy Mondays for 4 years after helping reform the band with frontman Shaun Ryder in 2004.",
+          " He launched his solo project under moniker \"KAV\" in 2008 with long-time friend and drummer Jim (James) Portas.",
+          " His solo material has been compared by the media to everyone from Iggy & The Stooges, Black Rebel Motorcycle Club, Primal Scream, Kasabian, The Rolling Stones & Bob Dylan.",
+          " He plays live with a full live band, which sometimes features guest musicians from various bands."
+        ],
+        [
+          "Vagrant Records is an American record label based in California.",
+          " It was founded in 1995 by Rich Egan and Jon Cohen.",
+          " The label focuses on rock but features artists in a variety of other genres including folk, soul, electronic, and pop.",
+          " It is home to artists such as The 1975, Death Spells, Eels, Bad Suns, Edward Sharpe and the Magnetic Zeroes, CRUISR, Active Child, PJ Harvey, School of Seven Bells, Black Rebel Motorcycle Club, James Vincent McMorrow, Black Joe Lewis, Wake Owl, Blitzen Trapper, and Bombay Bicycle Club.",
+          " Originally, Vagrant Records was mostly focused on emo bands such as Dashboard Confessional, Saves the Day, The Get Up Kids, and Alkaline Trio."
+        ]
+      ]
+    }
+  }
+]

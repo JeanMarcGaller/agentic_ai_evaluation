@@ -1,0 +1,276 @@
+[
+  {
+    "id": "5ab2a01d5542992953946778",
+    "question": "What kind of novelists were both Robert Stone and Truman Capote?",
+    "answer": "American",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Robert Stone (novelist)",
+        "Truman Capote"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Robert Stone (novelist)",
+        "Truman Capote",
+        "Dallas John Baker",
+        "Capote (film)",
+        "Truman Capote Award for Literary Criticism",
+        "Truman Capote Literary Trust",
+        "Trilogy (film)",
+        "A Christmas Memory",
+        "One Christmas",
+        "Infamous (film)"
+      ],
+      "sentences": [
+        [
+          "Robert Stone (August 21, 1937 \u2013 January 10, 2015) was an American novelist."
+        ],
+        [
+          "Truman Garcia Capote ( ; born Truman Streckfus Persons, September 30, 1924 \u2013 August 25, 1984) was an American novelist, screenwriter, playwright, and actor.",
+          " Many of Capote's short stories, novels, plays, and nonfiction are recognized as literary classics, including the novella \"Breakfast at Tiffany's\" (1958) and the true crime novel \"In Cold Blood\" (1966), which he labeled a \"nonfiction novel\".",
+          " At least 20 films and television dramas have been produced of Capote novels, stories, and plays."
+        ],
+        [
+          "Dallas John Baker (born Dallas John Angguish Baker on 19 February 1968) is an Australian writer and academic noted for poetry, short stories and travel writing whose work deals with themes of alienation, otherness and sexuality.",
+          " He is also known as Dallas Angguish, the name he used as a performance poet beginning in the 1980s.",
+          " He has been repeatedly compared to Truman Capote and to David Sedaris.",
+          " Angguish, who is openly gay, has also written plays and screenplays some of which have been produced.",
+          " He is known for a lyrical style that foregrounds feeling and the use of powerful descriptive passages.",
+          " Due to his evocative short stories, he has been variously described as Truman Capote's literary heir and as reminiscent of Carson McCullers, the much lauded Southern Gothic writer.",
+          " His prose poetry has appeared in the journals Text, Lodestar Quarterly, Retort Magazine and Polari journal.",
+          " His short stories have appeared in the book anthologies \"\"Dumped\"\", \"\"Bend, Don't Shatter\"\",\"\"Sensual Travels\"\" and others.",
+          " His collection of memoir and travel writing \"\"Anywhere But Here\"\", released in February 2006, received very strong reviews.",
+          " In particular Graeme Aitken of Australian gay magazine DNA wrote:"
+        ],
+        [
+          "Capote is a 2005 biographical film about Truman Capote, following the events during the writing of Capote's non-fiction book \"In Cold Blood\".",
+          " Philip Seymour Hoffman won several awards, including the Academy Award for Best Actor, for his critically acclaimed portrayal of the title character.",
+          " The film was based on Gerald Clarke's biography \"Capote\" and was directed by Bennett Miller.",
+          " It was filmed mostly in Manitoba in the autumn of 2004.",
+          " It was released September 30, 2005, to coincide with Truman Capote's birthday."
+        ],
+        [
+          "The Truman Capote Award for Literary Criticism is awarded for literary criticism by the University of Iowa on behalf of the Truman Capote Literary Trust.",
+          " The value of the award is $30,000 (USD), and is said to be the largest annual cash prize for literary criticism in the English language.",
+          " The formal name of the prize is the Truman Capote Award for Literary Criticism in Memory of Newton Arvin, commemorating both Capote and his friend Newton Arvin, who was a distinguished critic and Smith College professor until he lost his job in 1960 after his homosexuality was publicly exposed."
+        ],
+        [
+          "The Truman Capote Literary Trust is an American charitable trust established in 1994 by Truman Capote's literary executor, Alan U. Schwartz, pursuant to Capote's will."
+        ],
+        [
+          "Trilogy (also released as Truman Capote's Trilogy) is a 1969 American anthology drama film directed by Frank Perry and written by Truman Capote.",
+          " It was listed to compete at the 1968 Cannes Film Festival, but the festival was cancelled due to the events of May 1968 in France."
+        ],
+        [
+          "\"A Christmas Memory\" is a short story by Truman Capote.",
+          " Originally published in \"Mademoiselle\" magazine in December 1956, it was reprinted in \"The Selected Writings of Truman Capote\" in 1963.",
+          " It was issued in a stand-alone hardcover edition by Random House in 1966, and it has been published in many editions and anthologies since."
+        ],
+        [
+          "\"One Christmas\" is an autobiographical short story by Truman Capote, portions of which were originally published in a 1982 issue of the \"Ladies\u2019 Home Journal\" magazine.",
+          " It was shortly thereafter published in 1983 as a book by Random House, Inc and was the final work published by Capote before his death in 1984.",
+          " The story is an emotional childhood tale about the nature of deception and alcoholism.",
+          " It is Capote\u2019s last short story and a sequel to \"The Thanksgiving Visitor\"."
+        ],
+        [
+          "Infamous is a 2006 American drama film based on the 1997 book by George Plimpton \"Truman Capote: In Which Various Friends, Enemies, Acquaintances, and Detractors Recall His Turbulent Career\".",
+          " It covers the period from the late 1950s through the mid-1960s, during which Truman Capote researched and wrote his bestseller \"In Cold Blood\"."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5ae0d3da5542990adbacf66d",
+    "question": "Which Prince of Bismarcks EMS dispatch incited France to declare the Franco-Prussian War in July 1870",
+    "answer": "Otto Eduard Leopold",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Ems Dispatch",
+        "Ems Dispatch",
+        "Otto von Bismarck"
+      ],
+      "sent_id": [
+        0,
+        1,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Franco-Prussian War",
+        "Kashubian diaspora",
+        "French ironclad Marengo",
+        "North German federal election, August 1867",
+        "1870\u201371 Commemorative Medal",
+        "Ems Dispatch",
+        "Otto von Bismarck",
+        "Prince Robert, Duke of Chartres",
+        "Army of Ch\u00e2lons",
+        "La Promenade (Renoir)"
+      ],
+      "sentences": [
+        [
+          "The Franco-Prussian War or Franco-German War (German: \"Deutsch-Franz\u00f6sischer Krieg\" , French: \"Guerre franco-allemande\" ), often referred to in France as the War of 1870 (19 July 1870 \u2013 10 May 1871), was a conflict between the Second French Empire of Napoleon III and the German states of the North German Confederation led by the Kingdom of Prussia.",
+          " The conflict was caused by Prussian ambitions to extend German unification and French fears of the shift in the European balance of power that would result if the Prussians succeeded.",
+          " Some historians argue that the Prussian chancellor Otto von Bismarck deliberately provoked a French attack in order to draw the independent southern German states\u2014Baden, W\u00fcrttemberg, Bavaria and Hesse-Darmstadt\u2014into an alliance with the North German Confederation dominated by Prussia, while others contend that Bismarck did not plan anything and merely exploited the circumstances as they unfolded."
+        ],
+        [
+          "The Kashubian diaspora resulted from the emigration of Kashubians, in two waves occurring in the second half of the 19th century.",
+          " The majority of Kashubian emigrants settled in the United States; others emigrated to Canada and Brazil.",
+          " An online genealogical project, \"The Great Kashubian Migration,\" is devoted to tracking their settlement patterns.",
+          " Their reasons for emigration varied.",
+          " Until the Franco-Prussian War, Kashubians emigrated primarily for economic reasons.",
+          " After the Franco-Prussian War and especially due to the Kulturkampf, Kashubian emigration accelerated as socio-political factors came into play.",
+          " In his 1899 book, \"Statystyka ludnosci kaszubskiej\" (\"Statistics of the Kashubian Population\"), the Kashubophile linguist and sociologist Stefan Ramult estimated that 130,700 Kashubians were living in the Americas."
+        ],
+        [
+          "Marengo was a wooden-hulled, armored frigate of the \"Oc\u00e9an\"\u00a0class , built for the French Navy in the mid to late 1860s.",
+          " The ship was running her sea trials in July 1870 when the Franco-Prussian War began and was immediately placed in until after the war was over.",
+          " \"Marengo\" participated in the French occupation of Tunisia in 1881 and was flagship of the Northern Squadron in 1891 when it made port visits in Britain and Russia.",
+          " She was sold for scrap in 1896."
+        ],
+        [
+          "Elections to the Reichstag of the North German Confederation were held on 31 August 1867, with run-off elections during the following weeks.",
+          " The National Liberal Party continued to serve as the largest party, winning 81 seats.",
+          " These were the first regular and last elections during the North German Confederation.",
+          " In July 1870 the Reichstag members decided not to hold new elections during the Franco-Prussian war, in spite of the three-year period."
+        ],
+        [
+          "The 1870\u201371 Commemorative Medal (French: \"M\u00e9daille Comm\u00e9morative 1870\u201371\" , Dutch: \"Herinneringsmedaille 1870\u201371\" ) was a Belgian campaign medal established by royal decree on 20 September 1911 and awarded to all members of the Belgian Army who were mobilized during the period from 15 July 1870 to 5 March 1871 during the Franco-Prussian War."
+        ],
+        [
+          "The Ems Dispatch (French: \"D\u00e9p\u00eache d'Ems\" , German: \"Emser Depesche\" ), sometimes called the Ems Telegram, incited France to declare the Franco-Prussian War in July 1870.",
+          " The actual dispatch was an internal message from the Prussian King's vacationing site to Otto von Bismarck in Berlin, reporting demands made by the French ambassador; it was Bismarck's released statement to the press that became known as \"Ems Dispatch\".",
+          " The name referred to Bad Ems, a resort spa east of Koblenz on the Lahn river, then situated in Hesse-Nassau, a new possession of Prussia."
+        ],
+        [
+          "Otto Eduard Leopold, Prince of Bismarck, Duke of Lauenburg (1 April 1815 \u2013 30 July 1898), known as Otto von Bismarck (] ), was a conservative Prussian statesman who dominated German and European affairs from the 1860s until 1890.",
+          " In the 1860s, he engineered a series of wars that unified the German states, deliberately excluding Austria, into a powerful German Empire under Prussian leadership.",
+          " With that accomplished by 1871, he skillfully used balance of power diplomacy to maintain Germany's position in a Europe which, despite many disputes and war scares, remained at peace.",
+          " For historian Eric Hobsbawm, it was Bismarck who \"remained undisputed world champion at the game of multilateral diplomatic chess for almost twenty years after 1871, [and] devoted himself exclusively, and successfully, to maintaining peace between the powers\".",
+          " However, his annexation of Alsace-Lorraine gave new fuel to French nationalism and promoted Germanophobia in France.",
+          " This helped set the stage for the First World War."
+        ],
+        [
+          "Prince Robert Philippe Louis Eug\u00e8ne Ferdinand of Orl\u00e9ans, Duke of Chartres (November 9, 1840 \u2013 December 5, 1910) was the son of Prince Ferdinand Philippe, Duke of Orl\u00e9ans and thus grandson of King Louis-Philippe of France.",
+          " He fought for the Union in the American Civil War, and then for France in the 1870 Franco-Prussian War.",
+          " In 1863 he married his cousin Princess Fran\u00e7oise of Orl\u00e9ans in Kingston upon Thames \u2013 she was the daughter of Fran\u00e7ois, Prince of Joinville.",
+          " In 1886, he was exiled from France."
+        ],
+        [
+          "The Army de Ch\u00e2lons (French: \"Arm\u00e9e de Ch\u00e2lons (1870)\" ) was a French military unit that fought during the Franco-Prussian War of 1870.",
+          " Formed in the camp of Ch\u00e2lons on August 17, 1870 from elements of the Army of the Rhin (1870) (French: \"\" ) which the unit was issued from, the Army of Ch\u00e2lons was engaged in combats of Beaumont and Sedan while disappearing during the capitulation of September 2, 1870."
+        ],
+        [
+          "The forest was a popular landscape subject for nineteenth-century French artists, particularly the forest of Fontainebleau.",
+          " Before Renoir, Claude Monet (1840\u20131926) painted \"Bazille and Camille (Study for \"D\u00e9jeuner sur l'Herbe\")\" (1865), showing a couple together in the forest.",
+          " In 1869, Renoir and Monet spent time painting together at La Grenouill\u00e8re.",
+          " By 1870, Renoir was living in Louveciennes with his mother.",
+          " Throughout this decade, the eighteenth-century rococo art movement was back in style and Renoir embraced it.",
+          " France declared war against Germany on July 19, 1870, starting the Franco-Prussian War.",
+          " Renoir was conscripted and served four months in the cavalry but never saw combat."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5ac2660d55429951e9e685a1",
+    "question": "which American actress, singer, and songwriter too the tour of  I Stand tour ",
+    "answer": "Idina Kim Menzel",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "I Stand tour",
+        "Idina Menzel"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Divine Intervention Tour",
+        "List of Usher live performances",
+        "Summers Last Stand Tour",
+        "I Stand tour",
+        "Idina Menzel",
+        "Barefoot at the Symphony Tour",
+        "The Sun Comes Out World Tour",
+        "List of Sy Smith concert tours",
+        "MDNA World Tour (album)",
+        "The Girlie Show World Tour"
+      ],
+      "sentences": [
+        [
+          "The Divine Intervention Tour was the tenth concert tour by American singer, songwriter, actress, comedian, and film producer Bette Midler.",
+          " The tour started on May 8, 2015 in Hollywood, Florida, and concluded on July 19, 2015 in London, England.",
+          " The tour traveled through North America, specifically the United States and Canada, and Europe, specifically parts of England and Scotland."
+        ],
+        [
+          "American singer Usher has embarked on five concert tours, four of which have been worldwide.",
+          " He first served as an opening act for Mary J. Blige, Janet Jackson, and Puff Daddy from 1997\u20131999.",
+          " His solo tour debut, 8701 Evolution Tour began in North America then expanded to Europe and visiting Africa, supporting his third studio album, \"8701\" (2001).",
+          " Following the release of his fourth studio album, \"Confessions\", Usher embarked on his next world concert venture The Truth Tour.",
+          " For this tour Usher collaborated with MasterCard, the company gave him his own prepaid debit card with his picture on it that was sold at his concert.",
+          " The card gave his fans access to his website where you get discounts on concert tickets and Usher merchandise, T-shirts and key chains.",
+          " In 2008, to promote his fifth studio album, \"Here I Stand\", he began his 14 date at intimate clubs and theaters venues in the United States."
+        ],
+        [
+          "The Summer's Last Stand Tour is a concert tour by American band Slipknot.",
+          " The tour primarily took place in the United States.",
+          " The tour started on July 24, 2015 and ended on September 5, 2015."
+        ],
+        [
+          "The I Stand tour was a tour taken by American actress and singer Idina Menzel."
+        ],
+        [
+          "Idina Kim Menzel ( ; born Idina Kim Mentzel; May 30, 1971) is an American actress, singer, and songwriter."
+        ],
+        [
+          "The Barefoot at the Symphony Tour was concert tour by American actress and singer Idina Menzel.",
+          " This marks Menzel's first concert tour after giving birth to her son Walker Nathaniel Diggs.",
+          " The tour featured Menzel performing a diverse repoitore of classic pop, musical theater favorites\u2014including hits from \"Wicked\", \"Rent\", \"Glee\", and songs from her third studio album \"I Stand\"\u2014all accompanied by major symphony orchestras including the New York Philharmonic, San Francisco Symphony, Royal Philharmonic Orchestra, and more, featuring symphonic arrangements by Musical Director and pianist Rob Mounsey."
+        ],
+        [
+          "The Sun Comes Out World Tour (also known as the Sale el Sol World Tour) was the fifth concert tour by Colombian singer and songwriter Shakira, launched in support of her eighth and ninth studio albums, \"She Wolf\" (2009) and \"Sale El Sol\" (2010).",
+          " After a special tour preview show held in Montreal, Canada, on 15 September 2010, the North American leg of the tour commenced at Uncasville, Connecticut, on 17 September, and closed at Rosemont, Illinois, on 29 October 2010.",
+          " The European leg of the tour was planned to commence at Lyon, France, on 16 November, and end in London, England, on 20 December 2010.",
+          " The tickets for the initial dates of the European leg were soon sold out, and Shakira extended the tour into 2011, beginning by announcing a show at Paris, France; venues at countries such as Croatia, Russia, Spain and Switzerland were soon added.",
+          " The Latin American leg of the tour was a part of the Pop Festival and visited countries like Argentina, Brazil, Colombia, Mexico and Bolivia were added to the tour dates."
+        ],
+        [
+          "Sy Smith is an American R&B singer, songwriter, entertainer, record producer, and actress.",
+          " Her first concert tour was in America, where she performed in more than 9 shows in 2006.",
+          " The next year, she embarked on another tour in North America, Conflict Tour, playing over 20 shows.",
+          " In 2009 she embarked on a promo Soul Sista tour, performing with Conya Doss, Maya Azucena, and Yahzarah."
+        ],
+        [
+          "MDNA World Tour is the fourth live album by American singer and songwriter Madonna.",
+          " It was released on September 6, 2013, by Interscope Records as a full concert on all formats including a double-disc CD, DVD, and Blu-ray.",
+          " Madonna had embarked on The MDNA Tour for promotion of her twelfth studio album \"MDNA\".",
+          " The tour was a commercial success although it courted a number of controversies.",
+          " The performances at the American Airlines Arena in Miami, Florida during the North American leg of The MDNA Tour were documented for video release.",
+          " The recording was directed by Danny B. Tull and Stephane Sennour who included footage from other shows of the tour."
+        ],
+        [
+          "The Girlie Show World Tour (also referred to as simply The Girlie Show) was the fourth concert tour by American singer and songwriter Madonna, in support of her fifth studio album, \"Erotica\".",
+          " The tour visited the Americas, Europe, Asia, and Australia for the first time, selling 360,000 tickets in this leg only.",
+          " Madonna's inspiration for the name of the tour was a painting called \"Girlie Show\" by Edward Hopper.",
+          " The tour is estimated to have grossed over US$70 million.",
+          " Two separate television specials were broadcast during the tour, one made during the Japanese leg of the tour and shown only on Japanese television; \"Madonna Live in Japan 1993 \u2013 The Girlie Show\" and an HBO special \"\" which was later released in 1994 by Warner Music Vision on home video."
+        ]
+      ]
+    }
+  }
+]
