@@ -84,7 +84,7 @@ python main.py
 ```
 
 This will:
-- Sample 2 questions (can be changed via NUM_QUESTIONS)
+- Sample questions (can be changed via NUM_QUESTIONS)
 - Run them through the agentic QA system 
 - Save evaluations to results.json
 
