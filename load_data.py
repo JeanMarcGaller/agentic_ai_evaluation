@@ -5,20 +5,35 @@ import random
 import datetime
 from datasets import load_dataset
 
-def get_hotpotqa_subset(num_samples=3):
+def get_hotpotqa_subset(num_samples=3): # TODO: Check num_samples usage in code
+    """
+       Loads a random subset of the HotpotQA validation dataset.
+
+       Args:
+           num_samples (int): Number of questions to sample.
+
+       Returns:
+           list: Random sample of HotpotQA questions. # TODO: Test Natural Questions, WebQuestions
+       """
+
+    # Load distractor version of HotpotQA
     dataset = load_dataset(
-        "hotpot_qa", "distractor", split="validation", trust_remote_code=True
+        "hotpot_qa",
+        "distractor",
+        split="validation",
+        trust_remote_code=True # distractor needs custom loading script
     )
+
+    # Sample number of examples
     subset = random.sample(list(dataset), num_samples)
 
-    # Optional: neuen Dateinamen mit Zeitstempel verwenden
+    # Generate filename with timestamp
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     path = f"hotpotqa_subset_{timestamp}.json"
 
+    # Save subset of samples
     with open(path, "w") as f:
         json.dump(subset, f, indent=2)
 
-    print(f"🆕 HotpotQA subset saved to {path}")
+    print(f"Sample subset saved {path}")
     return subset
-
-
