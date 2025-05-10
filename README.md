@@ -86,7 +86,7 @@ python main.py
 This will:
 - Sample questions (can be changed via NUM_QUESTIONS)
 - Run them through the agentic QA system 
-- Save evaluations to results.json
+- Save evaluations to results.json file
 
 ---
 
@@ -122,14 +122,9 @@ This project includes components adapted from:
 ## 📝 License
 
 This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
 See the [LICENSE](./LICENSE) file for full license text and attribution details for third-party code reused or adapted in this project, including:
-
 - LangGraph Reflexion Tutorial (LangChain Team)
 - LangGraph Reflexion Agent (Edan Marco)
-
-
-
 ---
 
 ## 📬 Contact
@@ -138,4 +133,4 @@ If you are interested in this work, have questions or recommendations, feel free
 
 Jean-Marc Galler
 
-[jeanmarc.galler@students.fhnw.ch](mailto:jeanmarc.galler@students.fhnw.ch)
+📧 jeanmarc.galler [at] students [dot] fhnw [dot] ch
