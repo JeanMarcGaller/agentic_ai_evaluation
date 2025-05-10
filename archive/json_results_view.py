@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-with open("results.json") as f:
+with open("../results.json") as f:
     data = json.load(f)
 
 # Flachstruktur für tabellarische Darstellung extrahieren
