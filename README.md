@@ -107,7 +107,7 @@ This will:
 ## 🧪 Customization Ideas
 - Replace HotpotQA with NaturalQuestions or WebQuestions
 - Add support for more tools (e.g. calculator, Wikipedia search)
-- 
+- Test different LLMs
 ---
 
 ## 📎 Acknowledgements
@@ -151,8 +151,8 @@ This project includes components adapted from:
 - [LangGraph Reflexion Tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflexion/reflexion/) by the LangChain team,  
   also used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-- [Edan Marco](https://github.com/edanamarco), used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
-  Original codebase: [LangGraph Agentic Evaluations](https://github.com/edanamarco/langgraph-agentic-evals)
+- [Edan Marco](https://github.com/emarco177), used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+  Original codebase: [LangGraph Reflexion Agent](https://github.com/emarco177/langgraph-course)
 
 
 ---
