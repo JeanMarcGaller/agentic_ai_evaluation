@@ -28,7 +28,7 @@ class AnswerQuestion(BaseModel):
     Includes answer, self-reflection, and search intent.
     """
 
-    answer: str = Field
+    answer: str = Field(
     description="~150 word detailed answer to the question."
     )
     reflection: Reflection = Field(
@@ -42,7 +42,6 @@ class AnswerQuestion(BaseModel):
 
 
 # --- Schema for Revising an Answer ---
-
 class ReviseAnswer(AnswerQuestion):
     """
     Extension of AnswerQuestion with reference support.
