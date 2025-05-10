@@ -1,7 +1,8 @@
 Portions of this project are derived from the LangGraph Course repository by:
-- Edan Marco (https://github.com/emarco177/langgraph-course), used under the Apache License 2.0.
 - LangChain team (https://langchain-ai.github.io/langgraph/tutorials/reflexion/reflexion/),
 used under the Apache License 2.0.
+- Edan Marco (https://github.com/emarco177/langgraph-course), used under the Apache License 2.0.
+
 
 
                                  Apache License
