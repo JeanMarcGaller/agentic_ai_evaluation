@@ -52,7 +52,7 @@ agentic_ai_evaluation/
 - [LangGraph](https://langgraph.readthedocs.io)
 - [LangSmith](https://docs.smith.langchain.com/)
 - [Hugging Face Datasets](https://huggingface.co/docs/datasets)
-- [Tavily](https://www.tavily.com) API key (for web search)
+- [Tavily](https://www.tavily.com)
 
 Install dependencies:
 
@@ -122,6 +122,37 @@ Built with:
 ---
 
 ## 📝 License
+
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+See the [LICENSE](./LICENSE) file for full license text and attribution details for third-party code reused or adapted in this project, including:
+
+- LangGraph Reflexion Tutorial (LangChain team)
+- LangGraph Agentic Evaluations (Edan Marco)
+
+
+---
+
+## 📚 Citation
+
+This project is inspired in part by the paper:
+
+> Meng, Z., Dziri, N., Choudhury, M., Choi, Y., & Khashabi, D. (2023).  
+> **Reflexion: Language Agents with Verbal Reinforcement Learning**.  
+> arXiv: [2303.11366](https://arxiv.org/abs/2303.11366)
+
+---
+
+## 📄 Attribution
+
+This project includes components adapted from:
+
+
+- [LangGraph Reflexion Tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflexion/reflexion/) by the LangChain team,  
+  also used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- [Edan Marco](https://github.com/edanamarco), used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
+  Original codebase: [LangGraph Agentic Evaluations](https://github.com/edanamarco/langgraph-agentic-evals)
 
 
 ---
