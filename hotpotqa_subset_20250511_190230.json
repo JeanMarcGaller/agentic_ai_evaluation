@@ -1,0 +1,945 @@
+[
+  {
+    "id": "5a793d335542994bb9456fca",
+    "question": "Amil Grove appeared in what  British tabloid published by News UK? ",
+    "answer": "Amii Anne J. Grove",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Amii Grove",
+        "Amii Grove",
+        "The Sun (United Kingdom)"
+      ],
+      "sent_id": [
+        0,
+        1,
+        3
+      ]
+    },
+    "context": {
+      "title": [
+        "Hai Bangalore",
+        "Amii Grove",
+        "Adev\u0103rul Holding",
+        "News UK",
+        "National Enquirer",
+        "Page 3",
+        "News of the World (song)",
+        "Weekly World News",
+        "Les Hinton",
+        "The Sun (United Kingdom)"
+      ],
+      "sentences": [
+        [
+          "Hai Bangalore is a mass circulation weekly Kannada language tabloid published in Bangalore.",
+          " Its editor is journalist Ravi Belagere, who received a Karnataka Media Award in 2007.",
+          " The tabloid articles include reports about scandals, scams, affairs, background politics, murders, crime to the public eye, although the accuracy of the reports is often questionable.",
+          " Apart from these reports, it contains columns and articles about various fields like psychology, sports, science and cinema news."
+        ],
+        [
+          "Amii Anne J. Grove, (born 5 September 1985), is an English glamour model and current \"Page 3\" girl.",
+          " She has appeared in publications such as \"The Sun\", \"Nuts\", \"Zoo Weekly\", \"FHM\", and the \"Hot Shots Calendar\"."
+        ],
+        [
+          "Adev\u0103rul Holding is a media joint stock company owned by Romanian businessman and politician Dinu Patriciu and named after its main publication, the daily newspaper \"Adev\u0103rul\".",
+          " It currently owns newspapers and magazines, and has a television license.",
+          " In addition to its main trademark \"Adev\u0103rul\", its cultural supplement \"Adev\u0103rul Literar \u015fi Artistic\" and other related media, the holding owns the daily tabloid \"Click!",
+          "\", the cultural weekly \"Dilema Veche\" and its sister magazine \"Dilemateca\", the international policy magazine \"Foreign Policy Romania\", and the Romanian edition of \"Forbes\" magazine.",
+          " Adev\u0103rul Holding also owns \"Blik\", a tabloid published in Ukraine."
+        ],
+        [
+          "News Corp UK & Ireland Limited (trading as News UK, formerly News International and NI Group), is a British-based American-owned newspaper publisher, and a wholly owned subsidiary of the American mass media conglomerate News Corp.",
+          " It is the current publisher of \"The Times\", \"The Sunday Times\" and \"The Sun\" newspapers and its former publications include the \"Today\", \"News of the World\" and \"The London Paper\" newspapers.",
+          " Until June 2002, it was called News International plc.",
+          " On 31 May 2011 the company name was changed from News International Limited to NI Group Limited, and on 26 June 2013 to News UK."
+        ],
+        [
+          "The National Enquirer (also commonly known as the Enquirer) is an American supermarket tabloid published by American Media Inc (AMI).",
+          " Founded in 1926, the tabloid has gone through a number of changes over the years."
+        ],
+        [
+          "Page 3 is a colloquial term for a feature formerly included in the British tabloid newspaper \"The Sun\".",
+          " The phrase originates with the publication of a large photograph of a topless, bare-breasted female glamour model which was usually published on the print edition's third page.",
+          " The feature first appeared in the newspaper on 17 November 1970 and on the official Page 3 website since June 1999, where it still continues.",
+          " The terms \"Page 3\" and \"Page Three\" are registered trademarks of News UK, parent company of \"The Sun\", although the feature has been imitated in Britain's other 'red top' tabloids and by newspapers internationally."
+        ],
+        [
+          "\"News of the World\" was a single by British group The Jam released on 3 March 1978.",
+          " It reached No. 27 in the UK Singles Chart.",
+          " \"Aunties And Uncles (Impulsive Youths)\" and \"Innocent Man\" appeared as its B-side.",
+          " The title refers to the disgraced British tabloid newspaper, \"News of the World\"."
+        ],
+        [
+          "The Weekly World News was a largely fictional news tabloid published in the United States from 1979 to 2007, renowned for its outlandish cover stories often based on supernatural or paranormal themes and an approach to news that verged on the satirical.",
+          " Its characteristic black-and-white covers have become pop-culture images widely used in the arts.",
+          " It ceased publication in August 2007."
+        ],
+        [
+          "Leslie Frank \"Les\" Hinton (born 19 February 1944) is a British-American journalist and business executive whose career with Rupert Murdoch's News Corporation spanned more than fifty years.",
+          " Hinton worked in newspapers, magazines and television as a reporter, editor and executive in Australia, the United Kingdom and the United States and became an American citizen in 1986.",
+          " He was appointed CEO of Dow Jones & Company in December 2007, after its acquisition by News Corp.",
+          " Hinton has variously been described as Murdoch's \"hitman\"; one of his \"most trusted lieutenants\"; and an \"astute political operator\".",
+          " On 15 July 2011, he resigned from Dow Jones & Co as a result of a journalistic ethics scandal at \"The News of the World\", a British tabloid published by News Corp subsidiary, News International, where Hinton had previously been executive chairman."
+        ],
+        [
+          "The Sun is a tabloid newspaper published in the United Kingdom and Ireland.",
+          " Since \"The Sun on Sunday\" was launched in February 2012, the paper has been a seven-day operation.",
+          " As a broadsheet, it was founded in 1964 as a successor to the \"Daily Herald\"; it became a tabloid in 1969 after it was purchased by its current owners.",
+          " It is published by the News Group Newspapers division of News UK, itself a wholly owned subsidiary of Rupert Murdoch's News Corp."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a80274e5542992e7d278dfb",
+    "question": "Follow the Yellow Brick Road Tour is taking place to commemorate the album that was recorded where?",
+    "answer": "Ch\u00e2teau d'H\u00e9rouville",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Follow the Yellow Brick Road Tour",
+        "Goodbye Yellow Brick Road"
+      ],
+      "sent_id": [
+        0,
+        2
+      ]
+    },
+    "context": {
+      "title": [
+        "Goodbye Yellow Brick Road",
+        "Bennie and the Jets",
+        "Follow the Yellow Brick Road Tour",
+        "Family Christian Center",
+        "Ease on Down the Road",
+        "The Apprentice Australia",
+        "Goodbye Yellow Brick Road (song)",
+        "Blue Moves",
+        "Saturday Night's Alright for Fighting",
+        "Follow the Yellow Brick Road"
+      ],
+      "sentences": [
+        [
+          "Goodbye Yellow Brick Road is the seventh studio album by Elton John, released in 1973.",
+          " The album proved to be extremely popular, selling over 30 million copies worldwide, and is regarded as one of his best.",
+          " It was recorded at the Ch\u00e2teau d'H\u00e9rouville in France after problems recording at the intended location of Jamaica.",
+          " Among the 17 tracks, the album contains the hits \"Candle in the Wind\", \"Bennie and the Jets\", \"Goodbye Yellow Brick Road\" and \"Saturday Night's Alright for Fighting\" plus \"Funeral for a Friend/Love Lies Bleeding\" and \"Harmony\"."
+        ],
+        [
+          "\"Bennie and the Jets\" (also titled as \"Benny & the Jets\") is a song composed by Elton John and Bernie Taupin.",
+          " The song first appeared on the \"Goodbye Yellow Brick Road\" album in 1973.",
+          " \"Bennie and the Jets\" has been one of John's most popular songs and was performed during John's appearance at Live Aid.",
+          " The track is spelled \"Benny\" on the sleeve of the single and in the track listing of the album, but \"Bennie\" on the album vinyl disc label."
+        ],
+        [
+          "Follow the Yellow Brick Road Tour is a concert tour by British musician Elton John taking place in North America and Europe in promotion of the 40th anniversary re-release of 1973's Goodbye Yellow Brick Road."
+        ],
+        [
+          "Family Christian Center, commonly abbreviated to FCC, is a megachurch located in Munster, Indiana.",
+          " It was founded in the early 1950s by Bishop Frank Munsey and his wife, Ruth.",
+          " Today, Steve Munsey is the senior pastor at Family Christian Center.",
+          " The nondenominational church has 30,000 members, and even has a Starbucks in the lobby.",
+          " Drama is used to supplement the preaching, such as by reenacting a battle scene to commemorate the beginning of the second Gulf War.",
+          " The church also put on 3 yearly productions - \"Choices\" (formerly known as Hotel Hallelujah), \"Scrooge: The Musical\", and \"Jesus of Nazareth\".",
+          " Other productions, such as Yellow Brick Road and White Throne Judgement, have been done also over the years.",
+          " FCC is one of the fastest growing churches in the United States.",
+          " Beginning with Saturday evening and continuing through Sunday morning, FCC holds four services each lasting 90 minutes.",
+          " There is also 2 services at 5 and 7 each Wednesday night.",
+          " It now features a church in the back gymnasium for teenagers and young adults called Two52 Youthculture.",
+          " The church also features a radio station(88.3 FM Crosstower radio) and can be heard within 12 miles of the building in Munster.",
+          " FCC has also branched off into the city of Chicago.",
+          " City Church is run by Pastor Kent Munsey, Pastor Steve Munsey's son, and Kent's wife Alli.",
+          " City Church holds three services on Sundays, two in the morning and one in the evening."
+        ],
+        [
+          "\"Ease on Down the Road\" is a song from the 1975 Broadway musical \"The Wiz\", an R&B re-interpretation of L. Frank Baum's \"The Wonderful Wizard of Oz\".",
+          " The Charlie Smalls\u2013composed tune is the show's version of both \"Follow the Yellow Brick Road\" and \"We're Off to See the Wizard\" from the 1939 version of \"The Wizard of Oz\".",
+          " In the song, performed three times during the show, Dorothy and her friends the Scarecrow, the Tin Man, and the Cowardly Lion dance their way down the Yellow Brick Road and give each other words of encouragement."
+        ],
+        [
+          "The Apprentice Australia is an Australian reality television series which aired on the Nine Network.",
+          " It was based on NBC's \"The Apprentice\".",
+          " It first aired on 28 September 2009 and last aired on 23 November 2009, and features Mark Bouris, the founder and chairman of Wizard Home Loans and Yellow Brick Road, as the chief executive officer (CEO).",
+          " It is narrated by Andrew Daddo, and the series' winner received a one-year employment contract worth $200,000 at a job managing Bouris' newest business venture, Yellow Brick Road."
+        ],
+        [
+          "\"Goodbye Yellow Brick Road\" is a ballad performed by musician Elton John.",
+          " Lyrics for the song were written by Bernie Taupin and the music composed by John for his album \"Goodbye Yellow Brick Road\".",
+          " Its musical style and production were heavily influenced by 1970s soft rock.",
+          " It was widely praised by critics, and some critics have named it John's best song."
+        ],
+        [
+          "Blue Moves is the eleventh official album release by Elton John.",
+          " It was released in October 1976.",
+          " It was John's second double album (after \"Goodbye Yellow Brick Road\") and the first to be released by his own label, Rocket Records Ltd.",
+          " Despite the album's darker tone and a wave of negative reviews, on its release it reached no. 3 on the charts, partly on the strength of the its biggest hit single \"Sorry Seems to Be the Hardest Word\"."
+        ],
+        [
+          "\"Saturday Night's Alright for Fighting\" (sometimes written \"Saturday Night's Alright (For Fighting)\") is a song originally recorded by British musician Elton John.",
+          " John composed it with his long-time song-writing partner Bernie Taupin.",
+          " It was released on John's 1973 studio album \"Goodbye Yellow Brick Road\" and as the first single.",
+          " The song is one of John's most critically and commercially successful singles, a #7 hit record in the singer's native United Kingdom.",
+          " It has been covered by W.A.S.P., Flotsam and Jetsam, Nickelback (with Kid Rock and Dimebag Darrell), Queen, The Who, Fall Out Boy, and several others."
+        ],
+        [
+          "Follow the Yellow Brick Road is a television play by Dennis Potter, first broadcast in 1972 as part of BBC Two's \"The Sextet\" series of eight plays featuring the same six actors.",
+          " The play's central theme is of popular culture becoming the inheritor of religious scripture, which anticipated Potter's later serial \"Pennies from Heaven\" (1978).",
+          " The play's title is taken from the song used in \"The Wizard of Oz\", another version of which features in the incidental music."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5ac07327554299012d1db5f2",
+    "question": "Who is Colin Kaepernick and what is his preferred nickname?",
+    "answer": "an American football quarterback",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Kaep (disambiguation)",
+        "Colin Kaepernick"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Wickedness Preferred",
+        "Lotus Mark VI",
+        "Swing Around the Circle",
+        "Kaep (disambiguation)",
+        "Toni Kallio",
+        "Proposition Joe",
+        "Gregory Mcdonald",
+        "Colin Kaepernick",
+        "Cory Lopez",
+        "Willie &quot;Two-Knife&quot; Altieri"
+      ],
+      "sentences": [
+        [
+          "Wickedness Preferred is a lost 1928 American comedy silent film directed by Hobart Henley and written by Colin Clements, Robert E. Hopkins and Florence Ryerson.",
+          " The film stars Lew Cody, Aileen Pringle, Mary McAllister, Bert Roach and George K. Arthur.",
+          " The film was released on January 28, 1928, by Metro-Goldwyn-Mayer."
+        ],
+        [
+          "After building multiple trials and road racing cars, Colin Chapman introduced his first 'production' car, the Lotus Mark VI, in 1952.",
+          " The heart of the Mark VI was a space frame chassis.",
+          " Rather than a complete car, it was available to the general public as kit, wherein the customer could install any preferred engine and gearbox, making it eligible for a wider number of formulae."
+        ],
+        [
+          "Swing Around the Circle refers to a disastrous speaking campaign undertaken by U.S. President Andrew Johnson between August 27 and September 15, 1866, in which he tried to gain support for his mild Reconstruction policies and for his preferred candidates (mostly Democrats) in the forthcoming midterm Congressional elections.",
+          " The tour received its nickname due to the route that the campaign took: \"Washington, D.C., to New York, west to Chicago, south to St. Louis, and east through the Ohio River valley back to the nation's capital\"."
+        ],
+        [
+          "Kaep is a nickname for athlete Colin Kaepernick (although he prefers \"Kap\").",
+          " It may also refer to:"
+        ],
+        [
+          "Toni Kallio (born 9 August 1978) is a Finnish former footballer who last presented Ilves in Ykk\u00f6nen.",
+          " His preferred position is left back, but he can also operate as centre back and used to play as forward when he joined HJK.",
+          " His nickname is \"Bonecrusher\", coming from his great physical presence and playing style."
+        ],
+        [
+          "Joseph Stewart, better known as \"Proposition Joe\" or \"Prop Joe\", is a fictional character on the HBO drama \"The Wire\", played by actor Robert F. Chew.",
+          " Joe was an Eastside drug lord who preferred a peaceful solution to business disputes when possible.",
+          " He was responsible for creating the lucrative New Day Co-Op with Stringer Bell, supplying much of Baltimore with heroin brought into the city by \"The Greeks\".",
+          " Joe was a portly and amiable presence, but was often a match in wits for rival drug lords Avon Barksdale and Marlo Stanfield, and was able to manipulate most situations to his advantage.",
+          " His nickname stemmed from his trademark phrase \"I've got a proposition for you\", going back to his days selling test answers on the school yard.",
+          " Along with Poot Carr, Wee-Bey Brice, Omar Little, and Bubbles, he is one of the few characters from the drug trade to appear in every season."
+        ],
+        [
+          "Gregory Mcdonald (February 15, 1937 \u2013 September 7, 2008) was an American mystery writer best known for his creation of the character Irwin Maurice Fletcher, an investigative reporter who preferred the nickname \"Fletch.\""
+        ],
+        [
+          "Colin Rand Kaepernick ( ; born November 3, 1987) is an American football quarterback who is currently a free agent.",
+          " Kaepernick played college football at the University of Nevada, where he was named the Western Athletic Conference (WAC) Offensive Player of the Year twice and became the only player in NCAA Division I FBS history to amass 10,000 passing yards and 4,000 rushing yards in a career.",
+          " After graduating, he was selected by the San Francisco 49ers in the second round of the 2011 NFL Draft."
+        ],
+        [
+          "Cory Lopez is an elite professional surfer born on March 21, 1977 in Dunedin, Florida, USA.",
+          " Lopey is his preferred nickname.",
+          " Cory has been a top ranked contender on the ASP World Surfing circuit (ASP World Tour) for multiple years and is considered by many to be one of the best 'Free Surfers' on the planet."
+        ],
+        [
+          "Willie \"Two-Knife\" Altieri, (4 Mar 1891- Oct 1970?)",
+          " was a New York gangster who served as the chief enforcer for Frankie Yale's Italian-American \"Black-Hand\" gang, one of the most powerful criminal organizations in 1920's New York City.",
+          " He got his nickname after his preferred method of dispatching a victim.",
+          " Willie had killed dozens of rival gangsters during the 1920s and was considered an important figure in the \"Black-Hand\" gang."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a8bd4d65542997f31a41dd8",
+    "question": "Are both American Zeitgeist and Michael Jackson's This Is It documentary films about entertainment?",
+    "answer": "no",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "American Zeitgeist",
+        "Michael Jackson's This Is It"
+      ],
+      "sent_id": [
+        1,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Michael Jackson's Vision",
+        "Yair Qedar",
+        "This Is It (Michael Jackson song)",
+        "Michael Jackson: The Last Photo Shoot",
+        "Michael Jackson's This Is It (album)",
+        "Michael Jackson: 30th Anniversary Celebration",
+        "American Zeitgeist",
+        "Leo Braudy",
+        "Zeitgeist Films",
+        "Michael Jackson's This Is It"
+      ],
+      "sentences": [
+        [
+          "Michael Jackson's Vision is a deluxe DVD box set by American recording artist Michael Jackson.",
+          " It was released on November 22, 2010 by Epic Records, Legacy Recordings, and Jackson's own label, MJJ Productions.",
+          " It includes three DVDs, featuring 4.5 hours of content of 42 music videos with newly restored color and remastered audio.",
+          " Jackson referred to each of these productions as a \"short film\" and not a music video.",
+          " This is the first time that all of Jackson's videos have been released on DVD.",
+          " According to a statement by the producers, the video recognizes Jackson's \"pioneering short films that transformed the entertainment industry with timeless, pop culture classics\"."
+        ],
+        [
+          "Yair Qedar (Hebrew: \u05d9\u05d0\u05d9\u05e8 \u05e7\u05d3\u05e8\u200e \u200e , born June 13, 1969) is an Israeli filmmaker and a civil-rights activist.His academic training on 20th-century Hebrew literature (Tel Aviv University), propelled him into to The Hebrews \u2014 a trans media project on the Hebrew literary canon, centered on filmic portraits of the Hebrew writers.",
+          " Eight documentary films were made in this framwork and six others are currently shot.",
+          " The documentary films which he produced, wrote and directed are \u2014\"Bialik - King of the Jews\", \"The 5 Houses of Lea Goldberg\" and \"The Seven Tapes of Yona Wallach\", 'the Awakener - the story of Y.H Brener' and 'Simple Woman -Zelda'\u2014 as well as the three films which he produced in the project - \"Song of loves, Rabbi David Bouzaglo\", \"the Raven, Zeev Jabotinki\" and \"Mrs Rachel Bluestein\" \u2013 aired on Israeli TV, circulated far and wide in cinematheques, community and cultural centers, in Israel and around the world (USA and Canada, Europe, Australia and Russia) earning 10 awards (2016: first prize for filmmaking in the field of Jewish culture by the ministry of Education in Israel, 2015: the \"Hebrews\" films won the prize for best television project in the Israeli Documentary competition).",
+          " The project, both digital and print, offers altogether eight documentary films, a video archive and several books."
+        ],
+        [
+          "\"This Is It\" is a song co-written by American pop star and musician Michael Jackson and Canadian singer-songwriter Paul Anka.",
+          " The song was recorded by the former and featured as a track on the album, \"This Is It\" (2009), which accompanies the 2009 concert documentary \"Michael Jackson's This Is It\".",
+          " It was premiered worldwide on Jackson's official website on October 12, 2009 four months after his death on June 25, 2009.",
+          " Although Sony Music Entertainment referred to the song as a \"new single\" during its promotion, it was later confirmed that the song would only be sent for airplay, and not be available to buy as a single release.",
+          " According to Anka, the song was recorded in 1983 and intended to be a duet between him and Jackson on Anka's \"Walk a Fine Line\" album under the title \"I Never Heard\", but these plans fell through.",
+          " Thereafter, Sa-Fire recorded the track for her album, \"I Wasn't Born Yesterday\" (1991).",
+          " The duet version of the song was featured in Anka's 2013 \"Duets\" album.",
+          " While putting together the \"This Is It\" album, Jackson's demo version of the song was found.",
+          " His brothers' vocals and additional instrumentation were then added to the recording.",
+          " Immediately after its release, Anka threatened legal action against Jackson's estate.",
+          " The estate then agreed to give Anka 50% of the song's publishing rights."
+        ],
+        [
+          "Michael Jackson: The Last Photo Shoot is an upcoming documentary film directed by Craig J. Williams.",
+          " This historical documentary about Michael Jackson's last magazine cover-shoots in 2007.",
+          " The film is a unique story told through the eyes of Michael's closest friends, photographers, and stylists that had helped Jackson prepare for his 2007 United States comeback after several years of living in seclusion overseas.",
+          " In September of that year, photographer Bruce Weber and \"Vogue\" fashion editor as well as Jackson's personal stylist Rushka Bergman captured the magic of the King of Pop for the 25th anniversary reissue of his hit album \"Thriller\", entitled \"Thriller 25\".",
+          " Later that month, Jackson did another shoot and an interview for \"Ebony\" magazine's December 2007 issue.",
+          " This would mark Jackson's first United States interview and magazine story in over a decade."
+        ],
+        [
+          "Michael Jackson's This Is It (or simply This Is It) is a posthumous two-disc soundtrack album by American singer Michael Jackson.",
+          " Released by MJJ Music on October 26, 2009, \"This Is It\" features previously released music, as well as six previously unreleased recordings by Michael Jackson.",
+          " \"This Is It\" was released to coincide with the theatrical release of \"Michael Jackson's This Is It\", a concert film documenting Michael Jackson's rehearsals for the This Is It concert series at London's O2 Arena.",
+          " \"This Is It\" is the sixth album to be released by Sony and Motown/Universal since Michael Jackson's death in June 2009."
+        ],
+        [
+          "The Michael Jackson: 30th Anniversary Celebration was a 2001 New York City revue show by Michael Jackson.",
+          " It took place on September 7, 2001 and September 10, 2001.",
+          " In late November 2001, the CBS television network aired the concerts as a two-hour special in honor of Michael Jackson's thirtieth year as a solo entertainer (his first solo single, \"Got to Be There\", was recorded in 1971).",
+          " The show was edited from footage of two separate concerts Michael had orchestrated in New York City's Madison Square Garden on September 7 and September 10 of 2001.",
+          " The shows sold out in five hours.",
+          " Ticket prices were pop's most expensive ever; the best seats cost $10,000 and included a dinner with Michael Jackson and a signed poster.",
+          " The show was choreographed by Glenn Douglas Packard & Brian Thomas, they were nominated for a Emmy Award for Outstanding Choreography.",
+          " The show was presented by David Gest, World Events LLC and Clear Channel Entertainment in conjunction with American Airlines, American Eagle and Amazon.com.",
+          " Jackson reportedly earned $7.5 million for each of the two concerts.",
+          " The concert official Boxscore was $10,072,105 for both concerts."
+        ],
+        [
+          "American Zeitgeist is a 2006 documentary film by Rob McGann.",
+          " It discusses the war on terror and religion.",
+          " It was the winner to the best feature-length documentary at the Houston International Film Festival."
+        ],
+        [
+          "Leo Braudy (born June 11, 1941) is University Professor and Bing Professor of English at the University of Southern California, where he teaches 17th- and 18th-century English literature, film history and criticism, and American culture.",
+          " He has previously taught at Yale, Columbia, and Johns Hopkins University.",
+          " He is best known for his cultural studies scholarship on celebrity, masculinity, and film, and is frequently sought after for interviews on popular culture, Hollywood cinema, and the American zeitgeist of the 1950s."
+        ],
+        [
+          "Zeitgeist Films is an American independent film distributor based in New York City founded in 1988 by co-Presidents Nancy Gerstman and Emily Russo.",
+          " Films distributed by Zeitgeist are strongly auteur-driven by directors such as Christopher Nolan, Guy Maddin, Atom Egoyan, Todd Haynes, Nuri Bilge Ceylan, Olivier Assayas, Abbas Kiarostami, Deepa Mehta, Jan \u0160vankmajer and the Brothers Quay.",
+          " The expansive Zeitgeist film library includes \"Trouble the Water\", \"The Corporation\", \"Jellyfish\", \"Examined Life\", \"Into Great Silence\", Ten and Irma Vep.",
+          " In June 2008, the MoMA honored two decades of Zeitgeist successes with a month-long, twenty film retrospective entitled \"Zeitgeist: The Films of Our Time\", exhibiting the distributor's twenty most critically acclaimed, intellectually stimulating titles."
+        ],
+        [
+          "Michael Jackson's This Is It is a 2009 American documentary\u2013concert film directed by Kenny Ortega that documents Michael Jackson's rehearsals and preparation for his concert series of the same name that was originally scheduled to start on July 13, 2009, but was cancelled due to his death eighteen days prior on June 25.",
+          " The film consists of Jackson rehearsing musical numbers, directing his team, and additional behind-the-scenes footage including dancer auditions and costume design.",
+          " Ortega confirmed that none of the footage was originally intended for release, but after Jackson's death it was agreed that the film be made.",
+          " The footage was filmed in Los Angeles at the Staples Center and The Forum, and features a clip from East Rutherford's Arena where Jackson publicly announced the concert series."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a72a2935542991f9a20c546",
+    "question": "Is Velvetpark or Shape magazine written more for a lesbian and queer-identified female readership?",
+    "answer": "Velvetpark",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Velvetpark",
+        "Shape (magazine)",
+        "Shape (magazine)"
+      ],
+      "sent_id": [
+        1,
+        1,
+        7
+      ]
+    },
+    "context": {
+      "title": [
+        "Jeguk Sinmun",
+        "Velvetpark",
+        "Anna Kalata",
+        "Shape (magazine)",
+        "Cynthia Heimel",
+        "Femme",
+        "Chapstick lesbian",
+        "Elana Amsterdam",
+        "Sh\u014djo manga",
+        "Celesbian"
+      ],
+      "sentences": [
+        [
+          "The Jeguk Sinmun (\"Imperial Post\"; 1898-1910) was a Seoul-based Korean language newspaper founded in 1898 by Yi Jong-myeon.",
+          " It was published using the purely vernacular Hangeul script and attracted a largely lower or middle class and female readership.",
+          " It was less political than the other papers of the period, concentrating instead on social issues.",
+          " One of its early reporters was the young Syngman Rhee."
+        ],
+        [
+          "Velvetpark: Dyke Culture in Bloom is a lesbian and feminist arts and culture website that regularly features music, literature, theater, fine arts, film, television, and social activism as it impacts queer culture.",
+          " \"Velvetpark\" also hosts a social network and dating community for lesbians and queer-identified women."
+        ],
+        [
+          "Anna Kalata (born May 10, 1964, Milan\u00f3wek, Poland) is a Polish politician, celebrity and occasional actress.",
+          " She was a member of the populist Samoobrona party.",
+          " In Jaros\u0142aw Kaczy\u0144ski's cabinet she was the minister of labour and social policy.",
+          " She participated in the 12th season of Taniec z Gwiazdami (the Polish version of Dancing With The Stars).",
+          " After losing 38 kg she appeared on the cover of Shape magazine."
+        ],
+        [
+          "Shape is a monthly English language fitness magazine started by Weider Publications in 1981, founded by Christine MacIntyre (a pioneer in women's free weight fitness) and became the number one women's fitness magazine.",
+          " At that time, Weider Enterprises consisted primarily of the bodybuilding magazine \"Muscle & Fitness\".",
+          " Joe Weider and Christine MacIntyre had differing views of how to present \"Shape\", Weider endorsing a less journalistic and more commercial approach to articles, MacIntyre endorsing a more academic, doctor-based magazine.",
+          " Weider also endorsed a sexier approach to editorial while MacIntyre endorsed a healthier look for women, eschewing sexiness in the models and the copy.",
+          " MacIntyre largely won that battle, editing a magazine that required that every byline have an advanced medical degree, that cover models should look healthy rather than sexy, and that sexist language be avoided.",
+          " Christine MacIntyre was the editor-in-chief until her death in 1988.",
+          " Tara Kraft is the current editor-in-chief.",
+          " \"Shape\" found a readership based on that formula."
+        ],
+        [
+          "Cynthia Heimel (n\u00e9e Glick) (born 1947 in Philadelphia) is a feminist humorist writer from Oakland, California.",
+          " She is a columnist and the author of satirical books primarily aimed at a female readership and known for their unusual titles, as well as a playwright and television writer."
+        ],
+        [
+          "Femme is a lesbian sexual identity that was created in the working class lesbian bar culture of the 1950s.",
+          " It is a term used to distinguish feminine lesbian and bisexual women from their butch/stud lesbian counterparts and partners.",
+          " Today the term is still used in this way but in recent years - following the influence of Queer gender identity theories - its meaning has, sometimes contentiously, been expanded to describe a queer-identified person who is feminine in their presentation regardless of their gender or sexuality."
+        ],
+        [
+          "A chapstick lesbian is a sub-group within lesbianism that Ellen DeGeneres popularised in 1997 in her show \"Ellen\".",
+          " It was originally constructed as response to the phrase \"lipstick lesbian\" that emerged in 1990, which refers to a femme lesbian who emphasises their female identity through their self-presentation.",
+          " The slang term \"chapstick lesbian\" identifies a category on the femme-butch lesbian continuum, where the female homosexual has a gender identity bias towards femme lesbianism, although does not identify or fit the criteria of being a lipstick lesbian.",
+          " The word is frequently used as an alternative to the term \"soft-butch\" lesbian or androgynous.",
+          " The key attributes recognisable of a chapstick lesbian is that they have a casual dress-code and lack of desire to wear make-up.",
+          " Next to this, they are also viewed as being athletic in nature and have a notable interest in sport."
+        ],
+        [
+          "Elana Amsterdam is the New York Times Bestselling author of \"Paleo Cooking from Elana's Pantry\".",
+          " She writes cookbooks for gluten-free cooking, using almond flour and coconut flour as a gluten-free alternative to wheat flour.",
+          " Her book, \"The Gluten-Free Almond Flour Cookbook\", was named one of the \"Best Cookbooks of 2009\" by The Denver Post.",
+          " Amsterdam has partnered with the California Almond Board in conjunction with her works.",
+          " Her blog, elanaspantry.com, was named one of the top 50 food blogs by Cision.",
+          " Amsterdam contributed an article to Shape Magazine and she was featured on Fox News's On the Hunt with Jonathan Hunt."
+        ],
+        [
+          "Sh\u014djo, shojo, or shoujo manga (\u5c11\u5973\u6f2b\u753b , sh\u014djo manga ) is manga aimed at a teenage female readership.",
+          " The name romanizes the Japanese \u5c11\u5973 (sh\u014djo), literally \"young woman\".",
+          " Sh\u014djo manga covers many subjects in a variety of narrative styles, from historical drama to science fiction, often with a focus on romantic relationships or emotions.",
+          " Strictly speaking, however, sh\u014djo manga does not comprise a style or genre, but rather indicates a target demographic."
+        ],
+        [
+          "The term celesbian (a portmanteau of \"celebrity\" and \"lesbian\") originally referred to a female celebrity known or reputed to be a lesbian and popular within the LGBT community.",
+          " Celesbianism as a Western media phenomenon came into vogue in 2008, when several female celebrities presented themselves as lesbians.",
+          " The term was first used by New Yorkers Pam Franco and Susan Levine, a disk jockey.",
+          " It was used in a full-page ad in a lesbian nightlife magazine, \"GO MAGAZINE\".",
+          " The ad was for the Mz Hip and Fit NY contest, the idea of Denise Cohen of Denco Designs & Events.",
+          " The contest was a search for the hottest lesbian in the United States.",
+          " The term \"celesbian\" was used for the celebrity lesbian judges."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a79ca585542996c55b2dc71",
+    "question": "Who starred in the film The Human Factor in 1979, alongside fellow English actors Richard Attenborough and Derek Jacobi?",
+    "answer": "John Gielgud",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "The Human Factor (1979 film)",
+        "Derek Jacobi"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Sheila Sim",
+        "Derek Jacobi",
+        "Hamlet (1996 film)",
+        "Factor V Leiden",
+        "Gerald Sim",
+        "Tom Attenborough",
+        "The Human Factor (1979 film)",
+        "The Human Factor (Graham Greene book)",
+        "Prospect Theatre Company",
+        "Factor VII"
+      ],
+      "sentences": [
+        [
+          "Sheila Beryl Grant Attenborough, The Lady Attenborough (n\u00e9e Sim; 5 June 1922 \u2013 19 January 2016), known professionally by her maiden name Sheila Sim, was an English film and theatre actress.",
+          " She was the wife of the actor and director Richard Attenborough."
+        ],
+        [
+          "Sir Derek George Jacobi, ( ; born 22 October 1938) is an English actor and stage director."
+        ],
+        [
+          "Hamlet is a 1996 film adaptation of William Shakespeare's play \"Hamlet\", adapted for the screen and directed by Kenneth Branagh, who also stars in the titular role as Prince Hamlet.",
+          " The film also features Derek Jacobi as King Claudius, Julie Christie as Queen Gertrude, Kate Winslet as Ophelia, Michael Maloney as Laertes, Richard Briers as Polonius, and Nicholas Farrell as Horatio.",
+          " Other notable appearances include Robin Williams, G\u00e9rard Depardieu, Jack Lemmon, Billy Crystal, Rufus Sewell, Charlton Heston, Richard Attenborough, Judi Dench, John Gielgud and Ken Dodd."
+        ],
+        [
+          "Factor V Leiden is a variant (mutated form) of human factor V (one of several substances that helps blood clot), which causes an increase in blood clotting (hypercoagulability).",
+          " With this mutation, the anticoagulant protein secreted (which normally inhibits the pro-clotting activity of factor V) is not able to bind normally to Factor V, leading to a hypercoagulable state, i.e., an increased tendency for the patient to form abnormal and potentially harmful blood clots.",
+          " Factor V Leiden is the most common hereditary hypercoagulability (prone to clotting) disorder amongst ethnic Europeans.",
+          " It is named after the Dutch city Leiden, where it was first identified in 1994 by Prof R. Bertina \"et al.\""
+        ],
+        [
+          "Gerald Grant Sim (4 June 1925 \u2013 11 December 2014) was an English television and film actor who is perhaps best known for playing the Rector in \"To the Manor Born\".",
+          " He was the younger brother of the actress Sheila Sim and brother-in-law of the actor/director Richard Attenborough.",
+          " In August 2013, on Richard Attenborough's 90th birthday, it was reported that he was living in a care home for entertainers with his sister in the next room and his brother-in-law on the other side.",
+          " He died on 11 December 2014."
+        ],
+        [
+          "Tom Attenborough (born 13 October 1986) is an English theatre director.",
+          " He is the son of theatre director Michael Attenborough and the grandson of the late film actor and director Richard Attenborough."
+        ],
+        [
+          "The Human Factor is a 1979 British thriller film starring Richard Attenborough, Nicol Williamson, Derek Jacobi, and John Gielgud.",
+          " It is based on the 1978 novel \"The Human Factor\" by Graham Greene, with the screenplay written by Tom Stoppard.",
+          " It examined British espionage, and the West's relationship with apartheid South Africa."
+        ],
+        [
+          "The Human Factor is an espionage novel by Graham Greene, first published in 1978 and adapted into the 1979 film \"The Human Factor\", directed by Otto Preminger using a screenplay by Tom Stoppard."
+        ],
+        [
+          "The Prospect Theatre Company was an English company founded, as Prospect Productions, in 1961.",
+          " Based at the Arts Theatre, Cambridge from 1964 until 1969, the company, with Toby Robertson as artistic director and Richard Cottrell as associate director, toured both nationally and internationally with a mainly classical repertoire, providing notable appearances of such actors as Ian McKellen and Timothy West.",
+          " The company became closely associated with the Edinburgh Festival after its first appearance there in 1967.",
+          " Separating from the Arts Theatre in 1969, the company, renamed The Prospect Theatre Company, survived without a permanent base for the next eight years under the direction of Toby Robertson, mounting productions in which Derek Jacobi and Dorothy Tutin made significant appearances.",
+          " Eventually the company found a new home at London's Old Vic in 1977: two years later it became the Old Vic Theatre Company.",
+          " Though noted for its exemplary ensemble playing, the company lost its Arts Council of Great Britain funding in 1980 after Timothy West's first season as Robertson's successor, leading to Prospect's demise."
+        ],
+        [
+          "Factor VII (EC 3.4.21.21 , \"blood-coagulation factor VIIa\", \"activated blood coagulation factor VII\", formerly known as proconvertin) is one of the proteins that causes blood to clot in the coagulation cascade.",
+          " It is an enzyme of the serine protease class.",
+          " A recombinant form of human factor VIIa (eptacog alfa [activated], NovoSeven) has U.S. Food and Drug Administration approval for uncontrolled bleeding in hemophilia patients.",
+          " It is sometimes used unlicensed in severe uncontrollable bleeding, although there have been safety concerns.",
+          " A biosimilar form of recombinant activated factor VII (AryoSeven) is also available, but does not play any considerable role in the market."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5adff2aa554299603e4183d0",
+    "question": "What career did Markus Feehily and Bobby Fuller have in common?",
+    "answer": "songwriter",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Markus Feehily",
+        "Bobby Fuller"
+      ],
+      "sent_id": [
+        0,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Fire (Markus Feehily album)",
+        "I Fought the Law",
+        "The Bobby Fuller Four",
+        "Bobby Fuller Died for Your Sins",
+        "Trash Box",
+        "Markus Feehily",
+        "Bobby Fuller",
+        "Randy Fuller (musician)",
+        "Jim Reese (musician)",
+        "Love Is a Drug (Markus Feehily song)"
+      ],
+      "sentences": [
+        [
+          "Fire is the debut solo studio album by Irish singer-songwriter and former Westlife vocalist Markus Feehily.",
+          " The album was released on October 16, 2015, via Harmoney Entertainment, as part of the Kobalt Music Group.",
+          " The album includes the singles \"Love is a Drug\" and \"Butterfly\"."
+        ],
+        [
+          "\"I Fought the Law\" is a song written by Sonny Curtis of the Crickets and popularized by a cover by the Bobby Fuller Four, which went on to become a top-ten hit for the band in 1966 and was also recorded by the Clash in 1979.",
+          " The Bobby Fuller Four version of this song was ranked No.\u00a0175 on the \"Rolling Stone\" list of The 500 Greatest Songs of All Time in 2004, and the same year was named one of the 500 \"Songs that Shaped Rock\" by the Rock and Roll Hall of Fame."
+        ],
+        [
+          "The Bobby Fuller Four (sometimes stylized as Bobby Fuller 4) was a popular mid-1960s American rock & roll band started by Bobby Fuller.",
+          " With its first incarnation formed in 1962 in El Paso, Texas, the group went on to produce some of its most memorable hits under Mustang Records in Hollywood, California.",
+          " The band's most successful songs include \"Let Her Dance\", \"I Fought the Law\", and \"Love's Made a Fool of You.\""
+        ],
+        [
+          "Bobby Fuller Died for Your Sins is an album by recording artist and singer/songwriter Chuck Prophet.",
+          " It was released on February 10, 2017 on Yep Roc Records.",
+          " Chuck Prophet has described the album as :California Noir\", elaborating: \"the state has always represented the Golden Dream, and it's the tension between romance and reality that lurks underneath the surface in all noir films and paperbacks, and that connects these songs.",
+          " Doomed love, inconsolable loneliness, rags to riches to rags again, and fast-paced violence are always on the menu on the Left Coast.\"",
+          " The title of the album refers to the mystery long surrounding Bobby Fuller, a well regarded musician in the mid-1960s.",
+          " Found dead in his car at 23 years old, his death was ruled a suicide but still the topic of controversy, doubt and speculation."
+        ],
+        [
+          "Trash Box is a 5-CD box set of mid-1960s garage rock and psychedelic rock recordings, primarily by American bands.",
+          " This box set is similar to the earlier \"Pebbles Box\" (a 5-LP box set) and includes almost all of the same recordings in that box set (and in the same order), along with numerous bonus tracks at the end of each disc.",
+          " Supposedly, \"the Trash Box\" collects the first five volumes of the CDs in the Pebbles series (i.e., those released by AIP Records, not to be confused with the 4 earlier CDs that were issued by ESD Records).",
+          " However, as is generally true of the CD reissues of these five volumes (though not nearly to the same extent), the tracks differ significantly on all five discs as compared to both the original Pebbles LPs and the later Pebbles CDs in the corresponding volumes; and the surf rock rarities on \"Pebbles, Volume 4\" have been eschewed entirely.",
+          " Overall, there are 109 tracks in the box set (excluding the introduction and ending cuts) as compared to 101 songs on the individual CDs and 72 tracks in the \"Pebbles Box\".",
+          " Although most of the recordings on \"the Trash Box\" were released at some point on one of the individual Pebbles albums, several of the songs have not appeared elsewhere in the Pebbles series.",
+          " Inexplicably, one of these songs is the well-known hit \"I Fought the Law (but the Law Won)\" by the Bobby Fuller Four (on Disc Four) \u2013 which is also included in the \"Pebbles Box\" \u2013 in place of the much rarer \"Wine Wine Wine\" by Bobby Fuller that appears on \"Pebbles, Volume 2\"."
+        ],
+        [
+          "Markus Michael Patrick Feehily (formerly known as Mark Feehily, born 28 May 1980) is an Irish singer and songwriter.",
+          " He was one of the lead singers of the boy band Westlife from 1998 to 2012."
+        ],
+        [
+          "Robert Gaston Fuller (October 22, 1942 \u2013 July 18, 1966) was an American rock singer, songwriter, and guitarist best known for \"Love's Made a Fool of You\" and his cover of \"I Fought the Law\", recorded with his mid-1960s group The Bobby Fuller Four."
+        ],
+        [
+          "Randall \"Randy\" Fuller (January 29, 1944) is an American rock singer, songwriter, and bass player best known for his work in the popular 60s rock group the Bobby Fuller Four with his older brother, Bobby Fuller."
+        ],
+        [
+          "James Gordon Reese, Jr., simply known as Jim Reese, (7 December 1941 \u2013 26 October 1991) was a longtime member of the famed rock and roll band, The Bobby Fuller Four.",
+          " Being virtuosic at a variety of instruments, he is perhaps best known for his guitar work (both lead and rhythm).",
+          " He provided backing vocals and rhythm guitar to the Bobby Fuller Four's greatest hit, \"I Fought the Law.\""
+        ],
+        [
+          "\"Love Is a Drug\" is a song by Irish singer and songwriter and former member of Westlife Markus Feehily.",
+          " The song was released in the United Kingdom as a digital download On 19 April 2015 through Harmoney Entertainment.",
+          " It was released as the lead single from his debut studio album \"Fire\" (2015).",
+          " The song was written by Markus Feehily, Steve Anderson and Tinash\u00e9 Fazakerley; and produced by Mojam.",
+          " The song has peaked at number 65 on the Irish Singles Chart and number 55 on the UK Singles Chart."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a8afa4d55429949d91db44c",
+    "question": "Not About Angels was used in the film adaptation of what novel by John Green?",
+    "answer": "The Fault in Our Stars",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Not About Angels",
+        "The Fault in Our Stars"
+      ],
+      "sent_id": [
+        1,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "Not About Angels",
+        "Dear Hank &amp; John",
+        "Turtles All the Way Down (novel)",
+        "Paper Towns (film)",
+        "Scott Neustadter",
+        "Will Grayson, Will Grayson",
+        "Michael H. Weber",
+        "The Fault in Our Stars",
+        "John Aloysius Green",
+        "Angels &amp; Demons"
+      ],
+      "sentences": [
+        [
+          "\"Not About Angels\" is a song by English musician Birdy.",
+          " It is one of the theme songs for the film adaptation of the book \"The Fault in Our Stars\"."
+        ],
+        [
+          "Dear Hank & John is a podcast hosted by the Green brothers: musician and YouTube entrepreneur Hank Green and young-adult novelist and film producer, John Green.",
+          " The podcast is produced and edited by Nicholas Jenkins with additional help from Rosianna Halse Rojas.",
+          " First released in June 2015, Hank and John Green answer questions e-mailed by listeners, give \"dubious\" advice and talk about the weekly news for the planet Mars and the 3rd tier English football club AFC Wimbledon.",
+          " Episodes are usually around 45 minutes in length however it varies for every episode.",
+          " Upon the podcast's debut, it reached the number 4 position on the US iTunes performance chart and hit a peak position of number 2 two days later.",
+          " \"Dear Hank & John\" has also been charted on iTunes in the United Kingdom, Germany, France, Italy, Canada, Spain, Australia and Brazil.",
+          " The podcast is primarily funded through the crowdfunding website Patreon."
+        ],
+        [
+          "Turtles All the Way Down is an upcoming novel by author John Green.",
+          " It will be published on October 10, 2017.",
+          " It will be his fifth solo novel, and his seventh overall.",
+          " Its publication was announced during VidCon 2017, the online video conference co-founded by Green and his brother Hank.",
+          " It is his first published work since his 2012 novel \"The Fault in Our Stars\"."
+        ],
+        [
+          "Paper Towns is a 2015 American mystery, comedy-drama film, directed by Jake Schreier, based on the 2008 novel of the same name by John Green.",
+          " The film was adapted for the screen by Scott Neustadter and Michael H. Weber, the same team that wrote the first film adaption of one of Green's novels, \"The Fault in Our Stars\".",
+          " The film stars Nat Wolff and Cara Delevingne and was released on July 24, 2015, in the United States by 20th Century Fox.",
+          " The film follows the coming of age and search by the protagonist, Quentin \"Q\" Jacobsen (Wolff), for Margo Roth Spiegelman (Delevingne), his childhood friend and object of affection.",
+          " In the process, Quentin explores the relationship with his friends including his compatibility with Margo."
+        ],
+        [
+          "Scott Eric Neustadter (born 1977) is an American screenwriter and producer.",
+          " He often works with his writing partner, Michael H. Weber.",
+          " The two writers wrote the original screenplays for \"(500) Days of Summer\" and \"The Pink Panther 2\". \"",
+          "(500) Days of Summer\" is based on two real relationships Neustadter had.",
+          " They also wrote the screenplays for \"The Spectacular Now\", based on the novel by Tim Tharp, \"The Fault in Our Stars\", based on the best-selling novel by John Green, and \"Paper Towns\", based on another novel by John Green.",
+          " They also created the television series \"Friends with Benefits\", which lasted one season."
+        ],
+        [
+          "Will Grayson, Will Grayson is a novel by John Green and David Levithan, published in April 2010 by Dutton Juvenile.",
+          " The book's narrative is divided evenly between two boys named Will Grayson, with Green having written all of the chapters for one and Levithan having written the chapters for the other, presented in an alternating chapter fashion.",
+          " The novel debuted on \"The New York Times\" children's best-seller list after its release and remained there for three weeks.",
+          " It was the first LGBT-themed young adult novel to make it to that list."
+        ],
+        [
+          "Michael H. Weber is an American screenwriter and producer from New York.",
+          " He and his writing partner Scott Neustadter have written the original screenplays for the films \"500 Days of Summer\" (2009) and \"The Pink Panther 2\" (2009).",
+          " They also wrote the screenplays for \"The Spectacular Now\" (2013), based on the novel by Tim Tharp; \"The Fault in Our Stars\" (2014), based on the best-selling novel by John Green; and \"Paper Towns\" (2015), based on another novel by Green.",
+          " They also created the sitcom \"Friends with Benefits\", which lasted one season."
+        ],
+        [
+          "The Fault in Our Stars is the sixth novel by author John Green, published in January 2012.",
+          " The title is inspired by Act 1, Scene 2 of Shakespeare's play \"Julius Caesar\", in which the nobleman Cassius says to Brutus: \"The fault, dear Brutus, is not in our stars, / But in ourselves, that we are underlings.\"",
+          " The story is narrated by Hazel Grace Lancaster, a 16-year-old girl with cancer.",
+          " Hazel is forced by her parents to attend a support group where she subsequently meets and falls in love with 17-year-old Augustus Waters, an ex-basketball player and amputee.",
+          " A feature film adaptation of the novel directed by Josh Boone and starring Shailene Woodley, Ansel Elgort and Nat Wolff was released on June 6, 2014.",
+          " Both the book and its film adaptation were met with strong critical and commercial success."
+        ],
+        [
+          "John Aloysius Green was born in the parish of Moore, County Roscommon, Ireland, 10 December 1844.",
+          " His parents were John Green and Bridget (Kenny) Green.",
+          " John A. Green came to Boston, Massachusetts, September 2, 1852, and attended the common schools.",
+          " In 1860 he learned the monumental trade and worked at it for ten years.",
+          " Later he worked in granite, sandstone and last of all limestone."
+        ],
+        [
+          "Angels & Demons is a 2000 bestselling mystery-thriller novel written by American author Dan Brown and published by Pocket Books and then by Corgi Books.",
+          " The novel introduces the character Robert Langdon, who recurs as the protagonist of Brown's subsequent novels.",
+          " \"Angels & Demons\" shares many stylistic literary elements with its sequel, such as conspiracies of secret societies, a single-day time frame, and the Catholic Church.",
+          " Ancient history, architecture, and symbology are also heavily referenced throughout the book.",
+          " A film adaptation was released on May 15, 2009. \"",
+          "The Da Vinci Code\" film had been released in 2006."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a793ea55542994bb9456fce",
+    "question": "Which magazine was first published earlier, The Chronicle of Philanthropy or Skeptic?",
+    "answer": "The Chronicle of Philanthropy",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "The Chronicle of Philanthropy",
+        "The Chronicle of Philanthropy",
+        "The Chronicle of Philanthropy",
+        "Skeptic (U.S. magazine)"
+      ],
+      "sent_id": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    "context": {
+      "title": [
+        "Dallas Blues",
+        "Tales of the Jazz Age",
+        "Philanthropy (magazine)",
+        "The Porcupine",
+        "Letters from My Windmill",
+        "The Winter Knights",
+        "Clash of the Sky Galleons",
+        "Skeptic (U.S. magazine)",
+        "The Chronicle of Philanthropy",
+        "The Curse of the Gloamglozer"
+      ],
+      "sentences": [
+        [
+          "\"Dallas Blues\", written by Hart Wand, is an early blues song, first published in 1912.",
+          " It has been called the first true blues tune ever published.",
+          " However, two other 12-bar blues had been published earlier: Anthony Maggio's \"I Got the Blues\" in 1908 and \"Oh, You Beautiful Doll\", a Tin Pan Alley song whose first verse is twelve-bar blues, in 1911.",
+          " Also, two other songs with \"Blues\" in their titles were published in 1912: \"Baby Seals Blues\" (August 1912), a vaudeville tune written by Franklin \"Baby\" Seals, and \"The Memphis Blues\", written by W.C. Handy (September 1912).",
+          " Neither, however, were genuine blues songs."
+        ],
+        [
+          "Tales of the Jazz Age (1922) is a collection of eleven short stories by F. Scott Fitzgerald.",
+          " Divided into three separate parts, according to subject matter, it includes one of his better-known short stories, \"The Curious Case of Benjamin Button\".",
+          " All of the stories had been published earlier, independently, in either \"Metropolitan Magazine (New York)\", \"Saturday Evening Post\", \"Smart Set\", \"Collier's\", \"Chicago Sunday Tribune\", or \"Vanity Fair\"."
+        ],
+        [
+          "Philanthropy is a quarterly magazine published by the Philanthropy Roundtable.",
+          " First published as a newsletter in 1987, \"Philanthropy\" became a glossy magazine in 1996.",
+          " The magazine's primary focus is philanthropy, with a special interest in donor intent and philanthropic freedom.",
+          " The magazine is headquartered in Washington, D.C."
+        ],
+        [
+          "The Porcupine is a short novel by Julian Barnes originally published in 1992.",
+          " Before its British release date the book was first published earlier that year in Bulgarian, with the title \"\u0411\u043e\u0434\u043b\u0438\u0432\u043e \u0441\u0432\u0438\u043d\u0447\u0435\" (Bodlivo Svinche) by Obsidian of Sofia."
+        ],
+        [
+          "Letters from My Windmill (French: \"Lettres de mon moulin\" ) is a collection of short stories by Alphonse Daudet first published in its entirety in 1869.",
+          " Some of the stories had been published earlier in newspapers or journals such as \"Le Figaro\" and \"L'Ev\u00e9nement\" as early as 1865."
+        ],
+        [
+          "The Winter Knights is a children's fantasy novel by Paul Stewart and Chris Riddell, first published in 2005.",
+          " It is the eighth volume of \"The Edge Chronicles\" and the second of the \"Quint Saga\" trilogy; within the stories' own chronology it is the second novel, preceding the \"Twig Saga\" and \"Rook Saga\" trilogies that were published earlier."
+        ],
+        [
+          "Clash of the Sky Galleons is a children's fantasy novel by Paul Stewart and Chris Riddell, first published in 2006.",
+          " It is the ninth volume of \"The Edge Chronicles\" and the third of the \"Quint Saga\" trilogy; within the stories' own chronology it is the third novel, preceding the \"Twig Saga\" and \"Rook Saga\" trilogies that were published earlier."
+        ],
+        [
+          "Skeptic, colloquially known as Skeptic magazine, is a quarterly science education and science advocacy magazine published internationally by The Skeptics Society, a nonprofit organization devoted to promoting scientific skepticism and resisting the spread of pseudoscience, superstition, and irrational beliefs.",
+          " Founded by Michael Shermer, founder of the Skeptics Society, the magazine was first published in the spring of 1992 and is published through Millennium Press."
+        ],
+        [
+          "The Chronicle of Philanthropy is a magazine that covers the nonprofit world.",
+          " Based in Washington, DC, it is aimed at charity leaders, foundation executives, fund raisers, and other people involved in philanthropy.",
+          " The Chronicle of Philanthropy publishes 12 issues a year while updating its Web site daily.",
+          " It was founded in 1988 by editor Phil Semas and then managing editor Stacy Palmer.",
+          " It is owned by The Chronicle of Higher Education Inc., which also publishes \"The Chronicle of Higher Education\", a weekly newspaper covering colleges and universities."
+        ],
+        [
+          "The Curse of the Gloamglozer is a children's fantasy novel by Paul Stewart and Chris Riddell, first published in 2001.",
+          " It is the fourth volume of \"The Edge Chronicles\" and the first of the \"Quint Saga\" trilogy; within the stories' own chronology it is the first novel, preceding the \"Twig Saga\" trilogy that was published earlier."
+        ]
+      ]
+    }
+  },
+  {
+    "id": "5a8eb63455429917b4a5bdb7",
+    "question": "With which American musician, singer-songwriter, and multi-instrumentalist from Berklee College of Music did Jonny Browning collaborate?",
+    "answer": "St. Vincent",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Jonny Browning",
+        "St. Vincent (musician)",
+        "St. Vincent (musician)"
+      ],
+      "sent_id": [
+        6,
+        0,
+        1
+      ]
+    },
+    "context": {
+      "title": [
+        "Matt Hyde",
+        "Lee Eliot Berk",
+        "Shirish Korde",
+        "Berklee College of Music",
+        "St. Vincent (musician)",
+        "Berklee method",
+        "Wang Leehom",
+        "Jared Faber",
+        "Jonny Browning",
+        "Berklee Performance Center"
+      ],
+      "sentences": [
+        [
+          "Matt Hyde (born June 19, 1964) is an American producer, engineer, mixer and musician.",
+          " From 1982 to 1985 he attended Berklee College of Music in Boston.",
+          " While still at Berklee (1984) he obtained an internship at Pyramid Recording Studio in Boston.",
+          " After two semesters at Berklee, Hyde took a break from classes to tour for the Department of Defense overseas entertainment program, playing guitar and keyboards in several top 40 cover bands that played shows at U.S. military bases in foreign countries throughout Europe and the Pacific.",
+          " When he returned to the U.S., he began working at recording studios, first in Boston and from 1989 in Los Angeles."
+        ],
+        [
+          "Lee Eliot Berk (born 1942) was President and namesake of the Berklee College of Music (founded as Schillinger House in 1945 by his father, Lawrence Berk, who renamed the school after Lee in 1954) from 1979 to 2004.",
+          " Under the younger Berk\u2019s leadership, the college underwent significant changes.",
+          " Berklee expanded its curriculum to create new majors, including Film Scoring, Music Production and Engineering, Music Synthesis, Songwriting, Music Business/Management, and Music Therapy.",
+          " Educational applications of music technology expanded, the college administration was reorganized, more student services were added, and non-music academic offerings increased.",
+          " In 1992, he established the Berklee International Network that includes music schools with a shared mission around the globe."
+        ],
+        [
+          "Shirish Korde (born June 18, 1945), is a composer who was born in Uganda to Indian parents.",
+          " He is the Chair of the Music Department at the College of the Holy Cross (Worcester, MA) and has previously been on the faculty of the Berklee College of Music, the New England Conservatory, and Brown University.",
+          " Korde studied jazz and composition at the Berklee College of Music, analysis and composition at the New England Conservatory, and ethnomusicology at Brown University."
+        ],
+        [
+          "Berklee College of Music, located in Boston, Massachusetts, United States, is the largest independent college of contemporary music in the world.",
+          " Known for the study of jazz and modern American music, it also offers college-level courses in a wide range of contemporary and historic styles, including rock, flamenco, hip hop, reggae, salsa, and bluegrass.",
+          " Since 2012, Berklee College of Music has also operated a campus in Valencia, Spain."
+        ],
+        [
+          "Anne Erin \"Annie\" Clark (born September 28, 1982), better known by her stage name St. Vincent, is an American musician, singer-songwriter, and multi-instrumentalist.",
+          " After studying at Berklee College of Music for three years, she began her music career as a member of the Polyphonic Spree.",
+          " Clark was also a member of Sufjan Stevens's touring band before forming her own band in 2006."
+        ],
+        [
+          "In music performance and education, the Berklee method is the music theory, terminology, and practice taught at Berklee College of Music, the largest independent college of contemporary music in the world.",
+          " The \"Berklee method\" was founded by Lawrence Berk after study with Joseph Schillinger regarding the latter's, \"elaborate system of composition that employed mathematical permutation and combination process to generate rhythms, harmonies, and melodies\".",
+          " Later, attempting to codify jazz and popular music practice, the Berklee method often differs from common practice harmony and voice-leading rules or guidelines."
+        ],
+        [
+          "Wang Leehom (born May 17, 1976), sometimes credited as Leehom Wang, is a Chinese-American singer-songwriter, record producer, actor and film director.",
+          " He is currently based in Taiwan.",
+          " Formally trained at the Eastman School of Music, Williams College and Berklee College of Music, his musical style is known for fusing Chinese elements (such as Beijing opera, traditional styles of ethnic minorities, Chinese classical orchestra) with hip-hop and R&B.",
+          " Wang debuted in 1995 and since then has released over 25 albums, with sales of over 50 million copies.",
+          " He is also a four-time winner and 19-time nominee of Taiwan's Golden Melody Awards, the \"Grammys\" of Chinese music.",
+          " His sold-out concert at the 90,000 seat Beijing Bird's Nest on April 14, 2012 was the first solo pop concert to be held at the iconic venue.",
+          " He holds honorary doctoral degrees from both Williams College and Berklee.",
+          " With over 60 million followers on social media, he is one of the most followed celebrities in China (peaked as #1 most followed person in China's social media in 2014)."
+        ],
+        [
+          "Jared Faber (also known as J-Radical) is an American musician, composer, producer and multi-instrumentalist.",
+          " He grew up in New York City where he attended High School of Performing Arts, and later continued his music education at Berklee College of Music, studying jazz arranging and composition."
+        ],
+        [
+          "Jonny Browning is an American instrumental surf musician, primarily known as touring guitarist Victor Vector for the band Man or Astro-Man?",
+          " Prior to his performing in the band, he also played the part of Chromo-Crunch in Man or Astro-Man?",
+          ": Clone Project Alpha in 1997-1998.",
+          " He has played guitar and written songs for Sound of Humans (also featuring Birdstuff of Man or Astro-Man?",
+          "), Jonny and the Shamen, and The Man Made Brain.",
+          " He currently plays guitar and writes for Canadian instrumental surf band The Other Timelines.",
+          " Jonny has played in bands or recorded with members of many other bands, including: St. Vincent, The Polyphonic Spree, Drive-By Truckers, And You Will Know Us By The Trail Of Dead, Verbena, and Servotron.",
+          " He was born and raised in Alabama and has resided in Vancouver, BC since 2009."
+        ],
+        [
+          "The Berklee Performance Center is a 1,215-seat theatre located on Massachusetts Ave. in the Back Bay area of Boston, Massachusetts.",
+          " It is the largest theatre space on the Berklee College of Music campus and is used primarily for college-affiliated activities.",
+          " Presenters from outside the Berklee community also rent it for performances of all kinds.",
+          " In 2009, the Berklee Performance Center hosted a total of 200 events."
+        ]
+      ]
+    }
+  }
+]
