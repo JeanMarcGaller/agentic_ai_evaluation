@@ -18,7 +18,6 @@ coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "cohere
 # --- Pairwise evaluator to compare two answers ---
 pairwise_eval = load_evaluator("pairwise_string", llm=llm, config={"criteria": "overall"})
 
-
 def evaluate_pairwise(question, responder, revisor):
     """
        Evaluates two responses (responder and revisor) to the same question.
