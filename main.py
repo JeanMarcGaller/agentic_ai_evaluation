@@ -10,7 +10,7 @@ from langchain_core.messages import BaseMessage
 
 # Constants
 MAX_ROUNDS = 2 # Max iterations for revision loop
-NUM_QUESTIONS = 2 # Number of questions to evaluate
+NUM_QUESTIONS = 10 # Number of questions to evaluate
 
 # Load data
 examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
@@ -63,6 +63,8 @@ for idx, ex in enumerate(examples):
     # Extract answers
     responder_answer = extract_answer(result[1])
     revisor_answer = extract_answer(result[-1])
+    responder_tool_used = hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)
+    revisor_tool_used = hasattr(result[-1], 'tool_calls') and bool(result[-1].tool_calls)
 
     # Evaluate answers
     evaluation = evaluate_pairwise(question, responder_answer, revisor_answer)
@@ -72,6 +74,8 @@ for idx, ex in enumerate(examples):
         "question": question,
         "responder_answer": responder_answer,
         "revisor_answer": revisor_answer,
+        "responder_tool_used": responder_tool_used,
+        "revisor_tool_used": revisor_tool_used,
         "evaluation": evaluation
     })
 
