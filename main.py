@@ -10,8 +10,8 @@ from langchain_core.messages import BaseMessage
 from langsmith import traceable
 
 # Constants
-MAX_ROUNDS = 2  # Max iterations for revision loop
-NUM_QUESTIONS = 3  # Number of questions to evaluate
+MAX_ROUNDS = 3  # Max iterations for revision loop
+NUM_QUESTIONS = 10 # Number of questions to evaluate
 
 # Load data
 examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
