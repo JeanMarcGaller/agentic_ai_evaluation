@@ -59,7 +59,7 @@ def evaluate_pairwise(question, responder, revisor):
     )
 
     # Add results
-    evaluations["pairwise_winner"] = pairwise_result.get("value")
     evaluations["pairwise_reasoning"] = pairwise_result.get("reasoning")
+    evaluations["pairwise_winner"] = pairwise_result.get("value")
 
     return evaluations
