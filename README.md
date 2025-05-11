@@ -90,16 +90,18 @@ This will:
 
 ## 📊 Example Results
 
-| # | Question                                      | Responder Answer                 | Revisor Answer                    | Winner | Helpfulness (R/V) | Relevance (R/V) | Conciseness (R/V) | Coherence (R/V) |
-|---|------------------------------------------------------------|----------------------------------|-----------------------------------|--------|-------------------|------------------|--------------------|------------------|
-| 0 | The Polar Bears featuring the voice of Armie H...         | He voices the character Jackson Storm in... | In Cars 3, Armie Hammer provides the voice... | None   | Y / Y             | Y / Y            | Y / Y              | Y / Y            |
-| 1 | What date was the movie originally supposed to...          | The film originally slated for release on... | The film was originally scheduled to be re... | A      | Y / Y             | Y / Y            | Y / Y              | Y / Y            |
-
-Column Key:
-
-- R/V: Responder / Revisor 
-- Y: Satisfies the evaluation criterion (as judged by the LLM evaluator)
-- Winner: Either A, B, or None for tie
+| Question                                                                                      | Responder Tool | Revisor Tool | Winner | Helpfulness Responder | Helpfulness Revisor | Correctness Responder | Correctness Revisor | Relevance Responder | Relevance Revisor | Conciseness Responder | Conciseness Revisor | Coherence Responder | Coherence Revisor |
+|-----------------------------------------------------------------------------------------------|----------------|--------------|--------|------------------------|----------------------|------------------------|----------------------|----------------------|--------------------|------------------------|----------------------|----------------------|--------------------|
+| Who was appointed to the board of supervisors first, Jeff Sheehy or Ed Lee?                  | False          | False        | Responder | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Who was the electoral division that James Tully represented in 1928 named after?             | True           | False        | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?| False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Who played the female lead in a 2007 Indian Telugu film...?                                  | True           | False        | Revisor   | N                      | Y                    | N                      | Y                    | N                    | Y                  | N                      | Y                    | N                    | Y                  |
+| What is the name of the Minahasa journalist...?                                               | False          | True         | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Which star of The Human Stain was born in 1937?                                              | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Which year did the band, who released "Hooligan's Holiday," retire?                          | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Which Norwegian chess grandmaster was Espen Agdestein his manager?                           | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| What national historic district is located near a village...?                                | True           | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| What is the estimated population of the city in which Beaumont is located?                   | False          | False        | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
 
 ---
 

@@ -11,6 +11,7 @@ llm = ChatOpenAI(model="gpt-4") # Other models raise a warning, GPT-4 is recomme
 
 # --- Load evaluators ---
 helpfulness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "helpfulness"})
+correctness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "correctness"})
 relevance_eval = load_evaluator("criteria", llm=llm, config={"criteria": "relevance"})
 conciseness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "conciseness"})
 coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "coherence"})
@@ -30,6 +31,12 @@ def evaluate_pairwise(question, responder, revisor):
             input=question, prediction=responder
         ),
         "helpfulness_revisor": helpfulness_eval.evaluate_strings(
+            input=question, prediction=revisor
+        ),
+        "correctness_responder": correctness_eval.evaluate_strings(
+            input=question, prediction=responder
+        ),
+        "correctness_revisor": correctness_eval.evaluate_strings(
             input=question, prediction=revisor
         ),
         "relevance_responder": relevance_eval.evaluate_strings(
