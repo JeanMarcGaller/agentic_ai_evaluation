@@ -16,6 +16,7 @@ relevance_eval = load_evaluator("criteria", llm=llm, config={"criteria": "releva
 conciseness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "conciseness"})
 coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "coherence"})
 
+
 # --- Pairwise evaluator to compare two answers ---
 pairwise_eval = load_evaluator("pairwise_string", llm=llm, config={"criteria": "overall"})
 

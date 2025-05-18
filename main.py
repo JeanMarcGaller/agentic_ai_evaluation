@@ -1,6 +1,21 @@
 # === main.py ===
 
+"""
+Application Entry point
+
+This script evaluates two conversational agents. A responder and
+a revisor on a subset of the HotpotQA dataset.  It shows how to:
+
+1. spin up an Ollama server and load a local Llama-3 model;
+2. build LangGraph pipelines that draft answers, (optionally) execute tools,
+   and then revise the draft;
+3. score responder vs. revisor answers with a pair-wise evaluator; and
+4. save all run metadata to disk for later inspection.
+
+"""
+
 import json
+from ollama_manager import prepare_ollama
 from load_data import get_hotpotqa_subset
 from chains import build_responder, build_revisor
 from evaluator import evaluate_pairwise
@@ -12,8 +27,11 @@ from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 
 # Constants
-MAX_ROUNDS = 2
-NUM_QUESTIONS = 5
+MAX_ROUNDS = 1
+NUM_QUESTIONS = 1
+
+# Ollama-Backend hochfahren und Modell laden
+prepare_ollama(model="llama3.1")
 
 # Define responder/revisor models to compare
 model_configs = {
