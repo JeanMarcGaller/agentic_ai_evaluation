@@ -12,11 +12,16 @@ a revisor on a subset of the HotpotQA dataset.  It shows how to:
 3. score responder vs. revisor answers with a pair-wise evaluator; and
 4. save all run metadata to disk for later inspection.
 
+Use of own questions:
+python main.py --questions my_questions.json
+
 """
 
+
 import json
+import argparse
 from ollama_manager import prepare_ollama
-from load_data import get_hotpotqa_subset
+from load_data import get_hotpotqa_subset, load_custom_questions   # neu
 from chains import build_responder, build_revisor
 from evaluator import evaluate_pairwise
 from tool_executor import execute_tools
@@ -27,8 +32,8 @@ from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 
 # Constants
-MAX_ROUNDS = 1
-NUM_QUESTIONS = 1
+MAX_ROUNDS = 3
+NUM_QUESTIONS = 3
 
 # Ollama-Backend hochfahren und Modell laden
 prepare_ollama(model="llama3.1")
@@ -36,11 +41,26 @@ prepare_ollama(model="llama3.1")
 # Define responder/revisor models to compare
 model_configs = {
     "ollama": ChatOllama(model="llama3.1"),
-    "openai": ChatOpenAI(model="o4-mini")
+    "openai": ChatOpenAI(model="gpt-4.1")
 }
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--questions",
+    help="Pfad zu einer JSON-Datei mit eigenen Testfragen",
+    default=None,
+)
+cli_args = parser.parse_args()
+
+if cli_args.questions:
+    examples = load_custom_questions(cli_args.questions)
+    NUM_QUESTIONS = len(examples)          # überschreibt die Konstante
+else:
+    examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
+
 # Load data
-examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
+# examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
 results = []
 
 def extract_answer(step):

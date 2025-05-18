@@ -37,7 +37,7 @@ Examples:
 - Q: What is the capital of France? → A: \"Paris.\" (no tool needed)
 - Q: What startups raised funding in 2024 for AI in energy? → A: [Uses tool]
 
-Be thoughtful and only use a tool if it meaningfully improves your answer.
+If you cannot answer with high certainty, you MUST use the tool to verify or retrieve facts.
 """,
         ),
         MessagesPlaceholder(variable_name="messages"),
@@ -51,8 +51,7 @@ Be thoughtful and only use a tool if it meaningfully improves your answer.
 revise_instructions = """You are revising the previous answer using new context or tool results.
 
 Guidelines:
-- Use external tool results (e.g., search) only if they provide new, verifiable, or necessary information.
-- If the original answer was sufficient and factually correct, refine it without tools.
+- Use external tool results (e.g., search) if they provide new, verifiable, or necessary information.
 - Avoid speculation, unsupported claims, and verbose language.
 - Keep your revised answer under 150 words.
 - Cite new facts using [n] and list references at the end.
@@ -79,7 +78,8 @@ def build_responder(llm):
         first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
 
 - First try to answer using only your internal knowledge.
-- Only if you are uncertain or the question is likely to require up-to-date, external, or detailed information, suggest and call a search tool.
+- Only if you are uncertain or the question is likely to require up-to-date, external, or detailed information, suggest 
+and call a search tool.
 - Do not speculate or guess.
 - If uncertain and no tools are used, explicitly say so."""
     ) | llm.bind_tools(

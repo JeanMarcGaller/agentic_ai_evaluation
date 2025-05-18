@@ -37,3 +37,9 @@ def get_hotpotqa_subset(num_samples=3): # TODO: Check num_samples usage in code
 
     print(f"Sample subset saved {path}")
     return subset
+
+
+def load_custom_questions(path: str) -> list[dict]:
+    """Liest benutzerdefinierte Fragen aus einer JSON-Datei."""
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
