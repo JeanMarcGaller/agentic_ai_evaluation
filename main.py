@@ -32,7 +32,7 @@ from tool_executor import execute_tools
 
 # LangGraph framework for building pipelines
 from langgraph.graph import END, MessageGraph
-from langchain_core.messages import BaseMessage
+from langchain_core.messages import BaseMessage, HumanMessage
 from langsmith import traceable
 
 # LLM interfaces
@@ -42,12 +42,12 @@ from langchain_ollama import ChatOllama
 
 # === Constants ===
 
-MAX_ROUNDS = 2                      # Max graph steps before stopping (used in conditional edge logic)
-NUM_QUESTIONS = 1                   # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen2.5:72b"   # Ollama model to use
+MAX_ROUNDS = 3                      # Max graph steps before stopping (used in conditional edge logic)
+NUM_QUESTIONS = 10                  # Default number of questions to evaluate
+OLLAMA_MODEL_NAME = "qwen3:32b"     # Ollama model to use: qwen2.5:72b, qwen3:32b
 OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use
 
-# === Start Ollama backend and load model ===
+# === Start Ollama backend ===
 
 prepare_ollama(model=OLLAMA_MODEL_NAME) # Launches Ollama and ensures model is ready
 
@@ -103,11 +103,13 @@ def extract_answer(step):
 # === Evaluation ===
 
 @traceable(name="HotpotQA Evaluation")
-def evaluate_question(question, responder_answer, revisor_answer):
+def evaluate_question(question, responder_answer, revisor_answer, responder_tool_used, revisor_tool_used):
     return evaluate_pairwise(
         question=question,
         responder=responder_answer,
         revisor=revisor_answer,
+        # responder_tool_used=responder_tool_used,
+        # revisor_tool_used=revisor_tool_used
     )
 
 # === Compare responder/revisor model pairs ===
@@ -115,7 +117,6 @@ def evaluate_question(question, responder_answer, revisor_answer):
 model_pairs = [
     ("ollama", "ollama"),
     ("openai", "openai"),
-
 ]
 
 for responder_model_name, revisor_model_name in model_pairs:
@@ -164,7 +165,7 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         # === Execute pipeline ===
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
-        result = graph.invoke(question)
+        result = graph.invoke([HumanMessage(content=question)])
 
         # Extract tool usage metadata
         responder_tool_used = hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)
@@ -182,6 +183,8 @@ for responder_model_name, revisor_model_name in model_pairs:
             question=question,
             responder_answer=responder_answer,
             revisor_answer=revisor_answer,
+            responder_tool_used=responder_tool_used,
+            revisor_tool_used=revisor_tool_used
         )
 
         results.append({

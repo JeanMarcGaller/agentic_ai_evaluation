@@ -3,14 +3,12 @@ from dotenv import load_dotenv
 load_dotenv()  # Load environment variables
 
 # LangChain & LangGraph imports
-from langchain_core.messages import HumanMessage
 from langchain_core.output_parsers.openai_tools import (
     JsonOutputToolsParser,
     PydanticToolsParser,
 )
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_openai import ChatOpenAI
-from langchain_ollama import ChatOllama
+
 
 # Tool definitions (Pydantic schemas)
 from schemas import AnswerQuestion, ReviseAnswer
@@ -86,11 +84,3 @@ def build_revisor(llm):
         tools=[ReviseAnswer],
         tool_choice=None
     )
-
-# === Available LLM instances ===
-# openai_llm = ChatOpenAI(model="gpt-4o")
-# ollama_llm = ChatOllama(model="llama3.1")
-
-# === Default nodes (can be overridden in main.py) ===
-#first_responder = build_responder(openai_llm)
-# revisor = build_revisor(openai_llm)
