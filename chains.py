@@ -1,3 +1,6 @@
+# === chains.py ===
+
+
 import datetime
 from dotenv import load_dotenv
 load_dotenv()  # Load environment variables
@@ -10,17 +13,22 @@ from langchain_core.output_parsers.openai_tools import (
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 
-# Tool definitions (Pydantic schemas)
+# Tool definitions (Pydantic schemas, see schemas.py)
 from schemas import AnswerQuestion, ReviseAnswer
 
-# Output parsers
+# Parses tool output and includes tool identifier in result
 parser = JsonOutputToolsParser(return_id=True)
+
+# Parses tool output and validates structure against Pydantic model(s)
 parser_pydantic = PydanticToolsParser(tools=[AnswerQuestion])
+
 
 # === Prompt template used by both responder and revisor ===
 
+# Defines the format and behavior for all messages sent to the LLM
 actor_prompt_template = ChatPromptTemplate.from_messages(
     [
+        # System message that sets rules for answering questions
         (
             "system",
             """You are a knowledgeable assistant.
@@ -37,14 +45,19 @@ Examples:
 If you are not fully confident in your answer, YOU MUST use the tool to verify or obtain the necessary
 information.""",
         ),
+        # Placeholder where conversation history will be inserted
         MessagesPlaceholder(variable_name="messages"),
+        # Final instruction to follow the formatting rule
         ("system", "Answer the user's question above using the required format."),
     ]
 ).partial(
+    # Automatically fill {time} with current timestamp
     time=lambda: datetime.datetime.now().isoformat()
 )
 
 # === Shared revisor instructions ===
+
+# Instructions for how the revisor should rewrite an earlier answer
 revise_instructions = """You are revising the previous answer using new context or tool results.
 - YOU MUST use the tool results (e.g., search) if they provide new or necessary information.
 - Avoid speculation, unsupported claims, and verbose language.
@@ -65,22 +78,26 @@ References:
 """
 
 # === Builders for responder and revisor ===
+
+# Creates the responder agent
 def build_responder(llm):
     return actor_prompt_template.partial(
+        # Additional instruction for responder
         first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
 - First try to answer using only your internal knowledge.
 - If you are uncertain or the question is likely to require up-to-date, external, or detailed information,
 YOU MUST use the tool.
 """
     ) | llm.bind_tools(
-        tools=[AnswerQuestion],
-        tool_choice=None
+        tools=[AnswerQuestion], # Tool the responder can use
+        tool_choice=None # Let the model choose when to use the tool
     )
 
+# Creates the revisor agent
 def build_revisor(llm):
     return actor_prompt_template.partial(
-        first_instruction=revise_instructions
+        first_instruction=revise_instructions # Uses revisor-specific behavior
     ) | llm.bind_tools(
-        tools=[ReviseAnswer],
-        tool_choice=None
+        tools=[ReviseAnswer], # Tool the revisor can use
+        tool_choice=None # Let the model decide when to use it
     )

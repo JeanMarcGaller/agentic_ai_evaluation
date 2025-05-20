@@ -1,4 +1,4 @@
-# ollama_manager.py
+# === ollama_manager.py ===
 
 # === Imports ===
 from __future__ import annotations
