@@ -45,11 +45,11 @@ from langchain_ollama import ChatOllama
 MAX_ROUNDS = 3                      # Max graph steps before stopping (used in conditional edge logic)
 NUM_QUESTIONS = 10                  # Default number of questions to evaluate
 OLLAMA_MODEL_NAME = "qwen3:32b"     # Ollama model to use: qwen2.5:72b, qwen3:32b
-OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use
+OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use: gpt-4.1
 
 # === Start Ollama backend ===
 
-prepare_ollama(model=OLLAMA_MODEL_NAME) # Launches Ollama and ensures model is ready
+prepare_ollama(model=OLLAMA_MODEL_NAME)
 
 
 # === Define model configurations ===
@@ -58,6 +58,8 @@ model_configs = {
     "ollama": ChatOllama(model=OLLAMA_MODEL_NAME),
     "openai": ChatOpenAI(model=OPENAI_MODEL_NAME)
 }
+
+# === Define model names for results recording ===
 
 model_names = {
     "ollama": OLLAMA_MODEL_NAME,
@@ -78,24 +80,30 @@ cli_args = parser.parse_args()
 # === Load Dataset ===
 
 if cli_args.questions:
-    examples = load_custom_questions(cli_args.questions)  # Load user-provided questions
+    # Load user questions from JSON
+    examples = load_custom_questions(cli_args.questions)
     NUM_QUESTIONS = len(examples)                         # Update number of questions
 else:
-    examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)  # Load subset of HotpotQA
+    # Use a default subset of HotpotQA
+    examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
 
 
 # === Results Placeholder ===
 
-results = [] # Stores per-question results and metadata
+results = []    # List to accumulate all results and metadata
 
 
 # === Extract Final Answer ===
 
 def extract_answer(step):
+    """
+    Extracts the final answer from a graph node step result.
+    Checks for tool call outputs or direct message content.
+    """
     if hasattr(step, "tool_calls") and step.tool_calls:
-        return step.tool_calls[0]["args"]["answer"]
+        return step.tool_calls[0]["args"]["answer"] # Extract answer from tool call output
     elif hasattr(step, "content") and isinstance(step.content, str):
-        return step.content
+        return step.content # Extract from message string
     else:
         return "(No answer found)"
 
@@ -104,6 +112,7 @@ def extract_answer(step):
 
 @traceable(name="HotpotQA Evaluation")
 def evaluate_question(question, responder_answer, revisor_answer, responder_tool_used, revisor_tool_used):
+    # Pairwise evaluation function comparing two responses
     return evaluate_pairwise(
         question=question,
         responder=responder_answer,
@@ -115,9 +124,12 @@ def evaluate_question(question, responder_answer, revisor_answer, responder_tool
 # === Compare responder/revisor model pairs ===
 
 model_pairs = [
-    ("ollama", "ollama"),
-    ("openai", "openai"),
+    ("ollama", "ollama"), # Compare Ollama responder vs. Ollama revisor
+    ("openai", "openai"), # Compare OpenAI responder vs. OpenAI revisor
 ]
+
+
+# === Main Loop ===
 
 for responder_model_name, revisor_model_name in model_pairs:
     print(f"\n=== Running: Responder={responder_model_name}, Revisor={revisor_model_name} ===")
@@ -126,7 +138,7 @@ for responder_model_name, revisor_model_name in model_pairs:
     responder_llm = model_configs[responder_model_name]
     revisor_llm = model_configs[revisor_model_name]
 
-    # Use consistent model naming
+    # Model name for results metadata
     responder_model_actual = model_names[responder_model_name]
     revisor_model_actual = model_names[revisor_model_name]
 
@@ -141,22 +153,27 @@ for responder_model_name, revisor_model_name in model_pairs:
         # === Define LangGraph ===
         builder = MessageGraph()
 
-        # Nodes
-        builder.add_node("draft", responder_chain)
-        builder.add_node("execute_tools", execute_tools)
-        builder.add_node("revise", revisor_chain)
+        # Nodes / Steps
+        builder.add_node("draft", responder_chain)          # Initial draft generation
+        builder.add_node("execute_tools", execute_tools)    # Execute tools after draft
+        builder.add_node("revise", revisor_chain)           # Final revision step
 
-        # Edges
-        builder.add_edge("draft", "execute_tools")
-        builder.add_edge("execute_tools", "revise")
+        # Edges / Transitions
+        builder.add_edge("draft", "execute_tools")      # From draft to tools
+        builder.add_edge("execute_tools", "revise")     # From tools to revision
 
-        # Entry point
-        builder.set_entry_point("draft")
+        # Entry point / Start
+        builder.set_entry_point("draft")    # Start from the draft step
 
-        # Conditional: After "revise", continue or end?
+        # Conditional: This function decides whether to stop the graph or go for another round
         def event_loop(state: list[BaseMessage]) -> str:
+            # If we have reached the maximum number of steps (e.g. 3), stop the graph
+            # Otherwise, go back to the "execute_tools" step and continue
             return END if len(state) >= MAX_ROUNDS else "execute_tools"
 
+        # After the "revise" step, use the event_loop function to decide:
+        # - whether to stop (END)
+        # - or loop back to "execute_tools"
         builder.add_conditional_edges("revise", event_loop)
 
         # Compile LangGraph pipeline
@@ -165,9 +182,9 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         # === Execute pipeline ===
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
-        result = graph.invoke([HumanMessage(content=question)])
+        result = graph.invoke([HumanMessage(content=question)]) # Run LangGraph pipeline
 
-        # Extract tool usage metadata
+        # Check if each agent used a tool during execution
         responder_tool_used = hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)
         revisor_tool_used = hasattr(result[-1], 'tool_calls') and bool(result[-1].tool_calls)
 
@@ -187,6 +204,7 @@ for responder_model_name, revisor_model_name in model_pairs:
             revisor_tool_used=revisor_tool_used
         )
 
+        # Append structured result to results list
         results.append({
             "question": question,
             "responder_answer": responder_answer,
