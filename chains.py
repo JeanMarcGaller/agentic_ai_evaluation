@@ -36,7 +36,7 @@ Examples:
 - What is the capital of France? \"Paris.\" (no tool needed)
 - What startups raised funding in 2025 for AI in energy? (tool needed, use tool)
 
-If you are not fully confident in your answer, you must use the available tools to verify or obtain the necessary
+If you are not fully confident in your answer, YOU MUST use the tool to verify or obtain the necessary
 information.""",
         ),
         MessagesPlaceholder(variable_name="messages"),
@@ -48,7 +48,7 @@ information.""",
 
 # === Shared revisor instructions ===
 revise_instructions = """You are revising the previous answer using new context or tool results.
-- Use external tool results (e.g., search) if they provide new or necessary information.
+- YOU MUST use the tool results (e.g., search) if they provide new or necessary information.
 - Avoid speculation, unsupported claims, and verbose language.
 - Keep your revised answer under 150 words.
 - Cite new facts using [n] and list references at the end.
@@ -71,8 +71,8 @@ def build_responder(llm):
     return actor_prompt_template.partial(
         first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
 - First try to answer using only your internal knowledge.
-- If you are uncertain or the question is likely to require up-to-date, external, or detailed information, call a 
-search tool.
+- If you are uncertain or the question is likely to require up-to-date, external, or detailed information,
+YOU MUST use the tool.
 """
     ) | llm.bind_tools(
         tools=[AnswerQuestion],
@@ -88,9 +88,9 @@ def build_revisor(llm):
     )
 
 # === Available LLM instances ===
-openai_llm = ChatOpenAI(model="gpt-4o")
-ollama_llm = ChatOllama(model="llama3.1")
+# openai_llm = ChatOpenAI(model="gpt-4o")
+# ollama_llm = ChatOllama(model="llama3.1")
 
 # === Default nodes (can be overridden in main.py) ===
-first_responder = build_responder(openai_llm)
-revisor = build_revisor(openai_llm)
+#first_responder = build_responder(openai_llm)
+# revisor = build_revisor(openai_llm)

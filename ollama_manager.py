@@ -1,19 +1,22 @@
 # ollama_manager.py
+
+# === Imports ===
 from __future__ import annotations
 
 import os
 import subprocess
 import time
-from pathlib import Path
 from typing import Final
 
 import requests
 
+# === Constants ===
 OLLAMA_HOST: Final[str] = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 CHECK_URL: Final[str] = f"{OLLAMA_HOST}/api/tags"
 
 
 def _is_server_up(timeout: float = 1.5) -> bool:
+    """Check if the Ollama server is responding."""
     try:
         requests.get(CHECK_URL, timeout=timeout)
         return True
@@ -21,32 +24,32 @@ def _is_server_up(timeout: float = 1.5) -> bool:
         return False
 
 
-def _start_server(detach: bool = True) -> subprocess.Popen:
+def _start_server(detach: bool = True) -> subprocess.Popen | None:
     """
-    Startet `ollama serve` (falls nicht aktiv) und gibt den Prozess zurück.
-    Läuft er schon, wird `None` zurückgegeben.
+    Starts `ollama serve` if it is not already running.
+    Returns the subprocess if started, otherwise None.
     """
     if _is_server_up():
         return None
 
-    # `ollama serve` hängt sich nicht auf STDOUT ⇒ gleich in den Hintergrund schicken
+    # Suppress stdout/stderr output when running detached
     kwargs = {"stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL}
     cmd = ["ollama", "serve"]
     proc = subprocess.Popen(cmd, **kwargs) if detach else subprocess.Popen(cmd)
 
-    # kleines Polling, bis Server Ports offen sind
+    # Poll the server to wait until it's responsive
     for _ in range(15):
         if _is_server_up():
             return proc
         time.sleep(0.6)
 
-    raise RuntimeError("Ollama-Server konnte nicht gestartet werden.")
+    raise RuntimeError("Failed to start Ollama server.")
 
 
 def _warm_up(model: str) -> None:
     """
-    Ein schneller Prompt über die REST-API lädt das Modell in den RAM.
-    Schlägt der Call fehl, wird nur gewarnt – das Haupt­programm läuft weiter.
+    Sends a simple prompt to ensure the model is loaded into memory.
+    If it fails, prints a warning but does not interrupt execution.
     """
     try:
         resp = requests.post(
@@ -55,26 +58,34 @@ def _warm_up(model: str) -> None:
             timeout=30,
         )
         resp.raise_for_status()
-        _ = resp.json()["response"]      # Antwort kommt nur bei success
-    except Exception as exc:             # breche nicht ab, nur Hinweis
-        print(f"⚠️  Warm-up übersprungen ({exc})")
+        _ = resp.json()["response"]
+    except Exception as exc:
+        print(f"Warm-up skipped ({exc})")
 
 
-def ensure_model(model: str = "llama3.1") -> None:
+def ensure_model(model: str) -> None:
     """
-    Prüft, ob das Modell bereits auf der Platte liegt;
-    lädt es andernfalls per `ollama pull <model>`.
+    Checks if the model is already downloaded locally.
+    If not, downloads it using `ollama pull <model>`.
     """
-    resp = requests.get(CHECK_URL, timeout=3).json()
-    available = {m["name"] for m in resp.get("models", [])}
-    if model not in available:
-        print(f"📦  Lade Modell '{model}' …")
-        subprocess.run(["ollama", "pull", model], check=True)
+    try:
+        resp = requests.get(CHECK_URL, timeout=3).json()
+        available = {m["name"] for m in resp.get("models", [])}
+        if model not in available:
+            print(f"Downloading model '{model}' …")
+            subprocess.run(["ollama", "pull", model], check=True)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to check or pull model '{model}': {exc}")
 
 
-def prepare_ollama(model: str = "llama3.1") -> None:
+def prepare_ollama(model: str) -> None:
+    """
+    Ensures the Ollama backend is ready:
+    1. Starts the server (if needed).
+    2. Downloads the model (if missing).
+    3. Loads the model into memory.
+    """
     _start_server()
     ensure_model(model)
     _warm_up(model)
-    print("✅  Ollama bereit.")
-
+    print("Ollama is ready!")
