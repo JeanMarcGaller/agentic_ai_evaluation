@@ -43,7 +43,9 @@ No explanation. Only respond with [[A]], [[B]], or [[C]].
 pairwise_eval = load_evaluator(
     "pairwise_string",
     llm=llm,
-    config={"criteria": "overall"},
+    config={
+        "criteria": "Clarity, factual accuracy, conciseness, and effective use of tool/search results if available. Preference is given to answers that correctly incorporate new information from tools when relevant."
+    },
     prompt=pairwise_prompt
 )
 
