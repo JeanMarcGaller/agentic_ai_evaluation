@@ -29,6 +29,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 dill==0.3.8
 distro==1.9.0
+et_xmlfile==2.0.0
 executing==2.2.0
 fastjsonschema==2.21.1
 filelock==3.18.0
@@ -68,6 +69,7 @@ kiwisolver==1.4.8
 langchain==0.3.25
 langchain-community==0.3.23
 langchain-core==0.3.58
+langchain-ollama==0.3.2
 langchain-openai==0.3.16
 langchain-tavily==0.1.6
 langchain-text-splitters==0.3.8
@@ -95,7 +97,9 @@ nltk==3.9.1
 notebook==7.4.2
 notebook_shim==0.2.4
 numpy==2.2.5
+ollama==0.4.8
 openai==1.77.0
+openpyxl==3.2.0b1
 orjson==3.10.18
 ormsgpack==1.9.1
 overrides==7.7.0
