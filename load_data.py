@@ -3,7 +3,7 @@
 import json
 import random
 import datetime
-from datasets import load_dataset
+from datasets import load_dataset # From Hugging Face – loads datasets like HotpotQA
 
 def get_hotpotqa_subset(num_samples=3): # TODO: Check num_samples usage in code
     """
@@ -40,6 +40,6 @@ def get_hotpotqa_subset(num_samples=3): # TODO: Check num_samples usage in code
 
 
 def load_custom_questions(path: str) -> list[dict]:
-    """Liest benutzerdefinierte Fragen aus einer JSON-Datei."""
+    # Reads custom questions from a JSON file
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
