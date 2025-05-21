@@ -29,7 +29,7 @@ def get_hotpotqa_subset(num_samples=3): # TODO: Check num_samples usage in code
 
     # Generate filename with timestamp
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = f"hotpotqa_subset_{timestamp}.json"
+    path = f"data/hotpotqa_subset_{timestamp}.json"
 
     # Save subset of samples
     with open(path, "w") as f:

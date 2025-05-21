@@ -4,9 +4,10 @@
 Application Entry point
 
 This script evaluates two conversational agents: a responder and a revisor,
-on a subset of the HotpotQA or a user-defined dataset of questions.
+on a subset of the HotpotQA or a user-defined dataset.
 
 Workflow:
+
 1. Starts a local Ollama server and loads an opensource model.
 2. Constructs LangGraph pipelines to answer questions, use tools, and revise responses.
 3. Evaluates the two agents on the same questions and collects evaluation metrics.
@@ -15,7 +16,7 @@ Workflow:
 
 To process your own questions:
 1. Define your questions in my_questions.json.
-2. Run: python main.py --questions my_questions.json
+2. Run: python main.py --questions data/my_questions.json
 """
 
 # === Imports ===
@@ -39,18 +40,16 @@ from langsmith import traceable
 from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
 
-
 # === Constants ===
 
-MAX_ROUNDS = 3                      # Max graph steps before stopping (used in conditional edge logic)
-NUM_QUESTIONS = 10                  # Default number of questions to evaluate
+MAX_ROUNDS = 1                      # Max graph steps before stopping (used in conditional edge logic)
+NUM_QUESTIONS = 1                   # Default number of questions to evaluate
 OLLAMA_MODEL_NAME = "qwen3:32b"     # Ollama model to use: qwen2.5:72b, qwen3:32b
 OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use: gpt-4.1
 
 # === Start Ollama backend ===
 
 prepare_ollama(model=OLLAMA_MODEL_NAME)
-
 
 # === Define model configurations ===
 
@@ -76,7 +75,6 @@ parser.add_argument(
 )
 cli_args = parser.parse_args()
 
-
 # === Load Dataset ===
 
 if cli_args.questions:
@@ -92,7 +90,6 @@ else:
 
 results = []    # List to accumulate all results and metadata
 
-
 # === Extract Final Answer ===
 
 def extract_answer(step):
@@ -106,7 +103,6 @@ def extract_answer(step):
         return step.content # Extract from message string
     else:
         return "(No answer found)"
-
 
 # === Evaluation ===
 
@@ -127,7 +123,6 @@ model_pairs = [
     ("ollama", "ollama"), # Compare Ollama responder vs. Ollama revisor
     ("openai", "openai"), # Compare OpenAI responder vs. OpenAI revisor
 ]
-
 
 # === Main Loop ===
 
@@ -179,7 +174,6 @@ for responder_model_name, revisor_model_name in model_pairs:
         # Compile LangGraph pipeline
         graph = builder.compile()
 
-
         # === Execute pipeline ===
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
         result = graph.invoke([HumanMessage(content=question)]) # Run LangGraph pipeline
@@ -204,7 +198,7 @@ for responder_model_name, revisor_model_name in model_pairs:
             revisor_tool_used=revisor_tool_used
         )
 
-        # Append structured result to results list
+        # Append structured results to list
         results.append({
             "question": question,
             "responder_answer": responder_answer,
@@ -219,10 +213,9 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         print("Evaluation completed")
 
-
 # === Save results ===
 
-with open("results.json", "w") as f:
+with open("results/results.json", "w") as f:
     json.dump(results, f, indent=2)
 
-print("\nResults stored in: results.json")
+print("\nResults stored in results.json")
