@@ -5,10 +5,18 @@
   },
   {
     "question": "Who is the winner of the swiss football league 2025?",
-    "answer": [""]
+    "answer": ["FC Basel"]
   },
   {
     "question": "Which country is the winner of the Eurovision Song Contest 2025?",
     "answer": ["Austria"]
+  },
+  {
+    "question": "Where and when will the Superbooth 2025 will take place?",
+    "answer": ["Superbooth 2025 took place from May 8 to May 10, 2025, at the FEZ-Berlin (Freizeit- und Erholungszentrum) in Berlin, Germany."]
+  },
+  {
+    "question": "Which is the Synthesizer announced 2025 by Moog Music Inc.?",
+    "answer": ["Moog Music Inc. unveiled the Moog Messenger in 2025."]
   }
 ]
