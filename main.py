@@ -42,10 +42,10 @@ from langchain_ollama import ChatOllama
 
 # === Constants ===
 
-MAX_ROUNDS = 4                      # Max graph steps before stopping (used in conditional edge logic)
-NUM_QUESTIONS = 5                   # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen3:32b"     # Ollama model to use: qwen2.5:72b, qwen3:32b
-OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use: gpt-4.1
+MAX_ROUNDS = 3                              # Max graph steps before stopping (used in conditional edge logic)
+NUM_QUESTIONS = 10                          # Default number of questions to evaluate
+OLLAMA_MODEL_NAME = "qwen3:32b"             # Ollama model to use: qwen2.5:72b, qwen3:32b, firefunction-v2:70b
+OPENAI_MODEL_NAME = "gpt-4.1"               # OpenAi model to use: gpt-4.1
 
 # === Start Ollama backend ===
 
@@ -88,7 +88,7 @@ else:
 
 # === Results Placeholder ===
 
-results = []    # List to accumulate all results and metadata
+results = []
 
 # === Extract Final Answer ===
 
@@ -162,13 +162,13 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         # Conditional: This function decides whether to stop the graph or go for another round
         def event_loop(state: list[BaseMessage]) -> str:
-            # If we have reached the maximum number of steps (e.g. 3), stop the graph
-            # Otherwise, go back to the "execute_tools" step and continue
+            # If we have reached the maximum number of steps, stop the graph
+            # Otherwise, go back to execute_tools
             return END if len(state) >= MAX_ROUNDS else "execute_tools"
 
-        # After the "revise" step, use the event_loop function to decide:
-        # - whether to stop (END)
-        # - or loop back to "execute_tools"
+        # After revise, use the event_loop function to decide:
+        # - to stop (END)
+        # - loop back to execute_tools
         builder.add_conditional_edges("revise", event_loop)
 
         # Compile LangGraph pipeline
@@ -178,7 +178,7 @@ for responder_model_name, revisor_model_name in model_pairs:
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
         result = graph.invoke([HumanMessage(content=question)]) # Run LangGraph pipeline
 
-        # Check if each agent used a tool during execution
+        # Check if agent used tool
         responder_tool_used = hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)
         revisor_tool_used = hasattr(result[-1], 'tool_calls') and bool(result[-1].tool_calls)
 
@@ -198,7 +198,7 @@ for responder_model_name, revisor_model_name in model_pairs:
             revisor_tool_used=revisor_tool_used
         )
 
-        # Append structured results to list
+        # Append results
         results.append({
             "question": question,
             "responder_answer": responder_answer,

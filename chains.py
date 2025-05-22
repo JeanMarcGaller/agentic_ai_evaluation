@@ -1,6 +1,5 @@
 # === chains.py ===
 
-
 import datetime
 from dotenv import load_dotenv
 load_dotenv()  # Load environment variables
@@ -13,22 +12,20 @@ from langchain_core.output_parsers.openai_tools import (
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 
-# Tool definitions (Pydantic schemas, see schemas.py)
+# Tool definitions
 from schemas import AnswerQuestion, ReviseAnswer
 
-# Parses tool output and includes tool identifier in result
+# Parses tool output
 parser = JsonOutputToolsParser(return_id=True)
-
-# Parses tool output and validates structure against Pydantic model(s)
 parser_pydantic = PydanticToolsParser(tools=[AnswerQuestion])
 
 
 # === Prompt template used by both responder and revisor ===
 
-# Defines the format and behavior for all messages sent to the LLM
+# Defines format and behavior for messages sent to LLM
 actor_prompt_template = ChatPromptTemplate.from_messages(
     [
-        # System message that sets rules for answering questions
+        # System message
         (
             "system",
             """You are a knowledgeable assistant.
@@ -45,19 +42,18 @@ Examples:
 If you are not fully confident in your answer, YOU MUST use the tool to verify or obtain the necessary
 information.""",
         ),
-        # Placeholder where conversation history will be inserted
+        # Placeholder for conversation history
         MessagesPlaceholder(variable_name="messages"),
-        # Final instruction to follow the formatting rule
+        # Final instruction
         ("system", "Answer the user's question above using the required format."),
     ]
 ).partial(
-    # Automatically fill {time} with current timestamp
     time=lambda: datetime.datetime.now().isoformat()
 )
 
 # === Shared revisor instructions ===
 
-# Instructions for how the revisor should rewrite an earlier answer
+# Instructions for how the revisor should rewrite an answer
 revise_instructions = """You are revising the previous answer using new context or tool results.
 - YOU MUST use the tool results (e.g., search) if they provide new or necessary information.
 - Avoid speculation, unsupported claims, and verbose language.

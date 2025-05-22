@@ -1,7 +1,7 @@
 # === tool_executor.py ===
 
 from dotenv import load_dotenv
-load_dotenv() # Load environment variables
+load_dotenv()
 
 from langchain_core.tools import StructuredTool # Wraps functions to make them usable by LLMs
 from langchain_tavily import TavilySearch # Search tool from Tavily integration
@@ -28,7 +28,6 @@ def run_queries(search_queries: list[str], **kwargs):
     return tavily_tool.batch([{"query": query} for query in search_queries])
 
 # Wrap run_queries into LangChain-compatible StructuredTools
-# Bind the tool to each schema name so the LLM can invoke it correctly
 execute_tools = ToolNode([
 
     # Tool used by the responder agent

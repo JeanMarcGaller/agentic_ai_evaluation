@@ -1,7 +1,7 @@
 # === schemas.py ===
 
 from typing import List
-from pydantic import BaseModel, Field # Pydantic helps define and validate structured data
+from pydantic import BaseModel, Field
 
 
 # --- Helper Schema for Feedback / Self-Reflection ---
@@ -32,7 +32,7 @@ class AnswerQuestion(BaseModel):
     description="~150 word detailed answer to the question." # Main answer content
     )
     reflection: Reflection = Field(
-    description="Your reflection on the initial answer." # Self-evaluation (uses the Reflection schema)
+    description="Your reflection on the initial answer." # Self-evaluation
     )
     search_queries: List[str] = Field(
         # Model should generate helpful search queries to fill gaps
