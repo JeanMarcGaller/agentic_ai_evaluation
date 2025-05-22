@@ -42,8 +42,8 @@ from langchain_ollama import ChatOllama
 
 # === Constants ===
 
-MAX_ROUNDS = 1                      # Max graph steps before stopping (used in conditional edge logic)
-NUM_QUESTIONS = 1                   # Default number of questions to evaluate
+MAX_ROUNDS = 4                      # Max graph steps before stopping (used in conditional edge logic)
+NUM_QUESTIONS = 5                   # Default number of questions to evaluate
 OLLAMA_MODEL_NAME = "qwen3:32b"     # Ollama model to use: qwen2.5:72b, qwen3:32b
 OPENAI_MODEL_NAME = "gpt-4.1"       # OpenAi model to use: gpt-4.1
 
