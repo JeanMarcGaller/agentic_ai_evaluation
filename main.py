@@ -42,12 +42,12 @@ from langchain_ollama import ChatOllama
 
 # === Constants ===
 
-MAX_ROUNDS = 3                              # Max graph steps before stopping (used in conditional edge logic)
-NUM_QUESTIONS = 10                          # Default number of questions to evaluate
+MAX_ROUNDS = 3                              # Max graph steps before stopping
+NUM_QUESTIONS = 5                           # Default number of questions to evaluate
 OLLAMA_MODEL_NAME = "qwen3:32b"             # Ollama model to use: qwen2.5:72b, qwen3:32b, firefunction-v2:70b
 OPENAI_MODEL_NAME = "gpt-4.1"               # OpenAi model to use: gpt-4.1
 
-# === Start Ollama backend ===
+# === Start Ollama ===
 
 prepare_ollama(model=OLLAMA_MODEL_NAME)
 
@@ -208,7 +208,7 @@ for responder_model_name, revisor_model_name in model_pairs:
             "responder_model": responder_model_actual,
             "revisor_model": revisor_model_actual,
             "evaluation": evaluation,
-            "gold_answer": gold_answer
+            "gold_answer": gold_answer # unused
         })
 
         print("Evaluation completed")

@@ -2,14 +2,14 @@
 
 
 from dotenv import load_dotenv
-load_dotenv()  # Load environment variables
+load_dotenv()
 
 from langchain_openai import ChatOpenAI
 from langchain.evaluation import load_evaluator
 from langchain.prompts import PromptTemplate
 
 # --- Initialize evaluation LLM ---
-llm = ChatOpenAI(model="gpt-4")  # TODO ", temperature=0, stop=["[["]" Use stop token to reduce verbose completions
+llm = ChatOpenAI(model="gpt-4")
 
 # --- Load single-response evaluators ---
 helpfulness_eval = load_evaluator("criteria", llm=llm, config={"criteria": "helpfulness"})

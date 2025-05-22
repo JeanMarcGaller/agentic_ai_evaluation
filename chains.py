@@ -2,7 +2,7 @@
 
 import datetime
 from dotenv import load_dotenv
-load_dotenv()  # Load environment variables
+load_dotenv()
 
 # LangChain & LangGraph imports
 from langchain_core.output_parsers.openai_tools import (
