@@ -44,7 +44,7 @@ from langchain_ollama import ChatOllama
 
 MAX_ROUNDS = 3                              # Max graph steps before stopping
 NUM_QUESTIONS = 5                           # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen3:32b"             # Ollama model to use: qwen2.5:72b, qwen3:32b, firefunction-v2:70b
+OLLAMA_MODEL_NAME = "qwen3:32b"             # Ollama model to use: qwen2.5:72b, qwen3:32b, llama3.1, firefunction-v2:70b
 OPENAI_MODEL_NAME = "gpt-4.1"               # OpenAi model to use: gpt-4.1
 
 # === Start Ollama ===
