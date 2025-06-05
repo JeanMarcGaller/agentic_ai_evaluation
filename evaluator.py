@@ -1,7 +1,7 @@
 # === evaluator.py ===
 
 from dotenv import load_dotenv
-from langchain.evaluation import load_evaluator
+from langchain.evaluation import EvaluatorType, load_evaluator
 from langchain_openai import ChatOpenAI
 
 load_dotenv()
@@ -11,20 +11,24 @@ llm = ChatOpenAI(model="gpt-4")
 
 # --- Load single-response evaluators ---
 helpfulness_eval = load_evaluator(
-    "criteria", llm=llm, config={"criteria": "helpfulness"}
+    EvaluatorType.CRITERIA, llm=llm, config={"criteria": "helpfulness"}
 )
 correctness_eval = load_evaluator(
-    "criteria", llm=llm, config={"criteria": "correctness"}
+    EvaluatorType.CRITERIA, llm=llm, config={"criteria": "correctness"}
 )
-relevance_eval = load_evaluator("criteria", llm=llm, config={"criteria": "relevance"})
+relevance_eval = load_evaluator(
+    EvaluatorType.CRITERIA, llm=llm, config={"criteria": "relevance"}
+)
 conciseness_eval = load_evaluator(
-    "criteria", llm=llm, config={"criteria": "conciseness"}
+    EvaluatorType.CRITERIA, llm=llm, config={"criteria": "conciseness"}
 )
-coherence_eval = load_evaluator("criteria", llm=llm, config={"criteria": "coherence"})
+coherence_eval = load_evaluator(
+    EvaluatorType.CRITERIA, llm=llm, config={"criteria": "coherence"}
+)
 
 # Use built-in pairwise evaluator
 pairwise_eval = load_evaluator(
-    "pairwise_string", llm=llm, config={"criteria": "overall"}
+    EvaluatorType.PAIRWISE_STRING, llm=llm, config={"criteria": "overall"}
 )
 
 

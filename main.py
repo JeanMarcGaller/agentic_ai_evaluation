@@ -23,6 +23,7 @@ To process your own questions:
 
 import argparse
 import json
+from typing import List, cast
 
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_ollama import ChatOllama
@@ -190,9 +191,8 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         # === Execute pipeline ===
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
-        result = graph.invoke(
-            [HumanMessage(content=question)]
-        )  # Run LangGraph pipeline
+        raw_result = graph.invoke([HumanMessage(content=question)])
+        result: List[BaseMessage] = cast(List[BaseMessage], raw_result)
 
         # Check if agent used tool
         responder_tool_used = hasattr(result[1], "tool_calls") and bool(

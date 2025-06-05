@@ -6,7 +6,8 @@ from __future__ import annotations
 import os
 import subprocess
 import time
-from typing import Final
+from subprocess import Popen
+from typing import Final, Optional
 
 import requests
 
@@ -24,7 +25,7 @@ def _is_server_up(timeout: float = 1.5) -> bool:
         return False
 
 
-def _start_server(detach: bool = True) -> subprocess.Popen | None:
+def _start_server(detach: bool = True) -> Optional[Popen[bytes]]:
     """
     Starts `ollama serve` if it is not already running.
     Returns the subprocess if started, otherwise None.
@@ -33,9 +34,16 @@ def _start_server(detach: bool = True) -> subprocess.Popen | None:
         return None
 
     # Suppress stdout/stderr output when running detached
-    kwargs = {"stdout": subprocess.DEVNULL, "stderr": subprocess.DEVNULL}
     cmd = ["ollama", "serve"]
-    proc = subprocess.Popen(cmd, **kwargs) if detach else subprocess.Popen(cmd)
+
+    if detach:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    else:
+        proc = subprocess.Popen(cmd)
 
     # Poll the server to wait until it's responsive
     for _ in range(15):
