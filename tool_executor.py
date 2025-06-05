@@ -42,7 +42,8 @@ execute_tools = ToolNode(
         ),
         # Tool used by the revisor agent
         StructuredTool.from_function(
-            run_queries, name=ReviseAnswer.__name__  # Tool will be named "ReviseAnswer"
+            run_queries,
+            name=ReviseAnswer.__name__,  # Tool will be named "ReviseAnswer"
         ),
     ]
 )
