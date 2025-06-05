@@ -1,7 +1,9 @@
 # === chains.py ===
 
 import datetime
+
 from dotenv import load_dotenv
+
 load_dotenv()
 
 # LangChain & LangGraph imports
@@ -10,7 +12,6 @@ from langchain_core.output_parsers.openai_tools import (
     PydanticToolsParser,
 )
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-
 
 # Tool definitions
 from schemas import AnswerQuestion, ReviseAnswer
@@ -47,9 +48,7 @@ information.""",
         # Final instruction
         ("system", "Answer the user's question above using the required format."),
     ]
-).partial(
-    time=lambda: datetime.datetime.now().isoformat()
-)
+).partial(time=lambda: datetime.datetime.now().isoformat())
 
 # === Shared revisor instructions ===
 
@@ -75,25 +74,30 @@ References:
 
 # === Builders for responder and revisor ===
 
+
 # Creates the responder agent
 def build_responder(llm):
-    return actor_prompt_template.partial(
-        # Additional instruction for responder
-        first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
+    return (
+        actor_prompt_template.partial(
+            # Additional instruction for responder
+            first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
 - First try to answer using only your internal knowledge.
 - If you are uncertain or the question is likely to require up-to-date, external, or detailed information,
 YOU MUST use the tool.
 """
-    ) | llm.bind_tools(
-        tools=[AnswerQuestion], # Tool the responder can use
-        tool_choice=None # Let the model choose when to use the tool
+        )
+        | llm.bind_tools(
+            tools=[AnswerQuestion],  # Tool the responder can use
+            tool_choice=None,  # Let the model choose when to use the tool
+        )
     )
+
 
 # Creates the revisor agent
 def build_revisor(llm):
     return actor_prompt_template.partial(
-        first_instruction=revise_instructions # Uses revisor-specific behavior
+        first_instruction=revise_instructions  # Uses revisor-specific behavior
     ) | llm.bind_tools(
-        tools=[ReviseAnswer], # Tool the revisor can use
-        tool_choice=None # Let the model decide when to use it
+        tools=[ReviseAnswer],  # Tool the revisor can use
+        tool_choice=None,  # Let the model decide when to use it
     )

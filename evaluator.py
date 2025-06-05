@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from langchain_openai import ChatOpenAI
 from langchain.evaluation import load_evaluator
 from langchain.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
 
 # --- Initialize evaluation LLM ---
 llm = ChatOpenAI(model="gpt-4")
