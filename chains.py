@@ -3,18 +3,15 @@
 import datetime
 
 from dotenv import load_dotenv
-
-load_dotenv()
-
-# LangChain & LangGraph imports
 from langchain_core.output_parsers.openai_tools import (
     JsonOutputToolsParser,
     PydanticToolsParser,
 )
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Tool definitions
 from schemas import AnswerQuestion, ReviseAnswer
+
+load_dotenv()
 
 # Parses tool output
 parser = JsonOutputToolsParser(return_id=True)
@@ -32,15 +29,18 @@ actor_prompt_template = ChatPromptTemplate.from_messages(
             """You are a knowledgeable assistant.
 Current time: {time}
 
-Answer the question in a clear, fact-based and direct manner (max. 150 words). Do not speculate or include opinions. 
-If uncertain, clearly state what is unknown or ambiguous. Use tools (e.g. search) when the answer cannot be
+Answer the question in a clear, fact-based and direct manner (max. 150 words).
+Do not speculate or include opinions. 
+If uncertain, clearly state what is unknown or ambiguous.
+Use tools (e.g. search) when the answer cannot be
 confidently given from memory.
 
 Examples:
 - What is the capital of France? \"Paris.\" (no tool needed)
 - What startups raised funding in 2025 for AI in energy? (tool needed, use tool)
 
-If you are not fully confident in your answer, YOU MUST use the tool to verify or obtain the necessary
+If you are not fully confident in your answer,
+YOU MUST use the tool to verify or obtain the necessary
 information.""",
         ),
         # Placeholder for conversation history
@@ -53,8 +53,10 @@ information.""",
 # === Shared revisor instructions ===
 
 # Instructions for how the revisor should rewrite an answer
-revise_instructions = """You are revising the previous answer using new context or tool results.
-- YOU MUST use the tool results (e.g., search) if they provide new or necessary information.
+revise_instructions = """You are revising the previous answer using
+new context or tool results.
+- YOU MUST use the tool results (e.g., search)
+if they provide new or necessary information.
 - Avoid speculation, unsupported claims, and verbose language.
 - Keep your revised answer under 150 words.
 - Cite new facts using [n] and list references at the end.
@@ -80,11 +82,13 @@ def build_responder(llm):
     return (
         actor_prompt_template.partial(
             # Additional instruction for responder
-            first_instruction="""Answer the question as clearly and factually as possible (max. 150 words).
-- First try to answer using only your internal knowledge.
-- If you are uncertain or the question is likely to require up-to-date, external, or detailed information,
-YOU MUST use the tool.
-"""
+            first_instruction="""Answer the question as clearly and factually
+            as possible (max. 150 words).
+            - First try to answer using only your internal knowledge.
+            - If you are uncertain or the question is likely to require
+            up-to-date, external, or detailed information,
+            YOU MUST use the tool.
+            """
         )
         | llm.bind_tools(
             tools=[AnswerQuestion],  # Tool the responder can use

@@ -55,5 +55,6 @@ class ReviseAnswer(AnswerQuestion):
     """
 
     references: List[str] = Field(
-        description="Citations motivating your updated answer."  # Sources backing up the revised content
+        # Sources backing up the revised content
+        description="Citations motivating your updated answer."
     )

@@ -44,9 +44,10 @@ from tool_executor import execute_tools
 
 # === Constants ===
 
-MAX_ROUNDS = 6  # Max graph message before stopping, one round is 3 messages
-NUM_QUESTIONS = 5  # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use: qwen2.5:72b, qwen3:32b, llama3.1, firefunction-v2:70b
+MAX_ROUNDS = 3  # Max graph message before stopping, one round is 3 messages
+NUM_QUESTIONS = 1  # Default number of questions to evaluate
+OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use: qwen2.5:72b, qwen3:32b,
+# Other tested options: llama3.1, firefunction-v2:70b
 OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use: gpt-4.1
 
 # === Start Ollama ===
@@ -135,7 +136,8 @@ model_pairs = [
 
 for responder_model_name, revisor_model_name in model_pairs:
     print(
-        f"\n=== Running: Responder={responder_model_name}, Revisor={revisor_model_name} ==="
+        f"\n=== Running: Responder={responder_model_name}, "
+        f"Revisor={revisor_model_name} ==="
     )
 
     # Load LLMs
@@ -171,7 +173,8 @@ for responder_model_name, revisor_model_name in model_pairs:
         # Entry point / Start
         builder.set_entry_point("draft")  # Start from the draft step
 
-        # Conditional: This function decides whether to stop the graph or go for another round
+        # Conditional: This function decides whether to stop the graph or
+        # go for another round
         def event_loop(state: list[BaseMessage]) -> str:
             # If we have reached the maximum number of steps, stop the graph
             # Otherwise, go back to execute_tools

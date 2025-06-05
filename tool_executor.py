@@ -1,9 +1,6 @@
 # === tool_executor.py ===
 
 from dotenv import load_dotenv
-
-load_dotenv()
-
 from langchain_core.tools import (
     StructuredTool,  # Wraps functions to make them usable by LLMs
 )
@@ -11,6 +8,8 @@ from langchain_tavily import TavilySearch  # Search tool from Tavily integration
 from langgraph.prebuilt import ToolNode  # LangGraph node to execute tools in workflows
 
 from schemas import AnswerQuestion, ReviseAnswer  # Custom tool schemas
+
+load_dotenv()
 
 # Initialize Tavily search tool
 tavily_tool = TavilySearch(max_results=5)  # TODO: Test max_results

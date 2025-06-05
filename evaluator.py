@@ -1,12 +1,10 @@
 # === evaluator.py ===
 
 from dotenv import load_dotenv
+from langchain.evaluation import load_evaluator
+from langchain_openai import ChatOpenAI
 
 load_dotenv()
-
-from langchain.evaluation import load_evaluator
-from langchain.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
 
 # --- Initialize evaluation LLM ---
 llm = ChatOpenAI(model="gpt-4")

@@ -15,8 +15,9 @@ def get_hotpotqa_subset(num_samples=3):  # TODO: Check num_samples usage in code
         num_samples (int): Number of questions to sample.
 
     Returns:
-        list: Random sample of HotpotQA questions. # TODO: Test Natural Questions, WebQuestions
+        list: Random sample of HotpotQA questions.
     """
+    # TODO: Test Natural Questions, WebQuestions
 
     # Load distractor version of HotpotQA
     dataset = load_dataset(
