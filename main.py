@@ -42,10 +42,10 @@ from langchain_ollama import ChatOllama
 
 # === Constants ===
 
-MAX_ROUNDS = 3                              # Max graph steps before stopping
-NUM_QUESTIONS = 5                           # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen3:32b"             # Ollama model to use: qwen2.5:72b, qwen3:32b, llama3.1, firefunction-v2:70b
-OPENAI_MODEL_NAME = "gpt-4.1"               # OpenAi model to use: gpt-4.1
+MAX_ROUNDS = 6  # Max graph message before stopping, one round is 3 messages
+NUM_QUESTIONS = 5  # Default number of questions to evaluate
+OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use: qwen2.5:72b, qwen3:32b, llama3.1, firefunction-v2:70b
+OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use: gpt-4.1
 
 # === Start Ollama ===
 
@@ -55,15 +55,12 @@ prepare_ollama(model=OLLAMA_MODEL_NAME)
 
 model_configs = {
     "ollama": ChatOllama(model=OLLAMA_MODEL_NAME),
-    "openai": ChatOpenAI(model=OPENAI_MODEL_NAME)
+    "openai": ChatOpenAI(model=OPENAI_MODEL_NAME),
 }
 
 # === Define model names for results recording ===
 
-model_names = {
-    "ollama": OLLAMA_MODEL_NAME,
-    "openai": OPENAI_MODEL_NAME
-}
+model_names = {"ollama": OLLAMA_MODEL_NAME, "openai": OPENAI_MODEL_NAME}
 
 # === CLI Argument Parsing ===
 
@@ -80,7 +77,7 @@ cli_args = parser.parse_args()
 if cli_args.questions:
     # Load user questions from JSON
     examples = load_custom_questions(cli_args.questions)
-    NUM_QUESTIONS = len(examples)                         # Update number of questions
+    NUM_QUESTIONS = len(examples)  # Update number of questions
 else:
     # Use a default subset of HotpotQA
     examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
@@ -92,22 +89,29 @@ results = []
 
 # === Extract Final Answer ===
 
+
 def extract_answer(step):
     """
     Extracts the final answer from a graph node step result.
     Checks for tool call outputs or direct message content.
     """
     if hasattr(step, "tool_calls") and step.tool_calls:
-        return step.tool_calls[0]["args"]["answer"] # Extract answer from tool call output
+        return step.tool_calls[0]["args"][
+            "answer"
+        ]  # Extract answer from tool call output
     elif hasattr(step, "content") and isinstance(step.content, str):
-        return step.content # Extract from message string
+        return step.content  # Extract from message string
     else:
         return "(No answer found)"
 
+
 # === Evaluation ===
 
+
 @traceable(name="HotpotQA Evaluation")
-def evaluate_question(question, responder_answer, revisor_answer, responder_tool_used, revisor_tool_used):
+def evaluate_question(
+    question, responder_answer, revisor_answer, responder_tool_used, revisor_tool_used
+):
     # Pairwise evaluation function comparing two responses
     return evaluate_pairwise(
         question=question,
@@ -117,17 +121,20 @@ def evaluate_question(question, responder_answer, revisor_answer, responder_tool
         # revisor_tool_used=revisor_tool_used
     )
 
+
 # === Compare responder/revisor model pairs ===
 
 model_pairs = [
-    ("ollama", "ollama"), # Compare Ollama responder vs. Ollama revisor
-    ("openai", "openai"), # Compare OpenAI responder vs. OpenAI revisor
+    ("ollama", "ollama"),  # Compare Ollama responder vs. Ollama revisor
+    ("openai", "openai"),  # Compare OpenAI responder vs. OpenAI revisor
 ]
 
 # === Main Loop ===
 
 for responder_model_name, revisor_model_name in model_pairs:
-    print(f"\n=== Running: Responder={responder_model_name}, Revisor={revisor_model_name} ===")
+    print(
+        f"\n=== Running: Responder={responder_model_name}, Revisor={revisor_model_name} ==="
+    )
 
     # Load LLMs
     responder_llm = model_configs[responder_model_name]
@@ -139,7 +146,9 @@ for responder_model_name, revisor_model_name in model_pairs:
 
     for idx, ex in enumerate(examples):
         question = ex["question"]
-        gold_answer = ex.get("answer", [""])[0] # For comparison later, unused. #TODO Check gold_answer usage in code
+        gold_answer = ex.get("answer", [""])[
+            0
+        ]  # For comparison later, unused. #TODO Check gold_answer usage in code
 
         # === Build responder and revisor chains ===
         responder_chain = build_responder(responder_llm)
@@ -149,16 +158,16 @@ for responder_model_name, revisor_model_name in model_pairs:
         builder = MessageGraph()
 
         # Nodes / Steps
-        builder.add_node("draft", responder_chain)          # Initial draft generation
-        builder.add_node("execute_tools", execute_tools)    # Execute tools after draft
-        builder.add_node("revise", revisor_chain)           # Final revision step
+        builder.add_node("draft", responder_chain)  # Initial draft generation
+        builder.add_node("execute_tools", execute_tools)  # Execute tools after draft
+        builder.add_node("revise", revisor_chain)  # Final revision step
 
         # Edges / Transitions
-        builder.add_edge("draft", "execute_tools")      # From draft to tools
-        builder.add_edge("execute_tools", "revise")     # From tools to revision
+        builder.add_edge("draft", "execute_tools")  # From draft to tools
+        builder.add_edge("execute_tools", "revise")  # From tools to revision
 
         # Entry point / Start
-        builder.set_entry_point("draft")    # Start from the draft step
+        builder.set_entry_point("draft")  # Start from the draft step
 
         # Conditional: This function decides whether to stop the graph or go for another round
         def event_loop(state: list[BaseMessage]) -> str:
@@ -176,11 +185,17 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         # === Execute pipeline ===
         print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
-        result = graph.invoke([HumanMessage(content=question)]) # Run LangGraph pipeline
+        result = graph.invoke(
+            [HumanMessage(content=question)]
+        )  # Run LangGraph pipeline
 
         # Check if agent used tool
-        responder_tool_used = hasattr(result[1], 'tool_calls') and bool(result[1].tool_calls)
-        revisor_tool_used = hasattr(result[-1], 'tool_calls') and bool(result[-1].tool_calls)
+        responder_tool_used = hasattr(result[1], "tool_calls") and bool(
+            result[1].tool_calls
+        )
+        revisor_tool_used = hasattr(result[-1], "tool_calls") and bool(
+            result[-1].tool_calls
+        )
 
         # Extract answers
         responder_answer = extract_answer(result[1])
@@ -195,21 +210,23 @@ for responder_model_name, revisor_model_name in model_pairs:
             responder_answer=responder_answer,
             revisor_answer=revisor_answer,
             responder_tool_used=responder_tool_used,
-            revisor_tool_used=revisor_tool_used
+            revisor_tool_used=revisor_tool_used,
         )
 
         # Append results
-        results.append({
-            "question": question,
-            "responder_answer": responder_answer,
-            "revisor_answer": revisor_answer,
-            "responder_tool_used": responder_tool_used,
-            "revisor_tool_used": revisor_tool_used,
-            "responder_model": responder_model_actual,
-            "revisor_model": revisor_model_actual,
-            "evaluation": evaluation,
-            "gold_answer": gold_answer # unused
-        })
+        results.append(
+            {
+                "question": question,
+                "responder_answer": responder_answer,
+                "revisor_answer": revisor_answer,
+                "responder_tool_used": responder_tool_used,
+                "revisor_tool_used": revisor_tool_used,
+                "responder_model": responder_model_actual,
+                "revisor_model": revisor_model_actual,
+                "evaluation": evaluation,
+                "gold_answer": gold_answer,  # unused
+            }
+        )
 
         print("Evaluation completed")
 
