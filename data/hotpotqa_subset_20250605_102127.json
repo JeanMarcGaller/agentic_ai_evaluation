@@ -1,0 +1,106 @@
+[
+  {
+    "id": "5a85b2ac5542991dd0999e90",
+    "question": "Brad Budde played professionally for a team in the NFL that was founded in 1960 as the Dallas Texans by who?",
+    "answer": "Lamar Hunt",
+    "type": "bridge",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Brad Budde",
+        "Kansas City Chiefs"
+      ],
+      "sent_id": [
+        2,
+        2
+      ]
+    },
+    "context": {
+      "title": [
+        "Brad Budde",
+        "Kansas City Chiefs",
+        "Johnny Stark (soccer)",
+        "History of the Kansas City Chiefs",
+        "Cotton Davidson",
+        "Dallas Texans (NFL)",
+        "1960 NFL expansion draft",
+        "Frank Jackson (American football)",
+        "Ted Greene (American football)",
+        "Charley Diamond"
+      ],
+      "sentences": [
+        [
+          "Brad Edward Budde (born May 9, 1958) is a former American college and professional football player who was an offensive guard in the National Football League (NFL) for seven seasons during the 1980s.",
+          " Budde played college football for the University of Southern California (USC), and was an All-American and the winner of the Lombardi Award.",
+          " He was a first-round pick in the 1980 NFL Draft, and played professionally for the NFL's Kansas City Chiefs."
+        ],
+        [
+          "The Kansas City Chiefs are a professional American football team based in Kansas City, Missouri.",
+          " The Chiefs compete in the National Football League (NFL) as a member club of the league's American Football Conference (AFC) West division.",
+          " The team was founded in 1960 as the Dallas Texans by businessman Lamar Hunt and was a charter member of the American Football League (AFL) (they are not associated with an earlier Dallas Texans NFL team that only played for one season in 1952).",
+          " In 1963, the team relocated to Kansas City and assumed their current name.",
+          " The Chiefs joined the NFL as a result of the merger in 1970.",
+          " The team is valued at just under $1 billion."
+        ],
+        [
+          "Johnny Stark (born May 29, 1972) is a Canadian-American soccer forward who spent most of career with indoor soccer teams.",
+          " He currently coaches with the Dallas Texans youth club.cHe played for the Dallas Sidekicks.Stark (born May 29, 1972 in Vancouver, British Columbia, Canada) was a Canadian-American soccer forward who spent most of career with indoor soccer teams.",
+          " Stark currently coaches with the Dallas Texans youth club.On April 23, 1993, the Dallas Sidekicks of the Continental Indoor Soccer League selected Stark in the first round (fifth overall) of the CISL Supplemental Draft.",
+          " The team moved to Fort Worth in the spring of 1990 where it spent a single season as the North Texas United.",
+          " Although born in Canada, Stark grew up in Texas, graduating in 1990 from Sam Houston High School.",
+          " 1988, he began playing for the Addison Arrows in the Southwest Independent Soccer League (SISL) during the league\u2019s first outdoor season.",
+          " At the time, he was the youngest player in the league at age 16.",
+          "On April 23, 1993, the Dallas Sidekicks of the Continental Indoor Soccer League selected Stark in the first round (fifth overall) of the CISL Supplemental Draft.",
+          " He played two seasons in Dallas before being traded to the Houston Hotshots on August 15, 1994.",
+          " After retiring from playing, Stark entered coaching, currently working for the Dallas Texans."
+        ],
+        [
+          "The following is a detailed history of the Kansas City Chiefs, a professional American football franchise that began play in 1960 as the Dallas Texans.",
+          " The team was a charter member of the American Football League (AFL), and now is currently part of the National Football League (NFL) (they are not associated with an earlier Dallas Texans NFL team that only played for one season in 1952)."
+        ],
+        [
+          "Francis Marion \"Cotton\" Davidson (born November 30, 1931) is a former American football quarterback.",
+          " Davidson attended Baylor University, and played professionally for the National Football League's Baltimore Colts (1954, 1957), and the American Football League's Dallas Texans (1960\u20131962) and Oakland Raiders (1962\u20131968).",
+          " Davidson also played quarterback for the Fort Bliss Falcons in 1955 to 1957.",
+          " A game between the Fort Bliss Falcons and the Fort Sill, Oklahoma Cannoneers was played for a trophy called \"The Little Brown Dud.\"",
+          " The Cannoneers won the game and took home the Little Brown Dud.",
+          " Cotton was awarded ALL ARMY QUARTERBACK in 1955."
+        ],
+        [
+          "The Dallas Texans played in the National Football League (NFL) for one season, 1952, with a record of 1\u201311.",
+          " The team is considered one of the worst teams in NFL history, both on (lowest franchise winning percentage) and off the field.",
+          " The team was based first in Dallas, then Hershey, Pennsylvania, and Akron, Ohio, during its only season.",
+          " The Texans were the last NFL team to fold.",
+          " Many players on the 1952 roster went to the new Baltimore Colts franchise in 1953.",
+          " The American Football League (AFL) had a 1960 charter member named the Dallas Texans (who later became the Kansas City Chiefs), but the AFL Texans have no relationship with the earlier NFL team."
+        ],
+        [
+          "The 1960 NFL expansion draft was the first National Football League (NFL) draft in which a new expansion team, named the Dallas Rangers, selected its initial players.",
+          " The NFL awarded Dallas, Texas a franchise to compete for revenue with Lamar Hunt's Dallas Texans of the upstart American Football League.",
+          " The Dallas expansion franchise was approved too late for it to participate in the 1960 NFL draft which had been held on November 30, 1959.",
+          " Dallas is the only NFL expansion team to not have had the benefit of a college draft in its first year."
+        ],
+        [
+          "Frank Hardin Jackson (born April 14, 1939) is a former American football wide receiver.",
+          " He played college football at Southern Methodist University (SMU) and professionally with the American Football League's Dallas Texans, the Kansas City Chiefs, and the Miami Dolphins.",
+          " As a halfback, he scored four TDs (two rushing, two receiving) for the Texans in a 49\u201321 victory over the Denver Broncos in 1961.",
+          " As a wide receiver, in 1964 he caught four touchdown passes from Len Dawson in a 49\u20136 Chiefs defeat of the San Diego Chargers.",
+          " That tied the pro football record at the time.",
+          " He was an American Football League All-Star in 1965.",
+          " He played on the Texans' 1962 AFL Championship team, winning the longest pro football game ever played up to that time in the AFL Championship game against the two-time defending AFL Champion Houston Oilers."
+        ],
+        [
+          "Theodore William Greene (January 25, 1932 \u2013 April 16, 1982) was an American football linebacker who played three seasons in the American Football League (AFL) with the Dallas Texans.",
+          " Greene played college football at the University of Tampa.",
+          " He was a member of the Dallas Texans team that won the 1962 AFL championship."
+        ],
+        [
+          "Charles John Diamond (born July 19, 1936) is a former American football tackle who played four seasons in the American Football League (AFL) with the Dallas Texans/Kansas City Chiefs.",
+          " He played college football at the University of Miami and attended Archbishop Curley-Notre Dame High School in Buena Vista, Miami, Florida.",
+          " Davis was also a member of the BC Lions of the Canadian Football League.",
+          " He was a member of the Dallas Texans team that won the 1962 AFL championship."
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "id": "5ae4d0ff55429913cc204511",
+    "question": "Did Billy Corgan's band The Smashing Pumpkins or Greek Fire originate in a more southern location?",
+    "answer": "Greek Fire",
+    "type": "comparison",
+    "level": "hard",
+    "supporting_facts": {
+      "title": [
+        "Billy Corgan",
+        "Greek Fire (band)"
+      ],
+      "sent_id": [
+        2,
+        0
+      ]
+    },
+    "context": {
+      "title": [
+        "The Aeroplane Flies High",
+        "Greek Fire (band)",
+        "Zeitgeist (The Smashing Pumpkins album)",
+        "Billy Corgan",
+        "Jimmy Chamberlin",
+        "1979 (song)",
+        "Range Life (song)",
+        "Mike Byrne (musician)",
+        "List of the Smashing Pumpkins band members",
+        "Muzzle (song)"
+      ],
+      "sentences": [
+        [
+          "The Aeroplane Flies High is a five-disc box set released by American alternative rock band The Smashing Pumpkins in 1996.",
+          " It contains expanded versions of the five singles from their album \"Mellon Collie and the Infinite Sadness\" and also included a 44-page booklet with pictures and writings by the band's lead singer Billy Corgan, as well as lyrics.",
+          " A limited edition release, the box reached number 42 on the \"Billboard\" charts, and sold 300,000 units (1.5 million discs in all), generating a platinum disc for the band.",
+          " Originally intended to be limited to 200,000 copies, Virgin Records produced more after the original run sold out due to overwhelming and unexpected demand.",
+          " The album was remastered in 2013 under the supervision of frontman Billy Corgan and reissued on vinyl and as a CD/DVD box set."
+        ],
+        [
+          "Greek Fire is an American rock band from St. Louis, Missouri.",
+          " The band was formed in 2008 by members of Story of the Year and Maybe Today.",
+          " Since formation, Greek Fire has released a self-titled EP, a single titled \"Doesn't Matter Anyway\", on August 16, 2011, they released their debut, full-length album, \"Deus Ex Machina\", and have recently announced a new addition to the \"Lost/Found\" EPs titled \"Broken\" set to be released before \"Found\"."
+        ],
+        [
+          "Zeitgeist is the seventh album by American alternative rock band The Smashing Pumpkins, released on July 10, 2007 in the United States and Canada.",
+          " It was the first album The Smashing Pumpkins released after their 2000 disbandment and 2005 reunion.",
+          " The album was produced by Roy Thomas Baker, Billy Corgan, Jimmy Chamberlin, and Terry Date.",
+          " The album would be Chamberlin's last with the band before his departure in 2009.",
+          " The album debuted strongly, but sales soon decreased, and critical reception was mixed.",
+          " It was certified Gold in the United States on February 1, 2008."
+        ],
+        [
+          "William Patrick \"Billy\" Corgan Jr. (born March 17, 1967) is an American musician, songwriter, producer, poet, and entrepreneur.",
+          " He is best known as the lead singer, primary songwriter, guitarist, and sole permanent member of The Smashing Pumpkins.",
+          " Formed by Corgan and guitarist James Iha in Chicago, Illinois, in 1988, the band quickly gained steam with the addition of bassist D'arcy Wretzky and drummer Jimmy Chamberlin.",
+          " Strong album sales and large-scale tours propelled the band's increasing fame in the 1990s until their break-up in 2000.",
+          " Corgan started a new band called Zwan, and after their quick demise, he released a solo album (\"TheFutureEmbrace\") and a collection of poetry (\"Blinking with Fists\") before setting his sights on reforming Smashing Pumpkins."
+        ],
+        [
+          "James Joseph Chamberlin (born June 10, 1964) is an American drummer and record producer.",
+          " He is best known as the drummer for the alternative rock band The Smashing Pumpkins.",
+          " Following the 2000 breakup of the band, Chamberlin joined Pumpkins frontman Billy Corgan in the supergroup Zwan and also formed his own group, the Jimmy Chamberlin Complex.",
+          " In 2005, Chamberlin joined Corgan in reforming The Smashing Pumpkins; he eventually left the group in March 2009, though he returned again in 2015 for a summer tour.",
+          " He performed in the group Skysaw until 2012.",
+          " He is currently active under the Jimmy Chamberlin Complex name.",
+          " In addition to his current work as CEO, Chamberlin has joined Chicago jazz saxophonist Frank Catalano for a string of 2013\u201315 performances in the Chicago area.",
+          " An EP by Catalano and Chamberlin \"Love Supreme Collective - EP\" was released on the 29th of July 2014."
+        ],
+        [
+          "\"1979\" is a song by American alternative rock band the Smashing Pumpkins.",
+          " Released in 1996 as the second single from their third studio album, \"Mellon Collie and the Infinite Sadness\", \"1979\" was written by frontman Billy Corgan, and features loops and samples that were uncharacteristic of previous Smashing Pumpkins songs.",
+          " The song was written as a coming of age story by Corgan.",
+          " In the year 1979, Corgan was 12 and this is what he considered his transition into adolescence.",
+          " The song was popular with critics and fans; Allmusic's Amy Hanson called it a \"somewhat surprising hit\".",
+          " The song was nominated for the Record of the Year and Best Rock Performance by a Duo or Group with Vocal at the 39th Annual Grammy Awards, and won an MTV Video Music Award for Best Alternative Video.",
+          " In 2012, it was voted the second-best Smashing Pumpkins song by Rolling Stone magazine readers."
+        ],
+        [
+          "\"Range Life\" is a song by Pavement, the third single from their 1994 album \"Crooked Rain, Crooked Rain\".",
+          " The song attracted attention with controversial lyrics that seemed to mock alternative rock superstars the Smashing Pumpkins and the Stone Temple Pilots; Pumpkins frontman Billy Corgan expressed his displeasure in magazine interviews, while songwriter Stephen Malkmus maintained that his words had been misinterpreted and no insult was intended.",
+          " Regardless, Pavement, which was due to tour for Lollapalooza in 1994, got kicked out when the Smashing Pumpkins, the headlining act, threatened to cancel their Lollapalooza dates if Pavement played.",
+          " Pavement would eventually play Lollapalooza the next year.",
+          " An early 1993 demo of the song did not feature this verse; guitarist Spiral Stairs recalled in 2004 that when Malkmus first revealed these new lyrics to his bandmates at the New York City recording sessions for \"CRCR\", \"we almost lost our lunch from laughing so much.\"",
+          " The single was not commercially released in the USA; it was issued by the band's UK label at the time, Big Cat.",
+          " Both B-sides are outtakes from the \"Crooked Rain, Crooked Rain\" sessions and are included on the 2004 of that album.",
+          " This song was one of many to be included in the group's greatest hits album \"\"."
+        ],
+        [
+          "Michael William Byrne (born February 6, 1990) is a drummer who was a member of the band The Smashing Pumpkins.",
+          " When Pumpkins frontman Billy Corgan called for rehearsals to replace Jimmy Chamberlin, Byrne auditioned and was chosen out of thousands of applicants.",
+          " He played drums in Sky Saxon tribute band Spirits in the Sky for 6 shows in August 2009, along with Corgan, Kerry Brown, Kevin Dippold, Mark Tulin, Linda Strawberry, Ysanne Spevack, Mark Weitz, and Dave Navarro, and also performs drums on the ongoing Pumpkins 44-song project, \"Teargarden by Kaleidyscope\".",
+          " As a part of \"Teargarden\", Mike contributed drumming duties on \"Oceania\", the Pumpkins' eighth full-length album.",
+          " On April 17, 2010, Byrne played his first show under the Smashing Pumpkins moniker in celebration of Record Store Day."
+        ],
+        [
+          "The Smashing Pumpkins are an alternative rock band formed in Chicago, Illinois in 1988.",
+          " The band was formed by guitarist/vocalist Billy Corgan and guitarist James Iha after the demise of Corgan's first band, The Marked.",
+          " Since its inception, The Smashing Pumpkins has gone through multiple line-up changes, with Corgan the only consistent member."
+        ],
+        [
+          "\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\".",
+          " It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time.",
+          " It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide.",
+          " However, the song \"Thirty-Three\" was released as the fifth and final single instead."
+        ]
+      ]
+    }
+  }
+]

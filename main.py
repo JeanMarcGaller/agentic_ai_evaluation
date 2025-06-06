@@ -12,7 +12,7 @@ Workflow:
 2. Constructs LangGraph pipelines to answer questions, use tools, and revise responses.
 3. Evaluates the two agents on the same questions and collects evaluation metrics.
 4. Compares responder vs. revisor answers using pair-wise evaluation.
-5. Saves results.
+5. Saves results to JSON.
 
 To process your own questions:
 1. Define your questions in my_questions.json.
@@ -23,15 +23,14 @@ To process your own questions:
 
 import argparse
 import json
+import logging
+from datetime import datetime
+from pathlib import Path
 from typing import List, cast
 
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_ollama import ChatOllama
-
-# LLM interfaces
 from langchain_openai import ChatOpenAI
-
-# LangGraph framework for building pipelines
 from langgraph.graph import END, MessageGraph
 from langsmith import traceable
 
@@ -43,13 +42,30 @@ from load_data import get_hotpotqa_subset, load_custom_questions
 from ollama_manager import prepare_ollama
 from tool_executor import execute_tools
 
+# === Logging ===
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+log_file = log_dir / f"run_{timestamp}.log"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.StreamHandler(),  # Konsole
+        logging.FileHandler(log_file, encoding="utf-8"),  # nur EIN FileHandler
+    ],
+    force=True,
+)
+logger = logging.getLogger(__name__)
+
 # === Constants ===
 
-MAX_ROUNDS = 3  # Max graph message before stopping, one round is 3 messages
-NUM_QUESTIONS = 1  # Default number of questions to evaluate
-OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use: qwen2.5:72b, qwen3:32b,
-# Other tested options: llama3.1, firefunction-v2:70b
-OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use: gpt-4.1
+MAX_MESSAGES = 3  # Max message before stopping, one round is 3 messages
+NUM_QUESTIONS = 1  # Number of questions to evaluate
+OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use
+OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use
 
 # === Start Ollama ===
 
@@ -86,6 +102,7 @@ else:
     # Use a default subset of HotpotQA
     examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
 
+logger.info("Loaded %s questions", NUM_QUESTIONS)
 
 # === Results Placeholder ===
 
@@ -95,18 +112,11 @@ results = []
 
 
 def extract_answer(step):
-    """
-    Extracts the final answer from a graph node step result.
-    Checks for tool call outputs or direct message content.
-    """
-    if hasattr(step, "tool_calls") and step.tool_calls:
-        return step.tool_calls[0]["args"][
-            "answer"
-        ]  # Extract answer from tool call output
-    elif hasattr(step, "content") and isinstance(step.content, str):
-        return step.content  # Extract from message string
-    else:
-        return "(No answer found)"
+    return (
+        step.tool_calls[0]["args"]["answer"]
+        if step.tool_calls
+        else step.content if isinstance(step.content, str) else "(No answer found)"
+    )
 
 
 # === Evaluation ===
@@ -114,15 +124,15 @@ def extract_answer(step):
 
 @traceable(name="HotpotQA Evaluation")
 def evaluate_question(
-    question, responder_answer, revisor_answer, responder_tool_used, revisor_tool_used
+    question,
+    responder_answer,
+    revisor_answer,
 ):
-    # Pairwise evaluation function comparing two responses
+    # Pairwise evaluation function
     return evaluate_pairwise(
         question=question,
         responder=responder_answer,
         revisor=revisor_answer,
-        # responder_tool_used=responder_tool_used,
-        # revisor_tool_used=revisor_tool_used
     )
 
 
@@ -136,9 +146,10 @@ model_pairs = [
 # === Main Loop ===
 
 for responder_model_name, revisor_model_name in model_pairs:
-    print(
-        f"\n=== Running: Responder={responder_model_name}, "
-        f"Revisor={revisor_model_name} ==="
+    logger.info(
+        "=== Running: Responder=%s, Revisor=%s ===",
+        responder_model_name,
+        revisor_model_name,
     )
 
     # Load LLMs
@@ -151,9 +162,7 @@ for responder_model_name, revisor_model_name in model_pairs:
 
     for idx, ex in enumerate(examples):
         question = ex["question"]
-        gold_answer = ex.get("answer", [""])[
-            0
-        ]  # For comparison later, unused. #TODO Check gold_answer usage in code
+        gold_answer = ex.get("answer", [""])[0]  # gold_answer is currently unused
 
         # === Build responder and revisor chains ===
         responder_chain = build_responder(responder_llm)
@@ -175,11 +184,11 @@ for responder_model_name, revisor_model_name in model_pairs:
         builder.set_entry_point("draft")  # Start from the draft step
 
         # Conditional: This function decides whether to stop the graph or
-        # go for another round
+        # go for another message/step
         def event_loop(state: list[BaseMessage]) -> str:
             # If we have reached the maximum number of steps, stop the graph
             # Otherwise, go back to execute_tools
-            return END if len(state) >= MAX_ROUNDS else "execute_tools"
+            return END if len(state) >= MAX_MESSAGES else "execute_tools"
 
         # After revise, use the event_loop function to decide:
         # - to stop (END)
@@ -190,32 +199,30 @@ for responder_model_name, revisor_model_name in model_pairs:
         graph = builder.compile()
 
         # === Execute pipeline ===
-        print(f"\nQUESTION {idx + 1}/{NUM_QUESTIONS}: {question}")
-        raw_result = graph.invoke([HumanMessage(content=question)])
+        logger.info("QUESTION %s/%s: %s", idx + 1, NUM_QUESTIONS, question)
+
+        try:
+            raw_result = graph.invoke([HumanMessage(content=question)])
+        except Exception:  # pylint: disable=broad-except
+            logger.exception("Graph invocation failed for question: %s", question)
+            continue
+
         result: List[BaseMessage] = cast(List[BaseMessage], raw_result)
 
-        # Check if agent used tool
-        responder_tool_used = hasattr(result[1], "tool_calls") and bool(
-            result[1].tool_calls
-        )
-        revisor_tool_used = hasattr(result[-1], "tool_calls") and bool(
-            result[-1].tool_calls
-        )
+        responder_tool_used = bool(getattr(result[1], "tool_calls", []))
+        revisor_tool_used = bool(getattr(result[-1], "tool_calls", []))
 
-        # Extract answers
         responder_answer = extract_answer(result[1])
         revisor_answer = extract_answer(result[-1])
 
-        print(f"Responder tool used: {responder_tool_used}")
-        print(f"Revisor tool used: {revisor_tool_used}")
+        logger.info("Responder tool used: %s", responder_tool_used)
+        logger.info("Revisor tool used: %s", revisor_tool_used)
 
         # === Evaluate results ===
         evaluation = evaluate_question(
             question=question,
             responder_answer=responder_answer,
             revisor_answer=revisor_answer,
-            responder_tool_used=responder_tool_used,
-            revisor_tool_used=revisor_tool_used,
         )
 
         # Append results
@@ -233,11 +240,11 @@ for responder_model_name, revisor_model_name in model_pairs:
             }
         )
 
-        print("Evaluation completed")
+        logger.info("Evaluation for question %s completed", idx + 1)
 
 # === Save results ===
 
-with open("results/results.json", "w") as f:
-    json.dump(results, f, indent=2)
-
-print("\nResults stored in results.json")
+results_path = Path("results/results.json")
+results_path.parent.mkdir(exist_ok=True)
+results_path.write_text(json.dumps(results, indent=2), encoding="utf-8")
+logger.info("Results stored in %s", results_path)

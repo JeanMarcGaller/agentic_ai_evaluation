@@ -3,7 +3,7 @@ repos:
     rev: 25.1.0
     hooks:
       - id: black
-        args: ["--check"]
+        args: ["--check", "--line-length", "88"]
         language_version: python3.11
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
@@ -11,8 +11,6 @@ repos:
     hooks:
       - id: ruff-check
         args: ["--fix"]
-        language_version: python3.11
-      - id: ruff-format
         language_version: python3.11
 
   - repo: https://github.com/PyCQA/bandit
