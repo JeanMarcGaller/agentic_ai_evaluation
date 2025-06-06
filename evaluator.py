@@ -64,7 +64,7 @@ def evaluate_pairwise(question, responder, revisor):
             evaluations[f"{name}_revisor"] = evaluator.evaluate_strings(
                 input=question, prediction=revisor
             )
-        except Exception as exc:  # pylint: disable=broad-except
+        except Exception as exc:
             logger.exception("%s evaluator failed", name)
             evaluations[f"{name}_responder"] = {"error": str(exc)}
             evaluations[f"{name}_revisor"] = {"error": str(exc)}

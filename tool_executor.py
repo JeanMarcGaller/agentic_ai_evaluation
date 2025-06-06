@@ -12,10 +12,10 @@ from dotenv import load_dotenv
 from langchain_core.tools import (
     StructuredTool,  # Wraps functions to make them usable by LLMs
 )
-from langchain_tavily import TavilySearch  # Search tool from Tavily integration
-from langgraph.prebuilt import ToolNode  # LangGraph node to execute tools in workflows
+from langchain_tavily import TavilySearch
+from langgraph.prebuilt import ToolNode
 
-from schemas import AnswerQuestion, ReviseAnswer  # Custom tool schemas
+from schemas import AnswerQuestion, ReviseAnswer
 
 # --- Logging ---
 logger = logging.getLogger(__name__)
@@ -47,8 +47,6 @@ def run_queries(search_queries: List[str], **kwargs):
     results = tavily_tool.batch([{"query": q} for q in search_queries])
     logger.info("run_queries: Tavily search delivers  %s result blocks", len(results))
     return results
-
-    # return tavily_tool.batch([{"query": query} for query in search_queries])
 
 
 # Wrap run_queries into LangChain-compatible StructuredTools

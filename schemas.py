@@ -1,5 +1,11 @@
 # === schemas.py ===
 
+"""
+Typed tool-IO schemas for LangChain agents:
+- AnswerQuestion with self-reflection & search queries
+- ReviseAnswer extension
+"""
+
 from typing import List
 
 from pydantic import BaseModel, Field
@@ -10,16 +16,12 @@ from pydantic import BaseModel, Field
 class Reflection(BaseModel):
     """
     A structured critique of an answer.
-    - 'missing': What information is lacking?
-    - 'superfluous': What content is unnecessary or misleading?
+    - missing: What information is lacking?
+    - superfluous: What content is unnecessary or misleading?
     """
 
-    missing: str = Field(
-        description="Critique of what is missing."  # What should've been included?
-    )
-    superfluous: str = Field(
-        description="Critique of what is superfluous"  # What should've been left out?
-    )
+    missing: str = Field(description="Critique of what is missing.")
+    superfluous: str = Field(description="Critique of what is superfluous")
 
 
 # --- Schema for Initial Answer Generation ---
@@ -51,7 +53,7 @@ class AnswerQuestion(BaseModel):
 class ReviseAnswer(AnswerQuestion):
     """
     Extension of AnswerQuestion with reference support.
-    Used by the 'revisor' node to update and cite answers.
+    Used by the revisor node to update and cite answers.
     """
 
     references: List[str] = Field(

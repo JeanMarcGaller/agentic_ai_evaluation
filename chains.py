@@ -1,5 +1,10 @@
 # === chains.py ===
 
+"""
+Factory functions that build the responder and revisor LangChain agents.
+Both share one prompt template but bind different tool schemas.
+"""
+
 import datetime
 
 from dotenv import load_dotenv

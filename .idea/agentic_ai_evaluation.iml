@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/archive" />
       <excludeFolder url="file://$MODULE_DIR$/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/results/.ipynb_checkpoints" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.11 (agentic_ai_evaluation)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
