@@ -162,7 +162,6 @@ for responder_model_name, revisor_model_name in model_pairs:
 
     for idx, ex in enumerate(examples):
         question = ex["question"]
-        gold_answer = ex.get("answer", [""])[0]  # gold_answer is currently unused
 
         # === Build responder and revisor chains ===
         responder_chain = build_responder(responder_llm)
@@ -236,7 +235,6 @@ for responder_model_name, revisor_model_name in model_pairs:
                 "responder_model": responder_model_actual,
                 "revisor_model": revisor_model_actual,
                 "evaluation": evaluation,
-                "gold_answer": gold_answer,  # unused
             }
         )
 

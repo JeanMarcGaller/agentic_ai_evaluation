@@ -18,5 +18,25 @@
   {
     "question": "Which is the Synthesizer announced 2025 by Moog Music Inc.?",
     "answer": ["Moog Music Inc. unveiled the Moog Messenger in 2025."]
+  },
+    {
+    "question": "Who won the 2025 UEFA Champions League?",
+    "answer": ["Paris Saint-Germain"]
+  },
+  {
+    "question": "Which film won the Academy Award for Best Picture at the 97th Oscars in 2025?",
+    "answer": ["Anora"]
+  },
+  {
+    "question": "Which team won Super Bowl LIX in 2025?",
+    "answer": ["Philadelphia Eagles"]
+  },
+  {
+    "question": "Who won the men's singles title at the 2025 Australian Open?",
+    "answer": ["Jannik Sinner"]
+  },
+  {
+    "question": "Who won the women's singles title at the 2025 Australian Open?",
+    "answer": ["Madison Keys"]
   }
 ]

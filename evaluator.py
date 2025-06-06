@@ -72,14 +72,22 @@ def evaluate_pairwise(question, responder, revisor):
     # --- pair‑wise winner ---
     try:
         pairwise_result = pairwise_eval.evaluate_string_pairs(
-            input=question, prediction=responder, prediction_b=revisor
+            input=question,
+            prediction=responder,
+            prediction_b=revisor,
         )
-        evaluations["pairwise_winner"] = pairwise_result.get("value", "").strip()
-        evaluations["pairwise_reasoning"] = pairwise_result.get("reasoning", "")
-    except Exception as exc:  # pylint: disable=broad-except
-        logger.exception("Pair‑wise evaluation failed")
+
+        if isinstance(pairwise_result, dict):
+            evaluations["pairwise_winner"] = (
+                pairwise_result.get("value") or ""
+            ).strip()
+            evaluations["pairwise_reasoning"] = pairwise_result.get("reasoning", "")
+        else:
+            # evaluate_string_pairs delivers None or unexpected type
+            evaluations["pairwise_winner"] = "Invalid"
+            evaluations["pairwise_reasoning"] = "No result from pairwise evaluator"
+
+    except Exception as exc:
+        logger.exception("Pair-wise evaluation failed")
         evaluations["pairwise_winner"] = "Invalid"
         evaluations["pairwise_reasoning"] = f"Error: {exc}"
-
-    logger.info("Evaluation finished – winner: %s", evaluations.get("pairwise_winner"))
-    return evaluations
