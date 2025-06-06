@@ -58,7 +58,7 @@ def _start_server(detach: bool = True) -> Optional[Popen[bytes]]:
     else:
         proc = subprocess.Popen(cmd)
 
-    # Poll until responsive (≈9 s total)
+    # Poll until responsive
     for _ in range(15):
         if _is_server_up():
             logger.info("Ollama server is up and responsive")
@@ -80,12 +80,12 @@ def _warm_up(model: str) -> None:
         resp.raise_for_status()
         snippet = resp.json().get("response", "")[:40]
         logger.debug("Model '%s' warm‑up response: %s", model, snippet)
-    except Exception as exc:  # pylint: disable=broad-except
+    except Exception as exc:
         logger.warning("Warm‑up skipped (%s)", exc, exc_info=False)
 
 
 def ensure_model(model: str) -> None:
-    """Download *model* via ``ollama pull`` if it is not yet available locally."""
+    """Download model via ollama pull if it is not yet available locally."""
     try:
         resp = requests.get(CHECK_URL, timeout=3)
         resp.raise_for_status()
@@ -93,7 +93,7 @@ def ensure_model(model: str) -> None:
         if model not in available:
             logger.info("Downloading model '%s' … this may take a while", model)
             subprocess.run(["ollama", "pull", model], check=True)
-    except Exception as exc:  # pylint: disable=broad-except
+    except Exception as exc:
         logger.exception("Failed to check or pull model '%s'", model)
         raise RuntimeError(f"Failed to check or pull model '{model}': {exc}") from exc
 

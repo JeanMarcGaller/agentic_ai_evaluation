@@ -3,8 +3,7 @@
 This project implements a 🦜🕸️LangGraph-based multi-agent evaluation system for answering complex questions using
 LLMs, tools (e.g. Tavily Web Search), and self-reflection.
 
-It compares the quality of initial and revised answers using 
-LLM-powered evaluators.
+It compares the quality of initial and revised answers using LLM-powered evaluators.
 
 ---
 
@@ -144,7 +143,7 @@ See the [LICENSE](./LICENSE) file for full license text and attribution details 
 
 ## 📬 Contact
 This repository is part of an academic project and is provided for demonstration and review purposes only.  
-If you are interested in this work, have questions or recommendations, feel free to contact me via GitHub or email: 
+If you are interested in this work, have questions or recommendations, feel free to contact me via email: 
 
 Jean-Marc Galler
 

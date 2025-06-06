@@ -54,7 +54,7 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
         logging.StreamHandler(),  # Konsole
-        logging.FileHandler(log_file, encoding="utf-8"),  # nur EIN FileHandler
+        logging.FileHandler(log_file, encoding="utf-8"),
     ],
     force=True,
 )
@@ -97,7 +97,7 @@ cli_args = parser.parse_args()
 if cli_args.questions:
     # Load user questions from JSON
     examples = load_custom_questions(cli_args.questions)
-    NUM_QUESTIONS = len(examples)  # Update number of questions
+    NUM_QUESTIONS = len(examples)
 else:
     # Use a default subset of HotpotQA
     examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)

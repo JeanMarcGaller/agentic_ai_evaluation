@@ -53,7 +53,7 @@ def get_hotpotqa_subset(num_samples: int = 3) -> List[Dict]:
 
 
 def load_custom_questions(path: str | Path) -> List[Dict]:
-    # Reads custom questions from a JSON file
+    # Reads custom questions from a JSON file e.g., my_questions.json
     path = Path(path)
     logger.info("Loading custom questions from %s", path)
     with path.open("r", encoding="utf-8") as f:
