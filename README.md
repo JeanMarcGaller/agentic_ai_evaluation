@@ -1,9 +1,9 @@
 # Agentic AI Evaluation
 
-This project implements a 🦜🕸️LangGraph-based multi-agent evaluation system for answering complex questions using
-LLMs, tools (e.g. Tavily Web Search), and self-reflection.
+This project implements a 🦜🕸️LangGraph-based multi-agent evaluation system for answering questions using
+LLMs, tools (e.g., Tavily Web Search), and self-reflection.
 
-It compares the quality of initial and revised answers using LLM-powered evaluators.
+It compares the quality of initial and revised answers using LLM as a Judge evaluators.
 
 ---
 
@@ -24,12 +24,20 @@ It compares the quality of initial and revised answers using LLM-powered evaluat
 agentic_ai_evaluation/
 │
 ├── main.py # Entry point: runs question-answer-evaluation pipeline
+├── ollama_manager.py # Setup of Ollama backend
+├── load_data.py # Loads and samples questions
 ├── chains.py # Defines LLM agents (responder and revisor)
-├── tool_executor.py # Wraps Tavily search tool for LangGraph
-├── evaluator.py # Uses GPT-4 to evaluate answer quality
 ├── schemas.py # Defines structured outputs and tool schemas
-├── load_data.py # Loads and samples HotpotQA questions
-└── results.json # Output file containing evaluation results
+├── tool_executor.py # Wraps Tavily search tool for LangGraph
+├── evaluator.py # Uses GPT-4o-mini to evaluate answer quality
+├── results/
+│   ├── results.ipynb # Notebook to view results
+│   └── results.json # Output file containing evaluation results
+├── data/
+│   ├── hotpotqa_subset_20250101_010101.json # HotpotQA Sample questions
+│   └── my_questions.json # Custom dataset with own questions
+└── log/
+    └── run20250101_010101.log # Log files
 ```
 
 ---
@@ -45,9 +53,9 @@ agentic_ai_evaluation/
 
 ## 🧰 Technologies Used
 
-- 🐍 Python 3.11
+- 🐍 [Python 3.11](https://www.python.org/downloads/release/python-3110/)
 - 🦜🔗 [LangChain](https://python.langchain.com)
-- 🦜🕸️ [LangGraph](https://langgraph.readthedocs.io)
+- 🦜🕸️ [LangGraph](https://langchain-ai.github.io/langgraph/concepts/why-langgraph/)
 - 🦜🔨 [LangSmith](https://docs.smith.langchain.com/)
 - 🧠  [OpenAI API](https://openai.com/index/openai-api/)
 - 🤗 [Hugging Face Datasets](https://huggingface.co/docs/datasets)
@@ -82,32 +90,40 @@ LANGCHAIN_API_KEY=your-langsmith-api-key
 python main.py
 ```
 
-This will:
-- Sample questions (can be changed via NUM_QUESTIONS)
-- Run them through the agentic QA system 
-- Save evaluations to results.json file
+## ⚙️ Configuration Parameters
+
+These constants let you fine-tune a run without touching the core code.  
+You can override them via environment variables or CLI flags if needed.
+
+| Name                | Default | Meaning                                                                                           |
+|---------------------|---------|---------------------------------------------------------------------------------------------------|
+| `MAX_MESSAGES`      | `3`     | Hard stop for a single QA turn. One “round” consists of **3 messages** (user ➞ responder ➞ revisor). Prevents runaway loops. |
+| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`. Increase for more robust statistics, decrease for quick smoke-tests. |
+| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose any model you have pulled, e.g. `llama3:8b`. |
+| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model that acts as the LLM-as-a-Judge evaluator. Replace with any model ID available to your key. |
+
 
 ## 📊 Example Results
 
-| Question                                                                                      | Responder Tool | Revisor Tool | Winner | Helpfulness Responder | Helpfulness Revisor | Correctness Responder | Correctness Revisor | Relevance Responder | Relevance Revisor | Conciseness Responder | Conciseness Revisor | Coherence Responder | Coherence Revisor |
-|-----------------------------------------------------------------------------------------------|----------------|--------------|--------|------------------------|----------------------|------------------------|----------------------|----------------------|--------------------|------------------------|----------------------|----------------------|--------------------|
-| Who was appointed to the board of supervisors first, Jeff Sheehy or Ed Lee?                  | False          | False        | Responder | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| Who was the electoral division that James Tully represented in 1928 named after?             | True           | False        | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?| False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| Who played the female lead in a 2007 Indian Telugu film...?                                  | True           | False        | Revisor   | N                      | Y                    | N                      | Y                    | N                    | Y                  | N                      | Y                    | N                    | Y                  |
-| What is the name of the Minahasa journalist...?                                               | False          | True         | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| Which star of The Human Stain was born in 1937?                                              | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| Which year did the band, who released "Hooligan's Holiday," retire?                          | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| Which Norwegian chess grandmaster was Espen Agdestein his manager?                           | False          | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| What national historic district is located near a village...?                                | True           | False        | None      | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
-| What is the estimated population of the city in which Beaumont is located?                   | False          | False        | Revisor   | Y                      | Y                    | Y                      | Y                    | Y                    | Y                  | Y                      | Y                    | Y                    | Y                  |
+| Question                                                                                                             | Responder Tool | Revisor Tool | Winner    | Helpfulness R | Helpfulness V | Correctness R | Correctness V | Relevance R | Relevance V | Conciseness R | Conciseness V | Coherence R | Coherence V |
+|----------------------------------------------------------------------------------------------------------------------|----------------|--------------|-----------|---------------|---------------|---------------|---------------|-------------|-------------|---------------|---------------|-------------|-------------|
+| Who was appointed to the board of supervisors first, Jeff Sheehy or Ed Lee?                                          | N              | N            | Responder | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| Who was the electoral division that James Tully represented in 1928 named after?                                     | Y              | N            | Revisor   | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?                        | N              | N            | None      | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| Who played the female lead in a 2007 Indian Telugu film...?                                                          | Y              | N            | Revisor   | N             | Y             | N             | Y             | N           | Y           | N             | Y             | N           | Y           |
 
+
+---
+
+## ⚠️ Known Issues & Limitations
+- LangSmith evaluators deliver wrong output
+- High latency overall
 ---
 
 ## 🧪 Customization Ideas
 - Replace HotpotQA with NaturalQuestions or WebQuestions
-- Add support for more tools (e.g. arXiv API, Wikipedia search)
-- Test different LLMs
+- Add support for more tools (e.g., arXiv API, Wikipedia search)
+- Implement AsyncOpenAI-Client
 ---
 
 ## 📚 Citation
