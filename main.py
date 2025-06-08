@@ -63,7 +63,7 @@ logger = logging.getLogger(__name__)
 # === Constants ===
 
 MAX_MESSAGES = 3  # Max message before stopping, one round is 3 messages
-NUM_QUESTIONS = 5  # Number of questions to evaluate
+NUM_QUESTIONS = 2  # Number of questions to evaluate
 OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use
 OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use
 

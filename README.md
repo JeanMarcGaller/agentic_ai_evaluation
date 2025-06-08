@@ -14,7 +14,7 @@ It compares the quality of initial and revised answers using LLM as a Judge eval
 - 🪞 **Self-reflective answering**, where agents critique and iteratively refine their responses
 - ⚖️ **LLM-as-a-judge** evaluating answers based on helpfulness, relevance, coherence, and conciseness
 - 🤝 **Pairwise comparison** to determine which answer is better overall
-
+- 📈 **LangSmith tracing** for transparent run-level debugging and rich execution analytics  
 
 ---
 
@@ -89,6 +89,12 @@ LANGCHAIN_API_KEY=your-langsmith-api-key
 ```bash
 python main.py
 ```
+Before committing, **run**:  
+```bash
+black .
+```  
+Then run `pre-commit run --all-files` if you have the hooks installed).  
+
 
 ## ⚙️ Configuration Parameters
 
@@ -116,14 +122,14 @@ You can override them via environment variables or CLI flags if needed.
 ---
 
 ## ⚠️ Known Issues & Limitations
-- LangSmith evaluators deliver wrong output
+- LangSmith evaluators sometimes deliver wrong output
 - High latency overall
 ---
 
 ## 🧪 Customization Ideas
 - Replace HotpotQA with NaturalQuestions or WebQuestions
 - Add support for more tools (e.g., arXiv API, Wikipedia search)
-- Implement AsyncOpenAI-Client
+- Implement AsyncOpenAI-Client and retry mechanism
 ---
 
 ## 📚 Citation
