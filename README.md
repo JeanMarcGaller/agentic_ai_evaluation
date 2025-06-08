@@ -109,12 +109,12 @@ Then run `pre-commit run --all-files` if you have the hooks installed.
 These constants let you fine-tune a run without touching core code.  
 You can still override them via **environment variables** or **CLI flags**.
 
-| Constant               |   Default   | Purpose / Effect                                                                                |
-|------------------------|:-----------:|-------------------------------------------------------------------------------------------------|
-| **`NUM_QUESTIONS`**    |     `5`     | How many questions are loaded and evaluated in a single run of `main.py`.                       |
-| **`MAX_MESSAGES`**        |     `3`     | Max message before stopping, one round is 3 messages.                                           |
-| **`OLLAMA_MODEL_NAME`**| `qwen3:32b` | Local **Ollama** model for responder / revisor agents — must be pulled beforehand.              |
-| **`OPENAI_MODEL_NAME`**|  `gpt-4.1`  | Remote **OpenAI** model for responder / revisor agents.                                         |
+| Constant               |   Default   | Purpose / Effect                                                               |
+|------------------------|:-----------:|--------------------------------------------------------------------------------|
+| **`NUM_QUESTIONS`**    |     `5`     | How many questions are loaded and evaluated in a single run of main.py.        |
+| **`MAX_MESSAGES`**        |     `3`     | Max message before stopping, one round is 3 messages.                          |
+| **`OLLAMA_MODEL_NAME`**| `qwen3:32b` | Local Ollama model for responder / revisor agents — must be pulled beforehand. |
+| **`OPENAI_MODEL_NAME`**|  `gpt-4.1`  | Remote OpenAI model for responder / revisor agents.                            |
 
 
 ---
