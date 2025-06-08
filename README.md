@@ -89,6 +89,13 @@ LANGCHAIN_API_KEY=your-langsmith-api-key
 ```bash
 python main.py
 ```
+
+Or with your own questions, stored in my_questions.json:
+
+```bash
+python main.py --questions data/my_questions.json
+```
+
 Before committing, **run**:  
 ```bash
 black .
