@@ -62,8 +62,9 @@ logger = logging.getLogger(__name__)
 
 # === Constants ===
 
-MAX_MESSAGES = 3  # Max message before stopping, one round is 3 messages
-NUM_QUESTIONS = 2  # Number of questions to evaluate
+NUM_QUESTIONS = 1
+MAX_MESSAGES = 3
+
 OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use
 OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use
 
@@ -180,11 +181,9 @@ for responder_model_name, revisor_model_name in model_pairs:
         builder.add_edge("execute_tools", "revise")  # From tools to revision
 
         # Entry point / Start
-        builder.set_entry_point("draft")  # Start from the draft step
+        builder.set_entry_point("draft")  # Start from the draft ste
 
-        # Conditional: This function decides whether to stop the graph or
-        # go for another message/step
-        def event_loop(state: list[BaseMessage]) -> str:
+        def event_loop(state: List[BaseMessage]) -> str:
             # If we have reached the maximum number of steps, stop the graph
             # Otherwise, go back to execute_tools
             return END if len(state) >= MAX_MESSAGES else "execute_tools"
@@ -202,7 +201,8 @@ for responder_model_name, revisor_model_name in model_pairs:
 
         try:
             raw_result = graph.invoke([HumanMessage(content=question)])
-        except Exception:  # pylint: disable=broad-except
+
+        except Exception:
             logger.exception("Graph invocation failed for question: %s", question)
             continue
 

@@ -102,19 +102,24 @@ black .
 ```  
 Then run `pre-commit run --all-files` if you have the hooks installed.  
 
+---
 
 ## ⚙️ Configuration Parameters
 
-These constants let you fine-tune a run without touching the core code.  
-You can override them via environment variables or CLI flags if needed.
+These constants let you fine-tune a run without touching core code.  
+You can still override them via **environment variables** or **CLI flags**.
 
-| Name                | Default | Meaning                                                                                              |
-|---------------------|---------|------------------------------------------------------------------------------------------------------|
-| `MAX_MESSAGES`      | `3`     | Hard stop for a single QA turn. One “round” consists of **3 messages** (user ➞ responder ➞ revisor). |
-| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`.                             |
-| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose model you have pulled.           |
-| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model used by the responder/revisor agents.                                        |
+| Constant               |   Default   | Purpose / Effect                                                                                |
+|------------------------|:-----------:|-------------------------------------------------------------------------------------------------|
+| **`NUM_QUESTIONS`**    |     `5`     | How many questions are loaded and evaluated in a single run of `main.py`.                       |
+| **`MAX_MESSAGES`**        |     `2`     | Max message before stopping, one round is 3 messages.                                           |
+| **`MAX_HISTORY`**      |     `6`     | Number of most-recent messages each LLM node sees — cuts prompt length, saving tokens and cost. |
+| **`RECURSION_LIMIT`**  |    `25`     | Hard safety cap on LangGraph recursion depth (protects against runaway loops).                  |
+| **`OLLAMA_MODEL_NAME`**| `qwen3:32b` | Local **Ollama** model for responder / revisor agents — must be pulled beforehand.              |
+| **`OPENAI_MODEL_NAME`**|  `gpt-4.1`  | Remote **OpenAI** model for responder / revisor agents.                                         |
 
+
+---
 
 ## 📊 Example Results
 
@@ -135,12 +140,6 @@ You can override them via environment variables or CLI flags if needed.
 - Dataset questions are often generic, making them hard to interpret
 - Yes/No evaluators offer limited insight; a graded score would likely be more informative, 
 but attempts to implement such scoring have so far been unsuccessful
-
-
-
-
-
-
 ---
 
 ## 🧪 Customization Ideas
@@ -182,7 +181,7 @@ See the [LICENSE](./LICENSE) file for full license text and attribution details 
 
 ## 📬 Contact
 This repository is part of an academic project and is provided for demonstration and review purposes only.  
-If you are interested in this work, have questions or recommendations, feel free to contact me via email: 
+If you are interested in this work, have questions, recommendations or corrections, feel free to contact me via email: 
 
 Jean-Marc Galler
 
