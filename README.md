@@ -183,4 +183,4 @@ If you are interested in this work, have questions, recommendations or correctio
 
 Jean-Marc Galler
 
-📧 jeanmarc.galler [at] students [dot] fhnw [dot] ch
+📧 jeanmarc.galler [at] pm [dot] me
