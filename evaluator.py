@@ -79,7 +79,7 @@ def evaluate_pairwise(question, responder, revisor):
 
         if isinstance(pairwise_result, dict):
             evaluations["pairwise_winner"] = (
-                pairwise_result.get("value") or ""
+                pairwise_result.get("value") or "tie"
             ).strip()
             evaluations["pairwise_reasoning"] = pairwise_result.get("reasoning", "")
         else:
@@ -91,3 +91,11 @@ def evaluate_pairwise(question, responder, revisor):
         logger.exception("Pair-wise evaluation failed")
         evaluations["pairwise_winner"] = "Invalid"
         evaluations["pairwise_reasoning"] = f"Error: {exc}"
+
+    # --- LangSmith Scores ---
+    winner = evaluations["pairwise_winner"]
+    evaluations["pairwise_scores"] = (
+        [1, 0] if winner == "A" else [0, 1] if winner == "B" else [0, 0]
+    )
+
+    return evaluations
