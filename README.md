@@ -7,7 +7,7 @@ It compares the quality of initial and revised answers using LLM as a Judge eval
 
 It is recommended to use your own questions, see: data/my_questions.json, and use LangSmith tracing.
 
-One run of 10 questions with 2 models takes around XX minutes and costs around $0.20.
+One run of 10 questions with 2 models takes around 35 minutes and costs around $0.20.
 
 ---
 
