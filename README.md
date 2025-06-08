@@ -108,28 +108,39 @@ Then run `pre-commit run --all-files` if you have the hooks installed.
 These constants let you fine-tune a run without touching the core code.  
 You can override them via environment variables or CLI flags if needed.
 
-| Name                | Default | Meaning                                                                                     |
-|---------------------|---------|---------------------------------------------------------------------------------------------|
+| Name                | Default | Meaning                                                                                              |
+|---------------------|---------|------------------------------------------------------------------------------------------------------|
 | `MAX_MESSAGES`      | `3`     | Hard stop for a single QA turn. One “round” consists of **3 messages** (user ➞ responder ➞ revisor). |
-| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`. Increase for more robust statistics, decrease for quick tests. |
-| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose model you have pulled. |
-| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model used by the responder/revisor agents. |
+| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`.                             |
+| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose model you have pulled.           |
+| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model used by the responder/revisor agents.                                        |
 
 
 ## 📊 Example Results
 
-| Question                                                                                                             | Responder Tool | Revisor Tool | Winner    | Helpfulness R | Helpfulness V | Correctness R | Correctness V | Relevance R | Relevance V | Conciseness R | Conciseness V | Coherence R | Coherence V |
-|----------------------------------------------------------------------------------------------------------------------|----------------|--------------|-----------|---------------|---------------|---------------|---------------|-------------|-------------|---------------|---------------|-------------|-------------|
-| Who was appointed to the board of supervisors first, Jeff Sheehy or Ed Lee?                                          | N              | N            | Responder | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
-| Who was the electoral division that James Tully represented in 1928 named after?                                     | Y              | N            | Revisor   | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
-| At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?                        | N              | N            | None      | Y             | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
-| Who played the female lead in a 2007 Indian Telugu film...?                                                          | Y              | N            | Revisor   | N             | Y             | N             | Y             | N           | Y           | N             | Y             | N           | Y           |
+| Question                                                                                                             | Responder Tool | Revisor Tool | Winner    | Helpfulness Responder | Helpfulness Revisor | Correctness Responder | Correctness Revisor | Relevance Responder | Relevance Revisor | Conciseness Responder | Conciseness Revisor | Coherence Responder | Coherence Revisor |
+|----------------------------------------------------------------------------------------------------------------------|----------------|--------------|-----------|-----------------------|---------------|---------------|---------------|-------------|-------------|---------------|---------------|-------------|-------------|
+| Who was appointed to the board of supervisors first, Jeff Sheehy or Ed Lee?                                          | N              | N            | Responder | Y                     | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| Who was the electoral division that James Tully represented in 1928 named after?                                     | Y              | N            | Revisor   | Y                     | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?                        | N              | N            | None      | Y                     | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
+| Who played the female lead in a 2007 Indian Telugu film...?                                                          | Y              | N            | Revisor   | N                     | Y             | N             | Y             | N           | Y           | N             | Y             | N           | Y           |
 
 
 ---
 
 ## ⚠️ Known Issues & Limitations
-- High latency overall
+- High latency due to the responder–revisor cycle and the LLM-as-a-Judge evaluation
+- Evaluation is expensive  
+- In most cases, the initial response is already quite good
+- Dataset questions are often generic, making them hard to interpret
+- Yes/No evaluators offer limited insight; a graded score would likely be more informative, 
+but attempts to implement such scoring have so far been unsuccessful
+
+
+
+
+
+
 ---
 
 ## 🧪 Customization Ideas
