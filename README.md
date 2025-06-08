@@ -5,6 +5,10 @@ LLMs, tools (e.g., Tavily Web Search), and self-reflection.
 
 It compares the quality of initial and revised answers using LLM as a Judge evaluators.
 
+It is recommended to use your own questions, see: data/my_questions.json, and use LangSmith tracing.
+
+One run of 10 questions with 2 models takes around XX minutes and costs around $0.20.
+
 ---
 
 ## 🔧 Features
@@ -34,10 +38,8 @@ agentic_ai_evaluation/
 │   ├── results.ipynb # Notebook to view results
 │   └── results.json # Output file containing evaluation results
 ├── data/
-│   ├── hotpotqa_subset_20250101_010101.json # HotpotQA Sample questions
-│   └── my_questions.json # Custom dataset with own questions
-└── log/
-    └── run20250101_010101.log # Log files
+    ├── hotpotqa_subset_20250101_010101.json # HotpotQA Sample questions
+    └── my_questions.json # Custom dataset with own questions
 ```
 
 ---
@@ -49,6 +51,7 @@ agentic_ai_evaluation/
 3. 🧞 **Revisor agent** critiques and improves the initial response using new context or tool results
 4. ⚖️ **LLM evaluator** scores both answers on multiple criteria and performs a pairwise comparison
 5. 💾 **Save results** to `results.json` for analysis or reporting
+
 ---
 
 ## 🧰 Technologies Used
@@ -60,6 +63,8 @@ agentic_ai_evaluation/
 - 🧠  [OpenAI API](https://openai.com/index/openai-api/)
 - 🤗 [Hugging Face Datasets](https://huggingface.co/docs/datasets)
 - 🔍 [Tavily](https://www.tavily.com)
+
+---
 
 ## 🚀 Installation
 
@@ -116,7 +121,6 @@ You can still override them via **environment variables** or **CLI flags**.
 | **`OLLAMA_MODEL_NAME`**| `qwen3:32b` | Local Ollama model for responder / revisor agents — must be pulled beforehand. |
 | **`OPENAI_MODEL_NAME`**|  `gpt-4.1`  | Remote OpenAI model for responder / revisor agents.                            |
 
-
 ---
 
 ## 📊 Example Results
@@ -128,22 +132,25 @@ You can still override them via **environment variables** or **CLI flags**.
 | At what school is the individual who was awarded the 2012 Nobel Prize in Physics a professor?                        | N              | N            | None      | Y                     | Y             | Y             | Y             | Y           | Y           | Y             | Y             | Y           | Y           |
 | Who played the female lead in a 2007 Indian Telugu film...?                                                          | Y              | N            | Revisor   | N                     | Y             | N             | Y             | N           | Y           | N             | Y             | N           | Y           |
 
-
 ---
 
 ## ⚠️ Known Issues & Limitations
 - High latency due to the responder–revisor cycle and the LLM-as-a-Judge evaluation
-- Evaluation is expensive  
 - In most cases, the initial response is already quite good
 - Dataset questions are often generic, making them hard to interpret
 - Yes/No evaluators offer limited insight; a graded score would likely be more informative, 
 but attempts to implement such scoring have so far been unsuccessful
+
 ---
 
-## 🧪 Customization Ideas
+## 🧪 Improvement Ideas
 - Replace HotpotQA with NaturalQuestions or WebQuestions
+- Create more user defined questions
+- Make use of LangChain datasets and annotation queues
+- Use gold answer for evaluation
 - Add support for more tools (e.g., arXiv API, Wikipedia search)
 - Implement AsyncOpenAI-Client and retry mechanism
+
 ---
 
 ## 📚 Citation
@@ -160,7 +167,6 @@ This project is inspired in part by the paper:
 
 This project includes components adapted from:
 
-
 - [LangGraph Reflexion Tutorial](https://langchain-ai.github.io/langgraph/tutorials/reflexion/reflexion/) by the LangChain team,  
  used under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
@@ -175,6 +181,7 @@ This project is licensed under the [Apache License 2.0](https://www.apache.org/l
 See the [LICENSE](./LICENSE) file for full license text and attribution details for third-party code reused or adapted in this project, including:
 - LangGraph Reflexion Tutorial (LangChain Team)
 - LangGraph Reflexion Agent (Edan Marco)
+
 ---
 
 ## 📬 Contact
@@ -184,3 +191,5 @@ If you are interested in this work, have questions, recommendations or correctio
 Jean-Marc Galler
 
 📧 jeanmarc.galler [at] pm [dot] me
+
+---
