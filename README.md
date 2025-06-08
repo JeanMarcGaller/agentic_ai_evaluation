@@ -95,12 +95,12 @@ python main.py
 These constants let you fine-tune a run without touching the core code.  
 You can override them via environment variables or CLI flags if needed.
 
-| Name                | Default | Meaning                                                                                           |
-|---------------------|---------|---------------------------------------------------------------------------------------------------|
-| `MAX_MESSAGES`      | `3`     | Hard stop for a single QA turn. One “round” consists of **3 messages** (user ➞ responder ➞ revisor). Prevents runaway loops. |
-| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`. Increase for more robust statistics, decrease for quick smoke-tests. |
-| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose any model you have pulled, e.g. `llama3:8b`. |
-| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model that acts as the LLM-as-a-Judge evaluator. Replace with any model ID available to your key. |
+| Name                | Default | Meaning                                                                                     |
+|---------------------|---------|---------------------------------------------------------------------------------------------|
+| `MAX_MESSAGES`      | `3`     | Hard stop for a single QA turn. One “round” consists of **3 messages** (user ➞ responder ➞ revisor). |
+| `NUM_QUESTIONS`     | `5`     | How many questions are sampled and evaluated per execution of `main.py`. Increase for more robust statistics, decrease for quick tests. |
+| `OLLAMA_MODEL_NAME` | `qwen3:32b` | Local **Ollama** model used by the responder/revisor agents. Choose model you have pulled. |
+| `OPENAI_MODEL_NAME` | `gpt-4.1` | Remote **OpenAI** model that acts as the LLM-as-a-Judge evaluator. |
 
 
 ## 📊 Example Results
