@@ -19,8 +19,11 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # === Initialize evaluation LLM ===
-llm = ChatOpenAI(model="gpt-4")  # all other models raise a warning
-logger.info("Evaluation LLM initialised with model 'gpt-4'")
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0,
+)
+logger.info("Evaluation LLM initialised with model 'gpt-4o-mini'")
 
 # === Single‑response evaluators ===
 _eval_types = [

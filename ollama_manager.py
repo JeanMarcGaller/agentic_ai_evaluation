@@ -104,4 +104,4 @@ def prepare_ollama(model: str) -> None:
     _start_server()
     ensure_model(model)
     _warm_up(model)
-    logger.info("Ollama backend ready! ✔")
+    logger.info("Ollama backend ready!")
