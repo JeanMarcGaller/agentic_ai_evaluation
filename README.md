@@ -112,9 +112,7 @@ You can still override them via **environment variables** or **CLI flags**.
 | Constant               |   Default   | Purpose / Effect                                                                                |
 |------------------------|:-----------:|-------------------------------------------------------------------------------------------------|
 | **`NUM_QUESTIONS`**    |     `5`     | How many questions are loaded and evaluated in a single run of `main.py`.                       |
-| **`MAX_MESSAGES`**        |     `2`     | Max message before stopping, one round is 3 messages.                                           |
-| **`MAX_HISTORY`**      |     `6`     | Number of most-recent messages each LLM node sees — cuts prompt length, saving tokens and cost. |
-| **`RECURSION_LIMIT`**  |    `25`     | Hard safety cap on LangGraph recursion depth (protects against runaway loops).                  |
+| **`MAX_MESSAGES`**        |     `3`     | Max message before stopping, one round is 3 messages.                                           |
 | **`OLLAMA_MODEL_NAME`**| `qwen3:32b` | Local **Ollama** model for responder / revisor agents — must be pulled beforehand.              |
 | **`OPENAI_MODEL_NAME`**|  `gpt-4.1`  | Remote **OpenAI** model for responder / revisor agents.                                         |
 
