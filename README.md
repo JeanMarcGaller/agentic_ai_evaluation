@@ -31,12 +31,12 @@ agentic_ai_evaluation/
 ├── ollama_manager.py # Starts and prepares local Ollama backend
 ├── load_data.py # Loads questions from Huggingface HotpotQA or my_questions.json
 ├── chains.py # Defines LLM agents
-├── schemas.py # Defines structured outputs and tool schemas
-├── tool_executor.py # Wraps Tavily-Websearch tool for LangGraph
-├── evaluator.py # Uses LLM to evaluate answer quality
+├── schemas.py # Defines output and tool schemas
+├── tool_executor.py # Wraps Tavily-Websearch
+├── evaluator.py # LLM as a Judge evaluator
 ├── results/
-│   ├── results.ipynb # Notebook to view results
-│   └── results.json # Output file containing evaluation results
+│   ├── results.ipynb # Notebook with results
+│   └── results.json # Output file
 └── data/
     ├── hotpotqa_subset_20250101_010101.json # HotpotQA Sample questions
     └── my_questions.json # Custom dataset with own questions
@@ -47,10 +47,10 @@ agentic_ai_evaluation/
 ## 🛠️ How It Works
 
 1. 📥 **Load questions** from a small sample of the HotpotQA dataset
-2. 🧞‍♂️ **Responder agent** generates an initial answer using internal knowledge or Tavily web search
+2. 🧞‍♂️ **Responder agent** generates an initial answer using internal knowledge or Tavily-Websearch
 3. 🧞 **Revisor agent** critiques and improves the initial response using new context or tool results
 4. ⚖️ **LLM evaluator** scores both answers on multiple criteria and performs a pairwise comparison
-5. 💾 **Save results** to `results.json` for analysis or reporting
+5. 💾 **Save results** to results.json for analysis or reporting
 
 ---
 
