@@ -18,7 +18,7 @@ It compares the quality of initial and revised answers using LLM as a Judge eval
 - 🪞 **Self-reflective answering**, where agents critique and iteratively refine their responses
 - ⚖️ **LLM-as-a-judge** evaluating answers based on helpfulness, relevance, coherence, and conciseness
 - 🤝 **Pairwise comparison** to determine which answer is better overall
-- 📈 **LangSmith tracing** for transparent run-level debugging and rich execution analytics  
+- 📈 **LangSmith tracing** for logging and analytics  
 
 ---
 
@@ -28,12 +28,12 @@ It compares the quality of initial and revised answers using LLM as a Judge eval
 agentic_ai_evaluation/
 │
 ├── main.py # Entry point: runs question-answer-evaluation pipeline
-├── ollama_manager.py # Setup of Ollama backend
-├── load_data.py # Loads and samples questions
-├── chains.py # Defines LLM agents (responder and revisor)
+├── ollama_manager.py # Starts and prepares local Ollama backend
+├── load_data.py # Loads questions from Huggingface HotpotQA or my_questions.json
+├── chains.py # Defines LLM agents
 ├── schemas.py # Defines structured outputs and tool schemas
-├── tool_executor.py # Wraps Tavily search tool for LangGraph
-├── evaluator.py # Uses GPT-4o-mini to evaluate answer quality
+├── tool_executor.py # Wraps Tavily-Websearch tool for LangGraph
+├── evaluator.py # Uses LLM to evaluate answer quality
 ├── results/
 │   ├── results.ipynb # Notebook to view results
 │   └── results.json # Output file containing evaluation results
@@ -99,15 +99,8 @@ Or with your own questions, stored in my_questions.json:
 
 ```bash
 python main.py --questions data/my_questions.json
+
 ```
-
-Before committing, **run**:  
-```bash
-black .
-```  
-Then run `pre-commit run --all-files` if you have the hooks installed.  
-
----
 
 ## ⚙️ Configuration Parameters
 
@@ -134,7 +127,6 @@ Then run `pre-commit run --all-files` if you have the hooks installed.
 
 ## ⚠️ Known Issues & Limitations
 - High latency due to the responder–revisor cycle and the LLM-as-a-Judge evaluation
-- In most cases, the initial response is already quite good
 - Dataset questions are often generic, making them hard to interpret
 - Yes/No evaluators offer limited insight; a graded score would likely be more informative, 
 but attempts to implement such scoring have so far been unsuccessful
