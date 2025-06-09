@@ -31,12 +31,8 @@ def run_queries(search_queries: List[str], **kwargs):
     """
     Executes a batch of search queries using Tavily.
     Only runs if the input list is non-empty.
-
-    Args:
-        search_queries (list[str]): One or more user-generated queries.
-
-    Returns:
-        list: Search results, one per query.
+    Args: search_queries (list[str]): One or more user-generated queries.
+    Returns: list: Search results, one per query.
     """
     if not search_queries:
         logger.debug("run_queries: empty request, nothing to do")
@@ -55,12 +51,12 @@ execute_tools = ToolNode(
         # Tool used by the responder agent
         StructuredTool.from_function(
             run_queries,
-            name=AnswerQuestion.__name__,  # Tool will be named "AnswerQuestion"
+            name=AnswerQuestion.__name__,  # The Tool will be named "AnswerQuestion"
         ),
         # Tool used by the revisor agent
         StructuredTool.from_function(
             run_queries,
-            name=ReviseAnswer.__name__,  # Tool will be named "ReviseAnswer"
+            name=ReviseAnswer.__name__,  # The Tool will be named "ReviseAnswer"
         ),
     ]
 )

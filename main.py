@@ -53,7 +53,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.StreamHandler(),  # Konsole
+        logging.StreamHandler(),
         logging.FileHandler(log_file, encoding="utf-8"),
     ],
     force=True,
@@ -62,11 +62,11 @@ logger = logging.getLogger(__name__)
 
 # === Constants ===
 
-NUM_QUESTIONS = 1
+NUM_QUESTIONS = 10
 MAX_MESSAGES = 3
 
-OLLAMA_MODEL_NAME = "qwen3:32b"  # Ollama model to use
-OPENAI_MODEL_NAME = "gpt-4.1"  # OpenAi model to use
+OLLAMA_MODEL_NAME = "qwen3:32b"
+OPENAI_MODEL_NAME = "gpt-4.1"
 
 # === Start Ollama ===
 
@@ -79,11 +79,11 @@ model_configs = {
     "openai": ChatOpenAI(model=OPENAI_MODEL_NAME),
 }
 
-# === Define model names for results recording ===
+# === Define model names for result recording ===
 
 model_names = {"ollama": OLLAMA_MODEL_NAME, "openai": OPENAI_MODEL_NAME}
 
-# === CLI Argument Parsing ===
+# === CLI ===
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -96,11 +96,9 @@ cli_args = parser.parse_args()
 # === Load Dataset ===
 
 if cli_args.questions:
-    # Load user questions from JSON
     examples = load_custom_questions(cli_args.questions)
     NUM_QUESTIONS = len(examples)
 else:
-    # Use a default subset of HotpotQA
     examples = get_hotpotqa_subset(num_samples=NUM_QUESTIONS)
 
 logger.info("Loaded %s questions", NUM_QUESTIONS)
@@ -140,8 +138,8 @@ def evaluate_question(
 # === Compare responder/revisor model pairs ===
 
 model_pairs = [
-    ("ollama", "ollama"),  # Compare Ollama responder vs. Ollama revisor
-    ("openai", "openai"),  # Compare OpenAI responder vs. OpenAI revisor
+    ("ollama", "ollama"),
+    ("openai", "openai"),
 ]
 
 # === Main Loop ===

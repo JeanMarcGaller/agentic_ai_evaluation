@@ -12,7 +12,7 @@ import random
 from pathlib import Path
 from typing import Dict, Final, List
 
-from datasets import load_dataset  # Hugging Face dataset loader
+from datasets import load_dataset
 
 # === Logging ===
 logger = logging.getLogger(__name__)
@@ -21,12 +21,8 @@ logger = logging.getLogger(__name__)
 def get_hotpotqa_subset(num_samples: int = 3) -> List[Dict]:
     """
     Loads a random subset of the HotpotQA validation dataset.
-
-    Args:
-        num_samples (int): Number of questions to sample.
-
-    Returns:
-        list: Random sample of HotpotQA questions.
+    Args: num_samples (int): Number of questions to sample.
+    Returns: list: Random sample of HotpotQA questions.
     """
 
     # Load distractor version of HotpotQA
@@ -53,7 +49,6 @@ def get_hotpotqa_subset(num_samples: int = 3) -> List[Dict]:
 
 
 def load_custom_questions(path: str | Path) -> List[Dict]:
-    # Reads custom questions from a JSON file e.g., my_questions.json
     path = Path(path)
     logger.info("Loading custom questions from %s", path)
     with path.open("r", encoding="utf-8") as f:

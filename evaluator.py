@@ -86,7 +86,6 @@ def evaluate_pairwise(question, responder, revisor):
             ).strip()
             evaluations["pairwise_reasoning"] = pairwise_result.get("reasoning", "")
         else:
-            # evaluate_string_pairs delivers None or unexpected type
             evaluations["pairwise_winner"] = "Invalid"
             evaluations["pairwise_reasoning"] = "No result from pairwise evaluator"
 

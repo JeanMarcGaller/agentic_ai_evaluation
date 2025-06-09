@@ -1,3 +1,5 @@
+# === ollama_manager.py ===
+
 """Utility helpers to start and prepare an Ollama backend.
 
 The functions here are imported by *main.py* to
@@ -40,8 +42,7 @@ def _is_server_up(timeout: float = 1.5) -> bool:
 
 def _start_server(detach: bool = True) -> Optional[Popen[bytes]]:
     """Run ``ollama serve`` unless it is already running.
-
-    Returns the subprocess handle if a new server was started, otherwise None.
+    Returns the subprocess if a new server was started, otherwise None.
     """
     if _is_server_up():
         logger.info("Ollama server already running at %s", OLLAMA_HOST)
@@ -58,7 +59,6 @@ def _start_server(detach: bool = True) -> Optional[Popen[bytes]]:
     else:
         proc = subprocess.Popen(cmd)
 
-    # Poll until responsive
     for _ in range(15):
         if _is_server_up():
             logger.info("Ollama server is up and responsive")
@@ -70,7 +70,7 @@ def _start_server(detach: bool = True) -> Optional[Popen[bytes]]:
 
 
 def _warm_up(model: str) -> None:
-    """Send a dummy prompt so the model is loaded into memory."""
+    """Send a fake prompt so the model is loaded into memory."""
     try:
         resp = requests.post(
             f"{OLLAMA_HOST}/api/generate",
@@ -85,7 +85,7 @@ def _warm_up(model: str) -> None:
 
 
 def ensure_model(model: str) -> None:
-    """Download model via ollama pull if it is not yet available locally."""
+    """Download the model via ollama pull if it is not yet available locally."""
     try:
         resp = requests.get(CHECK_URL, timeout=3)
         resp.raise_for_status()
@@ -99,7 +99,7 @@ def ensure_model(model: str) -> None:
 
 
 def prepare_ollama(model: str) -> None:
-    """Ensure server is running, model present, and warmed up."""
+    """Ensure the server is running, model present, and warmed up."""
     logger.info("Preparing Ollama backend for model '%s'", model)
     _start_server()
     ensure_model(model)

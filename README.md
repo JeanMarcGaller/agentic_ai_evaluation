@@ -5,9 +5,9 @@ LLMs, tools (e.g., Tavily Web Search), and self-reflection.
 
 It compares the quality of initial and revised answers using LLM as a Judge evaluators.
 
-It is recommended to use your own questions, see: data/my_questions.json, and use LangSmith tracing.
+**Recommendation:** Use your own questions, see: data/my_questions.json, and use LangSmith for tracing.
 
-One run of 10 questions with 2 models takes around 35 minutes and costs around $0.16.
+**Note:** One run of 10 questions with 2 models takes around 35 minutes and costs around $0.20.
 
 ---
 
@@ -37,7 +37,7 @@ agentic_ai_evaluation/
 ├── results/
 │   ├── results.ipynb # Notebook to view results
 │   └── results.json # Output file containing evaluation results
-├── data/
+└── data/
     ├── hotpotqa_subset_20250101_010101.json # HotpotQA Sample questions
     └── my_questions.json # Custom dataset with own questions
 ```
@@ -111,8 +111,6 @@ Then run `pre-commit run --all-files` if you have the hooks installed.
 
 ## ⚙️ Configuration Parameters
 
-These constants let you fine-tune a run without touching core code.  
-You can still override them via **environment variables** or **CLI flags**.
 
 | Constant               |   Default   | Purpose / Effect                                                               |
 |------------------------|:-----------:|--------------------------------------------------------------------------------|

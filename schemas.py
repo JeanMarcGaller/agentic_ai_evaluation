@@ -40,7 +40,7 @@ class AnswerQuestion(BaseModel):
         description="Your reflection on the initial answer."  # Self-evaluation
     )
     search_queries: List[str] = Field(
-        # Model should generate helpful search queries to fill gaps
+        # Model should generate helpful search queries
         description=(
             "1-3 search queries for researching "
             "improvements to address the critique "

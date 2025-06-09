@@ -96,7 +96,7 @@ def build_responder(llm):
             """
         )
         | llm.bind_tools(
-            tools=[AnswerQuestion],  # Tool the responder can use
+            tools=[AnswerQuestion],  # The Tool the responder can use
             tool_choice=None,  # Let the model choose when to use the tool
         )
     )
@@ -105,8 +105,8 @@ def build_responder(llm):
 # Creates the revisor agent
 def build_revisor(llm):
     return actor_prompt_template.partial(
-        first_instruction=revise_instructions  # Uses revisor-specific behavior
+        first_instruction=revise_instructions
     ) | llm.bind_tools(
-        tools=[ReviseAnswer],  # Tool the revisor can use
+        tools=[ReviseAnswer],  # The Tool the revisor can use
         tool_choice=None,  # Let the model decide when to use it
     )
