@@ -175,8 +175,7 @@ See the [LICENSE](./LICENSE) file for full license text and attribution details 
 ---
 
 ## 📬 Contact
-This repository is part of an academic project and is provided for demonstration and review purposes only.  
-If you are interested in this work, have questions, recommendations or corrections, feel free to contact me via email: 
+This repository is part of an academic student project at the University of Applied Sciences FHNW and is intended solely for demonstration and review purposes. If you are interested in this work, have questions, recommendations or corrections, feel free to contact me via email: 
 
 Jean-Marc Galler
 
